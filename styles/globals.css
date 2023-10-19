@@ -70,14 +70,6 @@
 /* Tailwind Styles */
 @layer components {
 
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
-}
-
-
-
-
-
 
 /* PromptCard Component */
 .prompt_card {
@@ -99,4 +91,7 @@
 .flex-between {
   @apply flex justify-between items-center;
 } */
+}
+.rad{
+  border-radius: 3vw 4vw 8vw 2vw;
 }

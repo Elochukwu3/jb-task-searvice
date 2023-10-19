@@ -1,8 +1,8 @@
 import tw from "tailwind-styled-components";
 
 const LogoWrapper = tw.div `
- block font-montserrat text-5xl text-black 
+ block font-tummy text-4xl text-black 
  tracking-wide
- mt-5 font-extrabold leading-[1.15] sm:text-6xl
+ font-bold leading-[1.15] sm:text-5xl
 `
 export {LogoWrapper }

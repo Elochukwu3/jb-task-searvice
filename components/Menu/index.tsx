@@ -1,10 +1,14 @@
-import {Menu as  MenuWrappper} from "./MenuStyle"
+import {Menu as  MenuWrappper, MenuItem} from "./MenuStyle"
 
 
 const Menu = () => {
     
   return (
-    <MenuWrappper>Menu</MenuWrappper>
+    <MenuWrappper>
+      <MenuItem>Location</MenuItem>
+      <MenuItem>services</MenuItem>
+      <MenuItem>sign up/sign in</MenuItem>
+    </MenuWrappper>
   )
 }
 
