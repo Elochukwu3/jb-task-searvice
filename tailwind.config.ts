@@ -25,5 +25,8 @@ const config: Config = {
       },
     },
   },
+  variants: {
+    display: ['group-hover']
+  }
 }
 export default config
