@@ -14,7 +14,7 @@ const { isDropdownOpen, handleDropDown, handler } = useDropDown()
       <MenuItem>location</MenuItem>
       <MenuItem onClick={handleDropDown} onMouseEnter={()=>handler(true)}  $bool={true}>
          service
-      <DropDown isDropdownOpen={isDropdownOpen}/>
+      <DropDown/>
       </MenuItem>
       <MenuItem>sign up/sign in</MenuItem>
       <ButtonWrapper>Become Mender</ButtonWrapper>

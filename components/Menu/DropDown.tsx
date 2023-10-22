@@ -1,19 +1,11 @@
 import { DeskTopDropDownWrapper, UlWrapper } from "./MenuStyle";
-import {linkList} from "@utils/store_data/link_list";
+import List from "./List"
 
-type isDropdown = {
-  isDropdownOpen?: Boolean;
-};
-const DropDown = ({ isDropdownOpen }: isDropdown) => {
+const DropDown = () => {
   return (
     <DeskTopDropDownWrapper>
       <UlWrapper>
-        <li className="mx-auto block opacity-70 text-zinc-500  pt-3 w-full">
-          Popular Tasks{" "}
-        </li>
-        {linkList.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
+        <List/>
       </UlWrapper>
     </DeskTopDropDownWrapper>
   );
