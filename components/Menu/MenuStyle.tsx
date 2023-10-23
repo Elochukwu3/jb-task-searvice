@@ -17,10 +17,10 @@ capitalize font-medium max-lg:font-normal px-2 cursor-pointer
     before:block before:border-slate-300 z-50 h-auto hidden  hover:block group-hover:inline-block 
      right-0  border-x border-b border-slate-300 shadow-md bg-white pb-4"
     `
-    const UlWrapper = tw.div`w-full space-y-3 px-14  text-custom-greaner`;
+    const UlWrapper = tw.div`w-full space-y-3 px-14 pb-3 text-custom-greaner`;
 
-    const MobileStyle = tw.div`block overflow-scroll relative space-y-6 text-xl font-semibold pb-5 px-12 bg-white h-full w-80 text-custom-greaner`;
-    const MobileWrapper = tw.div`bg-[#7b7f82e6] z-50 block inset-0 sm:hidden fixed left-0`;
+    const MobileStyle = tw.div`block overflow-scroll relative space-y-5 text-xl font-semibold pb-5  bg-white h-auto w-full text-custom-greaner`;
+    const MobileWrapper = tw.div`bg-black z-50 block inset-0 sm:hidden  bg-opacity-30 backdrop-blur-sm fixed left-0`;
     const MobileMenuWrapper =tw.div`absolute top-0 z-50 space-y-6 w-full tex overflow-scroll bg-white h-full`
 
 export { Menu, MenuItem,  DeskTopDropDownWrapper, UlWrapper, MobileStyle, MobileWrapper, MobileMenuWrapper   };

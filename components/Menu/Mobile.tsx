@@ -7,8 +7,9 @@ const Mobile = () => {
   const isTrue = "";
   return (
     <MobileWrapper>
+       <div className=" bg-white h-full w-80 px-12">
+       <div className="block ml-auto w-fit text-xl pt-1">x</div>
       <MobileStyle>
-        <div className="block ml-auto text-3xl w-fit">x</div>
         {isTrue ? (
           <>
             <MenuItem>location</MenuItem>
@@ -20,6 +21,7 @@ const Mobile = () => {
           <List />
         )}
       </MobileStyle>
+       </div>
     </MobileWrapper>
   );
 };
