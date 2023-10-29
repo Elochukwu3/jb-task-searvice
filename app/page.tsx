@@ -1,11 +1,10 @@
-import Nav from '@components/Nav'
-import Image from 'next/image'
+// import Banner from "@components/Home/Banner"
 
 export default function Home() {
   return (
     <main className="">
-      {/* <Nav/> */}
-<div>Hello</div>
+      hello
+      {/* <Banner/> */}
     </main>
   )
 }
