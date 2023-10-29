@@ -21,8 +21,7 @@ capitalize font-medium max-lg:font-normal px-2 cursor-pointer
 
     const MobileStyle = tw.div`block overflow-y-auto relative space-y-5 text-xl font-semibold pb-5  bg-white h-auto w-full text-custom-greaner`;
     const MobileWrapper = tw.div`bg-black z-50 block inset-0 sm:hidden  bg-opacity-10 backdrop-blur-sm fixed left-0`;
-    const MobileMenuWrapper =tw.div`absolute top-0 z-50 space-y-6 w-full tex overflow-scroll bg-white h-full`
 
-export { Menu, MenuItem,  DeskTopDropDownWrapper, UlWrapper, MobileStyle, MobileWrapper, MobileMenuWrapper   };
+export { Menu, MenuItem,  DeskTopDropDownWrapper, UlWrapper, MobileStyle, MobileWrapper };
 
 
