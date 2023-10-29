@@ -1,4 +1,3 @@
-// "use client"
 import { MobileStyle, MobileWrapper, MobileMenuWrapper } from "./MenuStyle";
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import { MenuItem } from "./MenuStyle";
