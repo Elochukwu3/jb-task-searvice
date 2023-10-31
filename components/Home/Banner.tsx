@@ -1,10 +1,11 @@
-
+import {BannerWrapper} from "./homeStyle"
 
 const Banner = () => {
   return (
-    <div>
+    <BannerWrapper style={{backgroundImage: `url(${"../images/banner-1.jpg"})`,
+}} className="main">
         hi how are you
-    </div>
+    </BannerWrapper>
   )
 }
 

@@ -1,10 +1,10 @@
-// import Banner from "@components/Home/Banner"
+import Banner from "@components/Home/Banner"
 
 export default function Home() {
   return (
     <main className="">
-      hello
-      {/* <Banner/> */}
+      <Banner/>
+      <div className="curve"/>
     </main>
   )
 }
