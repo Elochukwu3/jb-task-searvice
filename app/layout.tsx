@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "@styles/globals.css";
 import { ReactProp } from "@app-types/type";
 import Nav from "@components/Nav";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "JBProMend",

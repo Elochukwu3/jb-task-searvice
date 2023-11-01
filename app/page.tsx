@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="">
       <Banner/>
-      <div className="curve"/>
+      {/* <div className="curve"/> */}
     </main>
   )
 }

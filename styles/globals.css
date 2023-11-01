@@ -79,11 +79,11 @@
   content: '';
   display: block;
   position: absolute;
-  border-radius: 100% 50%;
+    border-radius: 100% 50%;
   width: 55%;
   height: 100%;
   transform: translate(84%, 60%);
-  background-color: hsl(139, 55%, 69%);
+  background-color: white;
 }
 
 .curve::after {
@@ -93,7 +93,7 @@
   border-radius: 100% 50%;
   width: 55%;
   height: 100%;
-  background-color: #3c31dd;
+  background-color: white;
   transform: translate(-4%, 40%);
   z-index: -1;
 }
