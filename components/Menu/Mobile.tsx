@@ -1,4 +1,5 @@
-import { MobileStyle, MobileWrapper, MobileMenuWrapper } from "./MenuStyle";
+"use client"
+import { MobileStyle, MobileWrapper } from "./MenuStyle";
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import { MenuItem } from "./MenuStyle";
 import List from "./List";
