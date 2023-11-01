@@ -11,6 +11,12 @@
   list-style-type: none;
   box-sizing: border-box;
 }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input:focus { font-size: 16px!important}
 .main:before {
   /* background: radial-gradient(circle, rgba(112, 214, 148, 0.023) 0, #f6f5f1 110%); */
   position: absolute;
