@@ -1,4 +1,3 @@
-"use client"
 import {LargerInputWrapper, InputForm} from "./inputStyle";
 import { XCircle, MagnifyingGlass} from "@phosphor-icons/react";
 
