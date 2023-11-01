@@ -3,8 +3,7 @@ import {BannerWrapper} from "./homeStyle"
 
 const Banner = () => {
   return (
-    <BannerWrapper style={{backgroundImage: `url(${"../images/banner-1.jpg"})`,
-}} className="main">
+    <BannerWrapper  className="main">
         <SearchSection/>
     </BannerWrapper>
   )
