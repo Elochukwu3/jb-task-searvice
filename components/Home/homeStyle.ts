@@ -13,4 +13,5 @@ const HelperButton = tw.span `block w-fit m-2 text-center font-satoshi font-semi
 elative text-custom-greaner text-sm border border-custom-greaner rounded-md py-1 px-2`;
 const HelperButtonWrapper = tw.div`flex flex-wrap max-sm:w-11/12 max-sm:justify-center my-3 max-sm:mx-auto`;
 
+
 export { HelperButton, HelperButtonWrapper, BannerWrapper, SearchBoldText, SearchSectionWrapper };

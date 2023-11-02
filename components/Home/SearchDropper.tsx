@@ -14,3 +14,4 @@ const SearchDropper = ()=>{
         </div>
     )
 }
+export default SearchDropper;
