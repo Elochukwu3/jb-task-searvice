@@ -7,9 +7,9 @@ const SearchSection = () => {
     <SearchSectionWrapper>
         <SearchBoldText>Get help. Gain happiness.</SearchBoldText>
         <span className="border-t-2 px-2 my-4 py-4 border-custom-dark block mx-auto w-fit">just task</span>
-        <div className="grid grid-cols-3 space-x-3 max-sm:space-x-0 gap-y-4 max-sm:flex max-sm:flex-col max-sm:justify-center">
+        <div className="px-3 grid grid-cols-3 space-x-3 max-sm:space-x-0 gap-y-4 max-sm:flex max-sm:flex-col max-sm:justify-center">
         <Input/>
-        <ButtonWrapper>Get help today</ButtonWrapper>
+        <ButtonWrapper $bool={true}>Get help today</ButtonWrapper>
         </div>
     </SearchSectionWrapper>
   )
