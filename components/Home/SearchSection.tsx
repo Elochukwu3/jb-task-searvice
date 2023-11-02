@@ -21,7 +21,7 @@ const SearchSection = ({ isBool }: { isBool?: Boolean }) => {
         just task
       </span>
       <div className="px-3 grid grid-cols-3 space-x-3 max-sm:space-x-0 gap-y-4 max-sm:flex max-sm:flex-col max-sm:justify-center">
-        <div className="w-full col-span-2 ">
+        <div className="w-full col-span-2 relative">
           <Input handler={handleDropDown} blurhandler={handler}/>
           {
           isDropdownOpen && <SearchDropper/>
