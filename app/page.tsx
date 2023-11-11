@@ -1,5 +1,6 @@
-import Banner from "@components/Home/Banner"
 import { Metadata } from 'next'; 
+import Banner from "@components/Home/Banner";
+import ProductCard from "@components/Home/Card"
  
 export const metadata: Metadata = {
   openGraph: {
@@ -20,8 +21,13 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col justify-center gap-10">
       <Banner/>
+      <div className="grid grid-cols-3 ">
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      </div>
       <div className="urve"/>
     </main>
   )
