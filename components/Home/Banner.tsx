@@ -6,13 +6,14 @@ import {carousel_images} from "@db/carousel"
 
 const Banner = () => {
   const [slider, setSlider] = useState(0);
-  const item = [1,2,4]
+
   const nextHandler = ()=>{
     setSlider(prev => prev < carousel_images.length-1 ? prev + 1 : 0)
   }
 const prevHandler = ()=>{
   setSlider((prev)=>(prev<= 0 ? carousel_images.length -1 : prev-1))
 }
+
   return (
     <>
     <BannerWrapper  className="main " 
