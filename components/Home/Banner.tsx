@@ -20,6 +20,7 @@ const prevHandler = ()=>{
     style={{backgroundImage: `url(${carousel_images[slider]})`}}>
       <div onClick={prevHandler} className="absolute cursor-pointer z-10 h-24 w-24 left-10" />
       <div onClick={nextHandler} className="absolute cursor-pointer z-10 h-24 w-24  right-10"/>
+
       <SearchSection isBool={true}/>
     </BannerWrapper>
       <SearchSection/>
