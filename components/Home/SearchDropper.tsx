@@ -1,9 +1,9 @@
 import { SearchDropperwrapper } from "./homeStyle";
 
-const SearchDropper = () => {
+const SearchDropper = ({blurhandler}:{blurhandler : (item:Boolean) => void}) => {
   const newArray = Array.from({ length: 9 }, (_, i) => i);
   return (
-    <SearchDropperwrapper>
+    <SearchDropperwrapper onClick={()=> blurhandler(true)}>
       <p className="text-sm">Describe your task in a few words</p>
       <p className="flex justify-between">
         <span>Popular Projects</span>
