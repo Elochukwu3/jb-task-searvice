@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 const ProductCard = ()=>{
 
@@ -7,9 +7,9 @@ const ProductCard = ()=>{
 
 
 
-<div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div className="max-w-sm mx-auto relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        {/* <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" /> */}
+        <Image src="/images/banner-1.jpg" alt="card"  width={500} height={500} />
     </a>
     <div className="p-5">
         <a href="#">
