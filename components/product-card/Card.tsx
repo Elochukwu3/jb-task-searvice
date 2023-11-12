@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { ProductCardWrapper } from "./cardStyles";
+// import {Triangle} from "@phosphor-icons/react";
+
 const ProductCard = () => {
+ 
   return (
     <ProductCardWrapper>
       <a href="#">
@@ -75,10 +78,13 @@ const ProductCard = () => {
           crystal-clear viewing experience! #TelevisionMender #FixItInAMinute
         </p>
         <ul className="text-sm my-5">
-            <li>Seamless Symmetry, Seamless Satisfaction!</li>
+            <li className="inline-flex gap-2">
+            {/* <Triangle size={24} color={"#0d7a5f"}/> */}
+            Seamless Symmetry, Seamless Satisfaction!
+            </li>
             <li>A Click, A Fix, A Wow – Thank You, JPPromend!</li>
             <li>From Fuzzy to Fantastic – JPPromend Delivers!</li>
-        </ul>
+        </ul>   
       </div>
     </ProductCardWrapper>
   );
