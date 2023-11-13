@@ -61,7 +61,7 @@ input:focus { font-size: 16px!important}
 
 /* Tailwind Styles */
 @layer components {
-  @variants responsive{
+  @layer utilities{
     .no-scrollbar::-webkit-scrollbar{
       display: none
     }
