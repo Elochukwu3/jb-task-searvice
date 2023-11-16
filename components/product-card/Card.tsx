@@ -43,7 +43,7 @@ const ProductCard = () => {
             />
           </div>
         </div>
-        <p className="text-sm p-5 bg-green-50/50">
+        <p className="text-sm p-5 text-white bg-green-50/50">
           Transform your TV troubles into triumphs with Television Mender! 🛠️
           Say goodbye to fuzzy screens and pixelated problems. Our expert team
           is here to rescue your favorite shows and movies. Fast, reliable, and
@@ -54,6 +54,26 @@ const ProductCard = () => {
         <Testimonial />
         <Testimonial />
         <Testimonial />
+        <div className="laptop-container">
+      <div className="screen">
+        <div className="content">
+          <p> is here to rescue your favorite shows and movies. Fast, reliable, and
+          hassle-free TV repair, right at your fingertips. Click, mend, and get
+          back to binge-watching bliss! 📺✨ Visit our website now for a
+          crystal-clear viewing experience! #TelevisionMender #FixItInAMinute</p>
+        </div>
+      </div>
+    </div>
+    <div className="book-container">
+      <div className="book">
+        <div className="cover"></div>
+        <div className="left-page"></div>
+        <div className="right-page"></div>
+        <div className="center-page">
+          <p>Your Text Here</p>
+        </div>
+      </div>
+    </div>
         {/* <details className="text-sm my-5 px-5">
           <summary>A Click, A Fix, A Wow – Thank You, JPPromend!<span></span></summary>
         <div>Can I work on a project I started before the hackathon? Can I work on a project I
