@@ -64,24 +64,6 @@ const ProductCard = () => {
         </div>
       </div>
     </div> */}
-    <div className="book-container">
-      <div className="book pb-6">
-        <div className="one"></div>
-        <div className="two"></div>
-      </div>
-    </div>
-        {/* <details className="text-sm my-5 px-5">
-          <summary>A Click, A Fix, A Wow – Thank You, JPPromend!<span></span></summary>
-        <div>Can I work on a project I started before the hackathon? Can I work on a project I
-           started before the hackathon
-           </div>
-        </details>
-        <details className="text-sm my-5 px-5">
-          <summary>From Fuzzy to Fantastic – JPPromend Delivers!<span></span></summary>
-        <div>Can I work on a project I started before the hackathon? Can I work on a project I
-           started before the hackathon
-           </div>
-        </details> */}
       </div>
     </ProductCardWrapper>
   );

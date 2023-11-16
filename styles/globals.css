@@ -95,39 +95,8 @@ input:focus { font-size: 16px!important}
     transform: rotateX(0deg); /* Rotate to 0 degrees, opening up the laptop */
   }
 }
-.testimonial{
-  transform: skew(10deg)
-}
-.one,.two{
-    display: block;
-    padding: 2em 4em;
-    position: relative;
-    margin-bottom: 30px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      border-left: 2em solid transparent;
-      border-right: 2em solid transparent;
-      transform: rotateY(-30deg);
-      /* margin-top: 20px; */
-     
-}}
-.one{
-   &::before {
-      border-top: 6em solid green;
-      /* transform: rotateY(40deg) */
-}
-}
-.two{
-   &::before {
-    border-bottom: 6em solid red;
-      /* transform: rotateY(40deg) */
-}
-}
+
+
 
 /* Tailwind Styles */
 @layer components {
