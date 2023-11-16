@@ -58,60 +58,6 @@ input:focus { font-size: 16px!important}
     padding: 0;
   }
 }
-/* BookAnimation.css */
-.book-container {
-  perspective: 800px; /* Adjust the perspective value */
-}
-
-.book {
-  position: relative;
-  width: 200px; /* Adjust the width of your book */
-  height: 300px; /* Adjust the height of your book */
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  animation: openBook 2s ease-in-out forwards; /* Animation duration and easing */
-}
-
-.cover,
-.left-page,
-.right-page,
-.center-page {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  background-color: #eee; /* Adjust the color of your book pages */
-}
-
-.cover {
-  left: 0;
-  border-radius: 0 10px 10px 0; /* Adjust the border-radius for the cover */
-}
-
-.left-page {
-  left: 0;
-  clip-path: polygon(0 0, 100% 0, 0% 100%); /* Create a triangular shape */
-}
-
-.right-page {
-  right: 0;
-  clip-path: polygon(100% 0, 100% 100%, 0% 100%); /* Create a triangular shape */
-}
-
-.center-page {
-  left: 25%; /* Adjust the left position for center alignment */
-  right: 25%; /* Adjust the right position for center alignment */
-  z-index: 1; /* Ensure the center page is on top of the other pages */
-}
-
-@keyframes openBook {
-  from {
-    transform: rotateY(90deg); /* Initial rotation */
-  }
-  to {
-    transform: rotateY(0deg); /* Rotate to 0 degrees, opening up the book */
-  }
-}
 
 .laptop-container {
   position: relative;
@@ -132,7 +78,7 @@ input:focus { font-size: 16px!important}
   background-color: #fff; /* Screen color */
   border-radius: 5px; /* Rounded corners for the screen */
 
-  transform-origin: center center;
+  transform-origin: center bottom;
   transform-style: preserve-3d;
   animation: openLaptop 4s ease-in-out infinite; /* Animation duration and easing */
 }
@@ -148,6 +94,39 @@ input:focus { font-size: 16px!important}
   to {
     transform: rotateX(0deg); /* Rotate to 0 degrees, opening up the laptop */
   }
+}
+.testimonial{
+  transform: skew(10deg)
+}
+.one,.two{
+    display: block;
+    padding: 2em 4em;
+    position: relative;
+    margin-bottom: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-left: 2em solid transparent;
+      border-right: 2em solid transparent;
+      transform: rotateY(-30deg);
+      /* margin-top: 20px; */
+     
+}}
+.one{
+   &::before {
+      border-top: 6em solid green;
+      /* transform: rotateY(40deg) */
+}
+}
+.two{
+   &::before {
+    border-bottom: 6em solid red;
+      /* transform: rotateY(40deg) */
+}
 }
 
 /* Tailwind Styles */

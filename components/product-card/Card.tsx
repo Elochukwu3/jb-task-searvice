@@ -54,7 +54,7 @@ const ProductCard = () => {
         <Testimonial />
         <Testimonial />
         <Testimonial />
-        <div className="laptop-container">
+        {/* <div className="laptop-container">
       <div className="screen">
         <div className="content">
           <p> is here to rescue your favorite shows and movies. Fast, reliable, and
@@ -63,15 +63,11 @@ const ProductCard = () => {
           crystal-clear viewing experience! #TelevisionMender #FixItInAMinute</p>
         </div>
       </div>
-    </div>
+    </div> */}
     <div className="book-container">
-      <div className="book">
-        <div className="cover"></div>
-        <div className="left-page"></div>
-        <div className="right-page"></div>
-        <div className="center-page">
-          <p>Your Text Here</p>
-        </div>
+      <div className="book pb-6">
+        <div className="one"></div>
+        <div className="two"></div>
       </div>
     </div>
         {/* <details className="text-sm my-5 px-5">
