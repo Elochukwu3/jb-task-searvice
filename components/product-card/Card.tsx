@@ -54,6 +54,9 @@ const ProductCard = () => {
         <Testimonial />
         <Testimonial />
         <Testimonial />
+        <div className="opening-container">
+      <div className="opening-div"></div>
+    </div>
         {/* <div className="laptop-container">
       <div className="screen">
         <div className="content">
