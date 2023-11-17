@@ -1,4 +1,5 @@
 import useDropDown from "@hooks/useDropDown";
+ import {motion } from "framer-motion";
 
 
 const Testimonial = () => {
@@ -7,9 +8,11 @@ const Testimonial = () => {
         <summary className="inline-flex justify-between">
           A Click, A Fix, A Wow – Thank You, JPPromend!<span className="after:content-['+']"></span>
         </summary>
-        <div className="bg-custom-greaner p-4 testimonial">
+        <div className="">
+        <div className="bg-custom-greaner p-4">
           Can I work on a project I started before the hackathon? Can I work on
           a project I started before the hackathon
+        </div>
         </div>
       </details>
   );
