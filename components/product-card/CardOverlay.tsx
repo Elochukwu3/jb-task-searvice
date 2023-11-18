@@ -1,25 +1,32 @@
-"use client"
 import Image from "next/image";
 import { CardOverLayWrap } from "./cardStyles";
 import Testimonial from "./Testimonial";
-import useDropDown from "@hooks/useDropDown"
+import {motion, AnimatePresence} from "framer-motion"
 
-const CardOverlay = ()=>{
-    const { isDropdownOpen, handleDropDown, handler } = useDropDown()
+
+const CardOverlay = ({swipe, handler}:{swipe:Boolean, handler:()=> void})=>{
+ 
     const objectArray = [1, 2,4];
-
     return( 
-    <CardOverLayWrap $bool={isDropdownOpen}>
+    <CardOverLayWrap $bool={swipe}>
     <h5 className="my-3 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
       Mount a TV, art or shelves
     </h5>
-    <div className="h-40 overflow-x-scroll no-scrollbar flex gap-5 w-10/12 ml-auto bg-white">
-     
-      {objectArray.map((item, i)=>(
-      <div key={item} className="h-full relative w-28 rounded-md overflow-hidden shrink-0">
+     <AnimatePresence initial={false}>
+     {swipe &&
+    <motion.div 
+    initial={{ translateX: 200 }}
+      whileInView={{ translateX: 0 }}
+      transition={{ duration: 1.2, delay:0, type: "spring" }} 
+    className="h-40 overflow-x-scroll no-scrollbar flex gap-5 w-10/12 ml-auto bg-white">
+    {objectArray.map((item, i)=>(
+      <div  
+      key={item} className="h-full relative w-28 rounded-md overflow-hidden shrink-0">
         <Image src="/images/banner-1.jpg" alt="card" fill  style={{objectFit: "cover"}}/>
       </div>))}
-    </div>
+      </motion.div>
+      }
+     </AnimatePresence>
 
     <p className="text-sm p-5 text-black bg-green-50/50">
       Transform your TV troubles into triumphs with Television Mender! 🛠️
