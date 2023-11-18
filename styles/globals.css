@@ -59,44 +59,6 @@ input:focus { font-size: 16px!important}
   }
 }
 
-.laptop-container {
-  position: relative;
-  width: 300px; /* Adjust the width of your laptop */
-  height: 200px; /* Adjust the height of your laptop */
-  background-color: #333; /* Laptop color */
-  border-radius: 10px; /* Rounded corners for the laptop */
-
-  perspective: 1000px; /* Perspective for 3D effect */
-}
-
-.screen {
-  position: absolute;
-  top: 20px; /* Adjust the top position of the screen */
-  left: 5px; /* Adjust the left position of the screen */
-  right: 5px; /* Adjust the right position of the screen */
-  bottom: 20px; /* Adjust the bottom position of the screen */
-  background-color: #fff; /* Screen color */
-  border-radius: 5px; /* Rounded corners for the screen */
-
-  transform-origin: center bottom;
-  transform-style: preserve-3d;
-  animation: openLaptop 4s ease-in-out infinite; /* Animation duration and easing */
-}
-
-.content {
-  padding: 20px;
-}
-
-
-@keyframes openLaptop {
-  from {
-    transform: rotateX(90deg); /* Rotate 90 degrees initially */
-  }
-  to {
-    transform: rotateX(0deg); /* Rotate to 0 degrees, opening up the laptop */
-  }
-}
-
 
 
 /* Tailwind Styles */
@@ -151,25 +113,23 @@ input:focus { font-size: 16px!important}
   transform: translate(-4%, 40%);
   z-index: -1;
 }
-/* OpeningAnimation.css */
 
-
-.opening-div {
-  position: relative;
-  width: 200px; /* Adjust the width of your div */
-  height: 300px; /* Adjust the height of your div */
-  background-color: black; /* Adjust the color of your div */
-  margin: 50px auto; /* Adjust the margin as needed */
-  transform-origin: top left;
-  animation: openDiv 2s ease-in-out infinite; /* Animation duration and easing */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
 }
 
-@keyframes openDiv {
-  from {
-    transform: scaleY(0); /* Initial scaleY to 0, making it vertically turned */
-  }
-  to {
-    transform: scaleY(1); /* scaleY to 1, opening up the div */
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
 }
 
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}
