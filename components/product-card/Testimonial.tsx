@@ -3,6 +3,9 @@ import useDropDown from "@hooks/useDropDown";
 
 
 const Testimonial = () => {
+  const vairant={
+      
+  }
   return (
       <details className="text-sm my-5 px-5 ">
         <summary className="inline-flex justify-between">

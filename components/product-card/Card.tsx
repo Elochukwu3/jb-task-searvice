@@ -44,7 +44,7 @@ const ProductCard = () => {
         {!swipe && (
           <ButtonWrapper className="after:hover:w-0 hover:text-custom-greaner" onClick={handleDropDown}>see more</ButtonWrapper>
         )}
-        <CardOverlay swipe={swipe} handler={handleDropDown} />
+        <CardOverlay swipe={swipe} />
       </div>
     </ProductCardWrapper>
   );
