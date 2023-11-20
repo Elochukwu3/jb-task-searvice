@@ -31,7 +31,7 @@ const Testimonial = () => {
         <summary className="inline-flex justify-between">
           A Click, A Fix, A Wow – Thank You, JPPromend!<span className="after:content-['+']"></span>
         </summary>
-        < AnimatePresence mode="wait">
+        < AnimatePresence mode="sync" initial={false}>
         <motion.div variants={variant} initial="initial" animate="enter" className="text-white bg-custom-greaner p-4 origin-center ease-">
           Can I work on a project I started before the hackathon? Can I work on
           a project I started before the hackathon
