@@ -1,6 +1,7 @@
 import { Metadata } from 'next'; 
 import Banner from "@components/Home/Banner";
-import ProductCard from "@components/product-card/Card"
+import ProductCard from "@components/product-card/Card";
+import CardParallax from "@components/product-card/CardParallax";
  
 export const metadata: Metadata = {
   openGraph: {
@@ -32,9 +33,17 @@ export default function Home() {
       <ProductCard/>
       <ProductCard/>
       </div>
-      <div className="rad">hello</div>
+      {/* <div className="rad">hello</div> */}
       {/* //create another folder and file calle help eith then add animation by the side and texte by the right */}
-      <div className="curve"/>
+      {/* <div className="curve"/> */}
+      <div className="flex flex-col items-center min-h-screen">
+      <div className="my-[50vh]">
+        <CardParallax color={"red"} index={0} />
+        <CardParallax color={"green"} index={1} />
+        <CardParallax color={"blue"} index={2} />
+        <CardParallax color={"pink"} index={3} />
+      </div>
+    </div>
     </main>
   )
 }

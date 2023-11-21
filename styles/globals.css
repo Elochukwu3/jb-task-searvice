@@ -3,9 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*::-webkit-scrollbar {
-  width: 0px;
-}
 
 *::-webkit-scrollbar-track {
   background: #ffffff;
@@ -15,9 +12,6 @@
   background-color: #000000;
   border-radius: 0px;
   border: 0px solid #ffffff;
-}
-:root {
-  --main-height: 112px;
 }
 
 * {
@@ -133,3 +127,4 @@ input:focus {
   transform: translate(-4%, 40%);
   z-index: -1;
 }
+

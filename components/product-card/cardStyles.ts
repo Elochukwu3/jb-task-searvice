@@ -12,3 +12,6 @@ bg-white absolute z-20 inset-x-0 bottom-0 top-0 py-5 duration-700 max-sm:rounded
 overflow-y-auto overflow-x-hidden no-scrollbar origin-bottom ease-[cubic-bezier(0.83, 0, 0.17, 1)]
 ${(p)=> (p.$bool ? "scale-y-95   opacity-100" : "scale-y-0 opacity-0")} transition-all
 `
+export const CardParallaxWrapper = tw.div`
+    flex h-screen items-center justify-center top-0 sticky
+` 
