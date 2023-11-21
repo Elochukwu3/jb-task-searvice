@@ -1,0 +1,9 @@
+{
+    "tailwindCSS.emmetCompletions": true,
+    "autoimport.useSemiColon": true,
+    "autoimport.spaceBetweenBraces": true,
+    "autoimport.autoComplete": true,
+    "javascript.autoClosingTags": true,
+    "reactSnippets.settings.typescript": true,
+    "reactSnippets.settings.prettierEnabled": true
+}
