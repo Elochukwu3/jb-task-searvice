@@ -52,16 +52,6 @@ const CardOverlay = ({swipe}:{swipe:Boolean})=>{
         <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
       ))
     }
-    {
-      [2,3,4].map((item, index)=>(
-        <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
-      ))
-    }
-    {
-      [2,3,4].map((item, index)=>(
-        <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
-      ))
-    }
   </CardOverLayWrap>
   )
 }

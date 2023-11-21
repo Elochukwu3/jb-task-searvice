@@ -29,15 +29,6 @@ export default function Home() {
       <ProductCard/>
       </div>
       <div className="rad">hello</div>
-      {/* <div className="mx-auto overflow-hidden  w-1/2 border border-green-400">
-      <div className="bg-red-900 mx-auto overflow-hidden relative cont  w-full w-ato flex items-center">
-      <div className="trapezium">
-      </div>
-      <span className='span'></span>
-      <div className="trapezium2">
-      </div>
-      </div>
-      </div> */}
       <div className="urve"/>
     </main>
   )
