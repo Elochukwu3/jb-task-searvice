@@ -28,9 +28,13 @@ export default function Home() {
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
+      <ProductCard/>
       </div>
       <div className="rad">hello</div>
-      <div className="urve"/>
+      {/* //create another folder and file calle help eith then add animation by the side and texte by the right */}
+      <div className="curve"/>
     </main>
   )
 }
