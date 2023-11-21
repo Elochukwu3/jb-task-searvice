@@ -23,7 +23,8 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center gap-10">
       <Banner/>
-      <div className="grid max-sm:space-y-8 max-sm:p-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
+      <h2 className="text-2xl font-bold mt-5 mb-3 mr-4">Popular Projects</h2>
+      <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
