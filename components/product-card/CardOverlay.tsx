@@ -15,10 +15,11 @@ const CardOverlay = ({swipe}:{swipe:Boolean})=>{
      <AnimatePresence initial={false}>
      {swipe &&
     <motion.div 
-    initial={{ translateX: 200 }}
-      whileInView={{ translateX: 0 }}
-      transition={{ duration: 1.2, delay:0, type: "spring" }} 
-    className="h-40 overflow-x-scroll no-scrollbar flex gap-5 w-10/12 ml-auto bg-white">
+    initial={{x: 200 }}
+    exit={{x: 200}}
+      whileInView={{ x: 0 }}
+      transition={{ duration: 1.2, delay:0.1, type: "spring" , bounce: 0.34}} 
+    className="h-40 overflow-x-scroll no-scrollbar flex gap-5 w-11/12 ml-auto bg-white">
     {objectArray.map((item, i)=>(
       <div  
       key={item} className="h-full relative w-28 rounded-md overflow-hidden shrink-0">
