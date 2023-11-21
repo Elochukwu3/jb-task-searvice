@@ -186,14 +186,4 @@ input:focus { font-size: 16px!important}
       opacity: 1;
     }
 }
-@keyframes fold2 {
-  0%{
-    border-width: 0;
-    }
-    50%{
-      border-width: calc(var(--main-height)/2);
-    }
-    100%{
-      border-width: var(--main-height);
-    }
-}
+

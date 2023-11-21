@@ -25,6 +25,7 @@ const SearchSection = ({ isBool }: { isBool?: Boolean }) => {
           <Input handler={handleDropDown} blurhandler={handler}/>
           {
           isDropdownOpen && <SearchDropper blurhandler={handler}/>
+
           }
           </div>
         <ButtonWrapper $bool={true}>Get help today</ButtonWrapper>
