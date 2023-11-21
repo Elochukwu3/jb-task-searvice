@@ -1,10 +1,19 @@
+"use client"
+import {useState} from "react"
 import Image from "next/image";
 import { CardOverLayWrap } from "./cardStyles";
 import Testimonial from "./Testimonial";
-import {motion, AnimatePresence} from "framer-motion"
+import {motion, AnimatePresence} from "framer-motion";
 
 
 const CardOverlay = ({swipe}:{swipe:Boolean})=>{
+  const [track, setTrack] = useState<Number | null>(null)
+  const toggle = (index: any)=>{
+    if(index === track ){
+      return setTrack(null)
+    }
+    setTrack(index)
+  }
  
     const objectArray = [1, 2,4];
     return( 
@@ -37,9 +46,22 @@ const CardOverlay = ({swipe}:{swipe:Boolean})=>{
       back to binge-watching bliss! 📺✨ Visit our website now for a
       crystal-clear viewing experience! #TelevisionMender #FixItInAMinute
     </p>
-    <Testimonial />
-    <Testimonial />
-    <Testimonial />
+
+    {
+      [2,3,4].map((item, index)=>(
+        <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
+      ))
+    }
+    {
+      [2,3,4].map((item, index)=>(
+        <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
+      ))
+    }
+    {
+      [2,3,4].map((item, index)=>(
+        <Testimonial key={index}  handleTracker={()=>toggle(index)} track={track === index}/>
+      ))
+    }
   </CardOverLayWrap>
   )
 }

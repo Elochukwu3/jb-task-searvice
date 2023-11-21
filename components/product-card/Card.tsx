@@ -5,20 +5,7 @@ import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import CardOverlay from "./CardOverlay";
 import useDropDown from "@hooks/useDropDown";
 import { motion, AnimatePresence } from "framer-motion";
-// import {Triangle} from "@phosphor-icons/react/dist/ssr";
-const btnVariant = {
-  close: {
-    y: -10,
-  },
-  open: {
-    y: [0, -5, 0,-5, 0],
-    transition: {
-      duration: 0.9,
-      delay: 0,
-      type: "tween",
-    },
-  },
-};
+import { btnVariant } from "@utils/store_data/variants/motionVariants";
 
 const ProductCard = () => {
   const { isDropdownOpen: swipe, handleDropDown } = useDropDown();
