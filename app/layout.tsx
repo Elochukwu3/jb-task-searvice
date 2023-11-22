@@ -22,7 +22,7 @@ export default function RootLayout({ children }: ReactProp) {
         <main className="relative mx-auto z-10 w-full overflow-x-hidden">
           <Nav />
 
-          <div className="relative mx-auto z-10 max-w-8xl  px- w-full">
+          <div className="relative mx-auto z-10 max-w-7xl  px- w-full">
             {children}
           </div>
         </main>

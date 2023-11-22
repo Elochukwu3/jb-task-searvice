@@ -4,7 +4,9 @@ import { ButtonProp } from "@components/Button/ButtonStyle";
 
 export const ProductCardWrapper = tw.div` 
 max-w-sm xl:w-9/12 md:w-11/12 mx-auto relative bg-white border border-custom-greaner
-overflow-hidden rounded-lg min-h shadow max-sm:shadow-md shadow-white h-auto dark:bg-transparent 
+overflow-hidden rounded-lg min-h shadow max-sm:shadow-md shadow-white h-auto 
+dark:bg-transparent  
+
 
 `;
 export const CardOverLayWrap = tw.div<ButtonProp>`
