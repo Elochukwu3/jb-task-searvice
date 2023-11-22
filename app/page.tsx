@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center gap-10">
+    <main className="items-center flex flex-col justify-center gap-10">
       <Banner/>
       <h2 className="text-2xl font-bold mt-5 mb-3 mr-4">Popular Projects</h2>
-      <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
+      <div className="grid bg-red-900 max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
@@ -33,17 +33,6 @@ export default function Home() {
       <ProductCard/>
       <ProductCard/>
       </div>
-      {/* <div className="rad">hello</div> */}
-      {/* //create another folder and file calle help eith then add animation by the side and texte by the right */}
-      {/* <div className="curve"/> */}
-      <div className="flex flex-col items-center min-h-screen">
-      <div className="my-[50vh]">
-        <CardParallax color={"red"} index={0} />
-        <CardParallax color={"green"} index={1} />
-        <CardParallax color={"blue"} index={2} />
-        <CardParallax color={"pink"} index={3} />
-      </div>
-    </div>
     </main>
   )
 }

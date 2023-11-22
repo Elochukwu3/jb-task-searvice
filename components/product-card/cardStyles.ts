@@ -13,5 +13,5 @@ overflow-y-auto overflow-x-hidden no-scrollbar origin-bottom ease-[cubic-bezier(
 ${(p)=> (p.$bool ? "scale-y-95   opacity-100" : "scale-y-0 opacity-0")} transition-all
 `
 export const CardParallaxWrapper = tw.div`
-    flex h-screen items-center justify-center top-0 sticky
+sticky flex h-screen items-start justify-center top-5
 ` 
