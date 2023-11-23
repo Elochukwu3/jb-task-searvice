@@ -1,8 +1,8 @@
 import { Metadata } from 'next'; 
 import Banner from "@components/Home/Banner";
 import ProductCard from "@components/product-card/Card";
-import CardParallax from "@components/product-card/CardParallax";
- 
+import MoreDone from "@components/Home/getmoredone";
+
 export const metadata: Metadata = {
   openGraph: {
     title: 'JBProMend',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="items-center flex flex-col justify-center gap-10">
+    <div className="items-center flex flex-col justify-center gap-10">
       <Banner/>
-      <h2 className="text-2xl font-bold mt-5 mb-3 mr-4">Popular Projects</h2>
+      <h2 className="text-2xl font-bold mt-5 mb-3 mr-4 w-full">Popular Projects</h2>
       <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
       <ProductCard/>
       <ProductCard/>
@@ -33,6 +33,7 @@ export default function Home() {
       <ProductCard/>
       <ProductCard/>
       </div>
-    </main>
+      <MoreDone/>
+    </div>
   )
 }
