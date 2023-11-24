@@ -2,10 +2,14 @@ import { GetMoreWrapper } from "./style";
 import TextSvg from "./Svg";
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import {usersInfoHome} from "@utils/store_data/constants/svg";
+import Image from "next/image";
 
 const MoreDone = () => {
   return (
     <GetMoreWrapper>
+      <div>
+        <Image src={"https://images.airtasker.com/v7/www.airtasker.com/static/assets/033efe9095ab08b2.png"} width={2150} height={1447} alt="img"/>
+      </div>
       <div>
         <TextSvg />
         <div>
