@@ -1,20 +1,18 @@
-import { GetMoreWrapper } from "./style";
+import { GetMoreWrapper, GetMoreInner } from "./style";
 import TextSvg from "./Svg";
-import { ButtonWrapper } from "@components/Button/ButtonStyle";
+import { ButtonWrapper, } from "@components/Button/ButtonStyle";
 import {usersInfoHome} from "@utils/store_data/constants/svg";
 import Image from "next/image";
-
+// clip-path: inset(0px 0px 33%);
 const MoreDone = () => {
   return (
     <GetMoreWrapper>
-      <div>
-        <Image src={"https://images.airtasker.com/v7/www.airtasker.com/static/assets/033efe9095ab08b2.png"} width={2150} height={1447} alt="img"/>
-      </div>
-      <div>
+     <GetMoreInner>
+     <div className="flex-1">
         <TextSvg />
         <div>
           <p>Post any task. Pick the best person. Get it done.</p>
-          <ButtonWrapper>Post your task for free</ButtonWrapper>
+          <ButtonWrapper className="hover:none">Post your task for free</ButtonWrapper>
           <ButtonWrapper $bool={true}>Earn money as a Tasker</ButtonWrapper>
           <ul className="HeroStats__Wrapper-sc-2a7hty-0 kjYKut">
             <UsersInfo {...usersInfoHome[0]}/>
@@ -23,6 +21,10 @@ const MoreDone = () => {
           </ul>
         </div>
       </div>
+      <div className="h-[40vh] relative w-20 shrink-1">
+        <Image style={{transform:'matrix3d(-1.5099999904632568, 0, 0, 0, 0, 1.5099999904632568, 0, 0, 0, 0, 1, 0, 1207.5, -710.1199951171875, 0, 1)'}} src={"/images/carrier-image.png"} fill alt="img"/>
+      </div>
+     </GetMoreInner>
     </GetMoreWrapper>
   );
 };
