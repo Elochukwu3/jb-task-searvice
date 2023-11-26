@@ -25,14 +25,14 @@ export default function Home() {
     <div className="items-center flex flex-col justify-center gap-10">
       <Banner/>
       <h2 className="text-2xl font-bold mt-5 mb-3 mr-4 w-full">Popular Projects</h2>
-      <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
+      {/* <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
       <ProductCard/>
-      </div>
+      </div> */}
       <MoreDone/>
     </div>
   )

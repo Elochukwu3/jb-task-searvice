@@ -1,4 +1,4 @@
-import { GetMoreWrapper, GetMoreInner } from "./style";
+import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont } from "./style";
 import TextSvg from "./Svg";
 import { ButtonWrapper, } from "@components/Button/ButtonStyle";
 import {usersInfoHome} from "@utils/store_data/constants/svg";
@@ -8,21 +8,31 @@ const MoreDone = () => {
   return (
     <GetMoreWrapper>
      <GetMoreInner>
-     <div className="flex-1">
+    
+       {/* style={{transform:'matrix3d(-1.5099999904632568, 0, 0, 0, 0, 1.5099999904632568, 0, 0, 0, 0, 1, 0, 1207.5, -710.1199951171875, 0, 1)'}} */}
+      <ImageCont >
+        <div className="inset-y-0 w-11/12 right-0 rounded-lg  absolute -z-10 bg-black"/>
+      <Imagewrap>
+        <Image src={"/images/carrier-image.png"} 
+        className="object-cover"
+        fill
+        alt="img-carrier"/>
+      </Imagewrap>
+      </ImageCont>
+      <div className=" w-10/12 max-md:w-full flex-1">
         <TextSvg />
         <div>
-          <p>Post any task. Pick the best person. Get it done.</p>
-          <ButtonWrapper className="hover:none">Post your task for free</ButtonWrapper>
+          <PTag>Post any task. Pick the best person. Get it done.</PTag>
+          <div className="flex gap-8 max-sm:flex-col max-sm:w-10/12 mx-auto max-sm:gap-4">
+          <ButtonWrapper className="after:hover:bg-white hover:text-custom-greaner">Post your task for free</ButtonWrapper>
           <ButtonWrapper $bool={true}>Earn money as a Tasker</ButtonWrapper>
-          <ul className="HeroStats__Wrapper-sc-2a7hty-0 kjYKut">
+          </div>
+          <ul className="flex gap-2 flex-wrap pt-5 max-md:justify-center">
             <UsersInfo {...usersInfoHome[0]}/>
             <UsersInfo {...usersInfoHome[1]}/>
             <UsersInfo {...usersInfoHome[2]}/>
           </ul>
         </div>
-      </div>
-      <div className="h-[40vh] relative w-20 shrink-1">
-        <Image style={{transform:'matrix3d(-1.5099999904632568, 0, 0, 0, 0, 1.5099999904632568, 0, 0, 0, 0, 1, 0, 1207.5, -710.1199951171875, 0, 1)'}} src={"/images/carrier-image.png"} fill alt="img"/>
       </div>
      </GetMoreInner>
     </GetMoreWrapper>
@@ -33,15 +43,15 @@ export default MoreDone;
 
 const UsersInfo = ({path, label}: {path: string, label:string}) => {
   return (
-    <li className="HeroStats__Stat-sc-2a7hty-1 gzkrNQ">
-      <svg width="24" height="24" viewBox="0 0 24 24">
+    <li className="flex flex-col items-center m-3 text-white/70 justify-center  ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
         <path
           fill-rule="evenodd"
           d={path}
           clip-rule="evenodd"
         ></path>
       </svg>
-      <label className="Text__StyledTypographyComponent-sc-35e02v-0 hXQrMh">
+      <label className="block">
         {label}
       </label>
     </li>
