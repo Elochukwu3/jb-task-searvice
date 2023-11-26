@@ -1,4 +1,4 @@
-import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont } from "./style";
+import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont, HelpMove } from "./style";
 import TextSvg from "./Svg";
 import { ButtonWrapper, } from "@components/Button/ButtonStyle";
 import {usersInfoHome} from "@utils/store_data/constants/svg";
@@ -12,6 +12,13 @@ const MoreDone = () => {
        {/* style={{transform:'matrix3d(-1.5099999904632568, 0, 0, 0, 0, 1.5099999904632568, 0, 0, 0, 0, 1, 0, 1207.5, -710.1199951171875, 0, 1)'}} */}
       <ImageCont >
         <div className="inset-y-0 w-11/12 right-0 rounded-lg  absolute -z-10 bg-black"/>
+        <HelpMove>
+          <div className="font-bold text-sm border-b border-custom-dark pb-1">help move</div>
+          <div className="text-[11px] pt-3 flex gap-3">
+            <span >Enugu, Nigeria</span>
+            <span className="bg-white rounded-full px-1">#2,000</span>
+          </div>
+        </HelpMove>
       <Imagewrap>
         <Image src={"/images/carrier-image.png"} 
         className="object-cover"

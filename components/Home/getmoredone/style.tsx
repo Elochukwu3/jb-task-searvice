@@ -9,3 +9,4 @@ export const PTag = tw.p`block max-sm:text-center text-lg max-sm:text-sm
  text-white my-4 font-bold `
  export const Imagewrap = tw.div`relative rounded-lg overflow-hidden h-[95%] w-10/12 max-md:aspect-square`
  export const ImageCont = tw.div` md:h-64 lg:h-96 h-44 rounded-lg relative w-96 max-sm:w-10/12`
+ export const HelpMove = tw.div`p-2 rounded-md z-10 bg-green-100 text-custom-dark absolute -right-10 -top-10`
