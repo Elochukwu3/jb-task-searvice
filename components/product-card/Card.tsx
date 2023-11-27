@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ProductCardWrapper } from "./cardStyles";
+import { ProductCardWrapper} from "./cardStyles";
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import CardOverlay from "./CardOverlay";
 import useDropDown from "@hooks/useDropDown";

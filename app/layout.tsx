@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@styles/globals.css";
 import { ReactProp } from "@app-types/type";
 import Nav from "@components/Nav";
+import Footer from "@components/Footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,9 +23,10 @@ export default function RootLayout({ children }: ReactProp) {
         <main className="relative mx-auto z-10 w-full overflow-x-hidden">
           <Nav />
 
-          <div className="relative mx-auto z-10 max-w-8xl  px- w-full">
+          <div className="relative mx-auto z-10 max-w-7xl  px- w-full">
             {children}
           </div>
+          <Footer/>
         </main>
       </body>
     </html>
