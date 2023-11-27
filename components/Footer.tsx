@@ -1,7 +1,7 @@
 const Footer = () => {
   
     return (
-      <div className="bg-custom-dark/60 font-montserrat text-custom-dark mt-14 bg-footer py-10 mb-0 relative">
+      <div className="bg-custom-dark font-montserrat text-custom-dark mt-14 bg-footer py-10 mb-0 relative">
            <span className="text-xl left-14 max-sm:left-4 max-sm:inline max-sm:text-sm text-custom-dark top-1/4 max-sm:top-20 max-md:hidden block  absolute z-20">
                 &#x2726;
               </span>
