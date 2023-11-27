@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Banner from "@components/Home/Banner";
 import ProductCard from "@components/product-card/Card";
 import MoreDone from "@components/Home/getmoredone";
+import GettingDone from "@components/Home/getdone";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -34,6 +35,7 @@ export default function Home() {
       <ProductCard/>
       </div>
       <MoreDone/>
+      <GettingDone/>
     </div>
   )
 }
