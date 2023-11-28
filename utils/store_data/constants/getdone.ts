@@ -31,7 +31,7 @@ export const whatPeoopleGeDone = [
     }
     
 ]
-const homeMaintenanceData = [
+export const homeMaintenanceData = [
     {
         image: "/images/home-maintenance1.jpg",
         header: "Plumbing Repairs",
@@ -64,7 +64,7 @@ const homeMaintenanceData = [
     }
 ];
 
-const partiesData = [
+export const partiesData = [
     {
         image: "/images/party1.jpg",
         header: "Birthday Bashes",
@@ -97,7 +97,7 @@ const partiesData = [
     }
 ];
 
-const startingBusinessData = [
+export const startingBusinessData = [
     {
         image: "/images/startup1.jpg",
         header: "Business Planning",
@@ -131,3 +131,10 @@ const startingBusinessData = [
 ];
 
 
+export const submenu = [
+    {name: "Moving in", id:"homeMaintenanceData"},
+     {name:"Home maintenance", id:"homeMaintenanceData"},
+     {name:"Starting a business", id:"whatPeoopleGeDone"},
+    {name: "Parties", id:"startingBusinessData}"},
+    {name:"Something different", id:" partiesData"}
+]

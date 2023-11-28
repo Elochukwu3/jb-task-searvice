@@ -1,8 +1,12 @@
+"use client"
 import EachTree from "./EachTree";
 import EachTreeTwo from "./EachTreeTwo";
-import {whatPeoopleGeDone} from "@utils/store_data/constants/getdone";
+import {submenu, whatPeoopleGeDone, homeMaintenanceData, partiesData, startingBusinessData} from "@utils/store_data/constants/getdone";
+import {useState} from "react";
 
 const GettingDone = ()=>{
+    const [display, setDisplay] = useState("homeMaintenanceData")
+   
     return(
         <div className="w-11/12 mx-auto">
              <div className="w-fit h-fit mx-auto">
@@ -17,10 +21,17 @@ const GettingDone = ()=>{
                     </div>
                 </div>
             </div>
-            <EachTree {...whatPeoopleGeDone[0]}/>
-            <EachTreeTwo {...whatPeoopleGeDone[1]}/>
-            <EachTree {...whatPeoopleGeDone[2]}/>
-            <EachTreeTwo {...whatPeoopleGeDone[3]}/>
+            <div className="flex gap-4 w-fit mx-auto">
+                {
+                  submenu.map(({id, name}, i)=>(
+                    <div onClick={()=>setDisplay(id)} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
+                  ))  
+                }
+            </div>
+            {/* <EachTree />
+            <EachTreeTwo />
+            <EachTree />
+            <EachTreeTwo /> */}
             {/* <EachTree header={"Carpentry"} text={"Make a throne out of old Skis"} label={"David"}/>
             <EachTree header={"Carpentry"} text={"Make a throne out of old Skis"} label={"David"}/> */}
         </div>

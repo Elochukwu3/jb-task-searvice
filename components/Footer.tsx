@@ -33,20 +33,6 @@ const Footer = () => {
             <p  className="block cursor-pointer">Register</p>
             <div className="flex gap-4 items-center">
               <p className="text-custom-highlight">Follow us</p>
-              {/* <div className="flex items-center gap-3 object-contain">
-                <LinkRoute to={"https://getlinked.ai"}>
-                  <img src={ICON.insta} alt="" />
-                </LinkRoute>
-                <LinkRoute to={"https://getlinked.ai"}>
-                  <img src={ICON.x} alt="" />
-                </LinkRoute>
-                <LinkRoute to={"https://romauld.vercel.app/"}>
-                  <img src={ICON.facebook} alt="" />
-                </LinkRoute>
-                <LinkRoute to={"https://getlinked.ai"}>
-                  <img src={ICON.linked} alt="" />
-                </LinkRoute>
-              </div> */}
             </div>
           </div>
           <div className="space-y-5 relative">
