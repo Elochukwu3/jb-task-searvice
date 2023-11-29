@@ -1,4 +1,6 @@
-export const whatPeoopleGeDone = [
+export const displayObject =
+{
+    "whatPeoopleGeDone ": [
     {
         image: "/images/mini-1.png",
         header: "End of Lease Cleaning",
@@ -30,8 +32,8 @@ export const whatPeoopleGeDone = [
         text: "Planning a house move? EchoRaves is here to provide expert assistance. From packing to transportation, we'll help you seamlessly transition to your new home, ensuring a stress-free and enjoyable moving experience."
     }
     
-]
-export const homeMaintenanceData = [
+],
+ "homeMaintenanceData" : [
     {
         image: "/images/home-maintenance1.jpg",
         header: "Plumbing Repairs",
@@ -62,9 +64,9 @@ export const homeMaintenanceData = [
         label: "ColorCrafters",
         text: "Transform your home with ColorCrafters' professional painting services. Whether it's a single room or the entire house, our skilled painters bring color and vibrancy to your living spaces."
     }
-];
+],
 
-export const partiesData = [
+ "partiesData" : [
     {
         image: "/images/party1.jpg",
         header: "Birthday Bashes",
@@ -95,9 +97,9 @@ export const partiesData = [
         label: "CulinaryCraze",
         text: "Delight your guests with CulinaryCraze's event catering. From gourmet appetizers to decadent desserts, our chefs create a culinary experience that leaves a lasting impression."
     }
-];
+],
 
-export const startingBusinessData = [
+"startingBusinessData" : [
     {
         image: "/images/startup1.jpg",
         header: "Business Planning",
@@ -128,8 +130,8 @@ export const startingBusinessData = [
         label: "LegalLaunchpad",
         text: "Ensure legal compliance with LegalLaunchpad. Our legal experts guide you through business registrations, contracts, and other legal matters to protect your enterprise."
     }
-];
-
+]
+}
 
 export const submenu = [
     {name: "Moving in", id:"homeMaintenanceData"},
