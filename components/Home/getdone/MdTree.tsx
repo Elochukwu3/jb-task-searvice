@@ -1,7 +1,7 @@
 import {pageProp} from "./type";
 import Image from "next/image";
 
-const MdTree = (item: [pageProp])=>{
+const MdTree = ({item}:{ item: pageProp[]})=>{
     const content = item.map(({header, text, label, image})=>(
     <div key={label}>
         <div className="md:hidden pl-[19px] border-l-[2px] border-custom-dark">

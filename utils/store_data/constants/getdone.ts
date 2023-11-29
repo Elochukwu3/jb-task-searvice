@@ -133,7 +133,11 @@ export const displayObject =
 ]
 }
 
-export const submenu = [
+type prop = {
+    [index: string]: {}[]
+}
+
+export const submenu:prop = [
     {name: "Moving in", id:"homeMaintenanceData"},
      {name:"Home maintenance", id:"homeMaintenanceData"},
      {name:"Starting a business", id:"whatPeoopleGeDone"},

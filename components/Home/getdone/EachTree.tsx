@@ -2,7 +2,7 @@ import MdTree from "./MdTree";
 import {pageProp} from "./type";
 import Image from "next/image";
 
-export default function GetDone (item: [pageProp]){
+export default function GetDone ({item}: {item:pageProp[]}){
     return(
         <div>
         {item.map(({header, text, label, image})=>(

@@ -28,12 +28,10 @@ const GettingDone = ()=>{
                   ))  
                 }
             </div>
-            {/* <EachTree />
-            <EachTreeTwo />
-            <EachTree />
-            <EachTreeTwo /> */}
-            {/* <EachTree header={"Carpentry"} text={"Make a throne out of old Skis"} label={"David"}/>
-            <EachTree header={"Carpentry"} text={"Make a throne out of old Skis"} label={"David"}/> */}
+            <EachTree item={display}/>
+            <EachTreeTwo item={display}/>
+            <EachTree item={display}/>
+            <EachTreeTwo item={display}/>
         </div>
     )
 };

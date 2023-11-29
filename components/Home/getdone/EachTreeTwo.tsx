@@ -2,7 +2,7 @@ import MdTree from "./MdTree";
 import {pageProp} from "./type";
 import Image from "next/image";
 
-const EachTreeTwo = (item:[ pageProp])=>{
+const EachTreeTwo = ({item}:{item:pageProp[]})=>{
     return(
         <div>
         {item.map(({header, text, label, image})=>(
@@ -33,7 +33,7 @@ const EachTreeTwo = (item:[ pageProp])=>{
               </div>
       </div>
         ))}
-        <MdTree items={item}/>
+        <MdTree item={item}/>
         </div>
     )
 }
