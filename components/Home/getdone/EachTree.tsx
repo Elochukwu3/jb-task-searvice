@@ -3,9 +3,10 @@ import {pageProp} from "./type";
 import Image from "next/image";
 
 export default function GetDone ({item}: {item:pageProp[]}){
+    console.log(item)
     return(
         <div>
-        {item.map(({header, text, label, image})=>(
+        {item && item.map(({header, text, label, image})=>(
              <div key={label} className="w-fit mx-auto hidden md:block">
              <div className="flex mb-[11px] mt-[5px] lg:space-x-[86px] md:space-x-[50px] w-full items-center">
                     <div className="w-[40%]">

@@ -6,7 +6,7 @@ import {useState} from "react";
 
 const GettingDone = ()=>{
     const [display, setDisplay] = useState(displayObject[submenu[0].id as keyof typeof displayObject])
-   
+   console.log(display)
     return(
         <div className="w-11/12 mx-auto">
              <div className="w-fit h-fit mx-auto">
@@ -29,9 +29,9 @@ const GettingDone = ()=>{
                 }
             </div>
             <EachTree item={display}/>
-            <EachTreeTwo item={display}/>
+            {/* <EachTreeTwo item={display}/>
             <EachTree item={display}/>
-            <EachTreeTwo item={display}/>
+            <EachTreeTwo item={display}/> */}
         </div>
     )
 };
