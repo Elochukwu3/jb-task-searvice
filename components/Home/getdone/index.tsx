@@ -28,7 +28,7 @@ const GettingDone = ()=>{
                   ))  
                 }
             </div>
-            <EachTree item={display}/>
+            {/* <EachTree item={display}/> */}
             {/* <EachTreeTwo item={display}/>
             <EachTree item={display}/>
             <EachTreeTwo item={display}/> */}
