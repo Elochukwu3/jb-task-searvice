@@ -2,16 +2,20 @@
 import EachTree from "./EachTree";
 import EachTreeTwo from "./EachTreeTwo";
 import {submenu, displayObject} from "@utils/store_data/constants/getdone";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 const GettingDone = ()=>{
-    const [display, setDisplay] = useState(displayObject[submenu[0].id as keyof typeof displayObject])
-//    console.log(display)
+    const [display, setDisplay] = useState([])
 
-   const handle = (id:any)=>{
-    setDisplay(displayObject[id as keyof typeof displayObject])
-    console.log(id, display, 'work')
-   }
+ 
+    useEffect(() => {
+        setDisplay(displayObject[submenu[0].id as keyof typeof displayObject]);
+      }, []); 
+    
+      const handle = (id: any) => {
+        setDisplay(displayObject[id as keyof typeof displayObject]);
+        console.log(id, displayObject[id as keyof typeof displayObject]);
+      };
     return(
         <div className="w-11/12 mx-auto">
              <div className="w-fit h-fit mx-auto">
@@ -29,14 +33,20 @@ const GettingDone = ()=>{
             <div className="flex gap-4 w-fit mx-auto">
                 {
                   submenu.map(({id, name}, i)=>(
-                    <div onClick={handle} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
+                    <div onClick={()=>handle(id)} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
                   ))  
                 }
             </div>
-            {/* <EachTree item={display}/> */}
-            {/* <EachTreeTwo item={display}/>
-            <EachTree item={display}/>
-            <EachTreeTwo item={display}/> */}
+            {/* <EachTree {...display[objIndex -1]}/>
+            <EachTreeTwo {...display[2]}/> 
+            <EachTree {...display[0]}/>
+            <EachTreeTwo {...display[2]}/>  */}
+            {
+                display.map((item, index)=>{
+                    const ComponentToView = index % 2 === 0 ? EachTree : EachTreeTwo 
+                    return <ComponentToView {...item} key ={item.label}/>
+                })
+            }
         </div>
     )
 };

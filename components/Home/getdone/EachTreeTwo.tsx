@@ -2,10 +2,9 @@ import MdTree from "./MdTree";
 import {pageProp} from "./type";
 import Image from "next/image";
 
-const EachTreeTwo = ({item}:{item:pageProp[]})=>{
+const EachTreeTwo = ({header, text, label, image}:pageProp)=>{
     return(
         <div>
-        {item.map(({header, text, label, image})=>(
             <div key={label} className="w-fit mx-auto hidden md:block">
             <div className="flex mb-[11px] lg:space-x-[86px] md:space-x-[50px] w-full items-center">
                   <div className="text-bg-custom-dark w-[40%] text-right mb-[12px] mont text-[24px] font-[700]">
@@ -32,8 +31,7 @@ const EachTreeTwo = ({item}:{item:pageProp[]})=>{
                   <div className="w-[40%] mb-[5px]"></div>
               </div>
       </div>
-        ))}
-        <MdTree item={item}/>
+        <MdTree {...{header, text, label, image}}/>
         </div>
     )
 }

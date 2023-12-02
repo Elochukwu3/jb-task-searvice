@@ -1,9 +1,10 @@
 import {pageProp} from "./type";
 import Image from "next/image";
 
-const MdTree = ({item}:{ item: pageProp[]})=>{
-    const content = item.map(({header, text, label, image})=>(
-    <div key={label}>
+const MdTree = ({header, text, label, image}: pageProp)=>{
+  
+
+    return (  <div >
         <div className="md:hidden pl-[19px] border-l-[2px] border-custom-dark">
             <div className="text-custom-dark mb-[13px] mont  font-[700]">
                 {header}
@@ -22,10 +23,7 @@ const MdTree = ({item}:{ item: pageProp[]})=>{
             </div>
         </div>
     </div>
-    ));
-
-
-    return content
+    )
 };
 
 export default MdTree;
