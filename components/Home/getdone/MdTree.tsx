@@ -15,7 +15,7 @@ const MdTree = ({header, text, label, image}: pageProp)=>{
         </div>
         <div className="flex md:hidden mb-[27px] items-center">
             <div
-                className="w-[19.32px] relative left-[-9px] object-contain overflow-hidden rounded-[26.5px h-[19.32px]">
+                className="w-[26.32px] relative left-[-9px] object-contain overflow-hidden rounded-full h-[26.32px]">
                 <Image src={image} alt="" fill />
             </div>
             <div className="text-custom-dark mont  font-[700]">

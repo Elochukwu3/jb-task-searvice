@@ -14,8 +14,8 @@ const GettingDone = ()=>{
       };
 
     return(
-        <div className="w-11/12 mx-auto">
-             <div className="w-fit h-fit mx-auto">
+        <div className="w-full">
+             <div className="w-11/12 mx-auto">
                 <div className="w-fit mx-auto mb-[56px] md:mb-[91px]">
                     <div id="timeline"
                         className="text-custom-dark mb-[21px] md:mb-[12px] mx-auto  text-center text-[20px] md:text-[32px] font-[700] clashsd">
@@ -27,14 +27,14 @@ const GettingDone = ()=>{
                     </div>
                 </div>
             </div>
-            <div className="flex gap-4 w-fit mx-auto mb-8">
+            <div className="max-sm:flex-wrap flex gap-4 max-md:gap-2 w-fit mx-auto mb-8 max-sm:text-sm">
                 {
                   submenu.map(({id, name}, i)=>(
-                    <div onClick={()=>handle(id)} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
+                    <div onClick={()=>handle(id)} key={id + "key"} className="rounded-md p-2 max-md:p-1 mx-2 max-md:mx-0 text-wrap cursor-pointer border border-custom-greaner">{name}</div>
                   ))  
                 }
             </div>
-           <div className="bg-[#f6f5f1] h-[50vh] lg:h-auto overflow-y-scroll no-scrollbar">
+           <div className="w-11/12 mx-auto max-sm:w-[95%] bg-[#f6f5f1] font-montserrat p-5 h-[62.4vh] lg:h-auto overflow-y-scroll no-scrollbar">
            {
                display &&  display.map((item, index)=>{
                 const ComponentToView = index % 2 === 0 ? EachTree : EachTreeTwo 
