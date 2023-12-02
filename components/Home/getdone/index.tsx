@@ -6,7 +6,12 @@ import {useState} from "react";
 
 const GettingDone = ()=>{
     const [display, setDisplay] = useState(displayObject[submenu[0].id as keyof typeof displayObject])
-   console.log(display)
+//    console.log(display)
+
+   const handle = (id:any)=>{
+    setDisplay(displayObject[id as keyof typeof displayObject])
+    console.log(id, display, 'work')
+   }
     return(
         <div className="w-11/12 mx-auto">
              <div className="w-fit h-fit mx-auto">
@@ -24,7 +29,7 @@ const GettingDone = ()=>{
             <div className="flex gap-4 w-fit mx-auto">
                 {
                   submenu.map(({id, name}, i)=>(
-                    <div onClick={()=>setDisplay(displayObject[id as keyof typeof displayObject])} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
+                    <div onClick={handle} key={id + "key"} className="rounded-md p-2 mx-2 cursor-pointer border border-custom-greaner">{name}</div>
                   ))  
                 }
             </div>

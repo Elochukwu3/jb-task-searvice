@@ -134,7 +134,6 @@ export const displayObject =
 }
 
 export const submenu = [
-    {name: "Moving in", id:"homeMaintenanceData"},
      {name:"Home maintenance", id:"homeMaintenanceData"},
      {name:"Starting a business", id:"whatPeoopleGeDone"},
     {name: "Parties", id:"startingBusinessData}"},
