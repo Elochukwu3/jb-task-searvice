@@ -1,9 +1,10 @@
-import TrustText from "./TrustText"
+import TrustText from "./TrustText";
+import {SectionTrustRating} from "./style"
 const index = ()=>{
     return(
-        <div>
+        <SectionTrustRating>
             <TrustText/>
-        </div>
+        </SectionTrustRating>
     )
 }
 export default index

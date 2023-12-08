@@ -3,6 +3,7 @@ import Banner from "@components/Home/Banner";
 import ProductCard from "@components/product-card/Card";
 import MoreDone from "@components/Home/getmoredone";
 import GettingDone from "@components/Home/getdone";
+import HomeRating from "@components/Home/rating-home";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -36,6 +37,7 @@ export default function Home() {
       </div>
       <MoreDone/>
       <GettingDone/>
+      <HomeRating/>
     </div>
   )
 }
