@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const RatingSection = () => (
-  <div className="h-full my-5 w-full relative flex items-center justify-center">
+  <div className="h-full  my-5 w-full relative flex items-center justify-center">
    
-    <div className="mx-auto h-5/6 w-8/12  relative ">
-    <div className=" flex z-10 absolute -top-12 -left-1/3 items-center gap-3 p-4 max-md:p-2 w-fit bg-white border border-blue-100 rounded-xl">
+    <div className="mx-auto h-5/6 max-md:h-[95%] xl:w-8/12 lg:w-10/12 md:10/12 w-11/12  relative ">
+    <div className="mx-5 flex z-10 absolute -top-16 -left-14 items-center gap-3 p-4 max-md:p-2 w-fit bg-white border border-blue-100 rounded-xl">
       <span className="block object-contain w-20 h-20 rounded-full relative ">
         <Image src="/images/rounded-profile.png" alt="rate" fill />
       </span>
@@ -48,7 +48,7 @@ const RatingSection = () => (
         </svg>
       </div>
     </div>
-    <div className="right-0 items-center w-fit gap-3 text-custom-greaner flex font-bold bg-[#e3e3e3] absolute z-10 bottom-5 rounded-full py-2  px-4">
+    <div className="right-0 items-center w-fit gap-3 text-custom-greaner flex font-bold bg-[#e3e3e3] absolute z-10 sm:bottom-4 -bottom-3 md:bottom-5 rounded-full py-2 max-sm:py-1 px-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"
@@ -62,7 +62,7 @@ const RatingSection = () => (
       <span className="">Payment released</span>
       <span className="opacity-50 text-sm">2m ago</span>
     </div>
-    <div className="items-center w-fit gap-3 text-custom-greaner flex font-bold bg-[#e3e3e3] absolute z-10 bottom-20 -right-3 rounded-full py-2  px-4">
+    <div className="items-center w-fit gap-3 text-custom-greaner flex font-bold bg-[#e3e3e3] absolute z-10 sm:bottom-10 bottom-9 md:bottom-20 -right-3 rounded-full py-2 max-sm:py-1 px-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"
