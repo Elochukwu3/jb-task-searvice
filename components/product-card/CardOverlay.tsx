@@ -8,7 +8,7 @@ import {motion, AnimatePresence} from "framer-motion";
 
 const CardOverlay = ({swipe}:{swipe:Boolean})=>{
   const [track, setTrack] = useState<Number | null>(null)
-  const toggle = (index: any)=>{
+  const toggle = (index: number)=>{
     if(index === track ){
       return setTrack(null)
     }

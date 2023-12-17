@@ -4,6 +4,7 @@ import ProductCard from "@components/product-card/Card";
 import MoreDone from "@components/Home/getmoredone";
 import GettingDone from "@components/Home/getdone";
 import HomeRating from "@components/Home/rating-home";
+import ProjectOutline from "@components/Home/ProjectOutline";
 import ProjectCard from "@components/project_card";
 
 export const metadata: Metadata = {
@@ -42,16 +43,24 @@ export default function Home() {
           <ProjectCard />
         </div>
       </div>
-      <h2 className="text-2xl font-bold mt-5 mb-3 mr-4 w-full">
-        Popular Projects
-      </h2>
-      <div className="grid max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+
+      <div className="w-full  gap-3 flex max-md:flex-col justify-enter max-md:items-center my-10">
+        <div className=" max-md:w-full w-1/4">
+        <h2 className="text-2xl font-bold  mb-4 mr-4">
+          Explore Our Featured Projects
+        </h2>
+        <ProjectOutline />
+        </div>
+        <div className="grid pt-14 h-fit flex-grow  w-auto max-sm:space-y-8 max-lg:p-4 gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-3">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
       </div>
       {/* //getmoredone section// */}
       <MoreDone />
