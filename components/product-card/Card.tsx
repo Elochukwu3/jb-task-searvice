@@ -11,7 +11,7 @@ const ProductCard = () => {
   const { isDropdownOpen: swipe, handleDropDown } = useDropDown();
   return (
     <ProductCardWrapper>
-      <Image src="/images/banner-1.jpg" alt="card" width={500} height={300} />
+      <Image src="/images/project-img/tv.png" alt="card" width={500} height={300} />
       <AnimatePresence initial={false}>
       {swipe && (
         <motion.div variants={btnVariant} initial="close" animate="open" onClick={handleDropDown} className="absolute top-0 left-0 right-0 z-30">

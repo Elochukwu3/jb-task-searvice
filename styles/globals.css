@@ -128,3 +128,20 @@ input:focus {
   z-index: -1;
 }
 
+.slider:hover .slide-track{
+animation-play-state: paused;
+}
+.slide-track{
+animation:  20s scroll linear infinite;
+display: flex;
+width: auto;
+box-sizing: border-box;
+}
+@keyframes scroll{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
