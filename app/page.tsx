@@ -44,14 +44,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex-wrap gap-3 flex max-md:flex-col justify-enter max-md:items-center my-10">
-        <div className=" max-md:w-full lg:w-1/4 md:10/12 mx-auto">
+      <div className="w-full  gap-3 flex max-lg:flex-col justify-center max-md:items-center my-10">
+        <div className="  lg:w-1/4 md:w-10/12 mx-auto max-sm:px-4">
         <h2 className="text-2xl font-bold  mb-4 mr-4">
           Explore Our Featured Projects
         </h2>
         <ProjectOutline />
         </div>
-        <div className="grid pt-14 h-fit flex-grow  w-auto  gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-3">
+        <div className="grid xl:ml-auto mx-auto pt-14 h-fit  w-auto  gap-x-3 gap-y-4 grid-cols-2 md:grid-cols-3 grid-flow-row-dense lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-3">
           <ProductCard />
           <ProductCard />
           <ProductCard />

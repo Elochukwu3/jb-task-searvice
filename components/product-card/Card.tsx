@@ -12,7 +12,7 @@ const ProductCard =  () => {
   return (
     <ProductCardWrapper>
       <Image src="/images/project-img/tv.png" 
-      className="hover:scale-110 transition-al durations-300" alt="card" width={500} height={600} />
+      className="hover:scale-110 transition-all duration-[2s] ease-out" alt="card" width={500} height={600} />
       <AnimatePresence initial={false}>
       {swipe && (
         <motion.div variants={btnVariant} initial="close" animate="open" onClick={handleDropDown} className="absolute top-0 left-0 right-0 z-30">
