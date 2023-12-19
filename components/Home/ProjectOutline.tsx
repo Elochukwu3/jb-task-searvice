@@ -6,7 +6,7 @@ const ProjectOutline = () => {
     { caption: "Set your budget", text:"What is your budget for the task or service you described?"}, 
      {caption:"Get quotes and choose the top-rated Tasker", text:"Ready to receive quotes?"}]
   return (
-    <section className=" text-gray-600 space-y-3 w-full items-start">
+    <section className=" pt-5 pb-8 text-gray-600 space-y-3 w-full items-start">
       <div className=" mx-auto flex flex-wrap">
         {data.map((item, i)=>(
           <div key={"key" + 1} className="flex relative  md:w-full mx-auto items-start">
