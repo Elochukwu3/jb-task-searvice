@@ -10,5 +10,5 @@ const linkList = [
     " Plumbing",
     "Hang Pictures",
     "Lighting Installation",
-  ];
+  ] as const;
   export {linkList}
