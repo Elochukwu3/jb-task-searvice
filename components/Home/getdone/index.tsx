@@ -3,7 +3,7 @@ import {useState} from "react";
 import EachTree from "./EachTree";
 import {pageProp} from "./type";
 import EachTreeTwo from "./EachTreeTwo";
-import {submenu, displayObject} from "@utils/store_data/constants/getdone";
+import {submenu, displayObject} from "@db/constants/getdone";
 
 const GettingDone = ()=>{
     const [display, setDisplay] = useState<pageProp[]>(displayObject[submenu[0].id as keyof typeof displayObject])

@@ -1,7 +1,9 @@
+import { footer_links } from "@db/constants/link_list";
+
 const Footer = () => {
   
     return (
-      <div className="bg-custom-dark font-montserrat  mt-14 bg-footer py-10 mb-0 relative">
+      <div className="bg-custom-dark font-montserrat  mt-14 bg-footer py-10 mb-0 relative text-white ">
            <span className="text-xl left-14 max-sm:left-4 max-sm:inline max-sm:text-sm text-custom-dark top-1/4 max-sm:top-20 max-md:hidden block  absolute z-20">
                 &#x2726;
               </span>
@@ -22,52 +24,25 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <div className="space-y-5 relative">
+          <div className="space-y-3 relative">
                <span className="text-xl right-10 max-sm:text-sm text-zinc-600 bottom-3/4 max-md:bottom-1/2  absolute z-20">
                 &#x2726;
               </span>
-            <p className="text-custom-highlight">Useful Links</p>
-            <p className="block cursor-pointer" >Overview</p>
-            <p  className="block cursor-pointer">Timeline</p>
-            <p  className="block cursor-pointer" >FAQs</p>
-            <p  className="block cursor-pointer">Register</p>
-            <div className="flex gap-4 items-center">
-              <p className="text-custom-highlight">Follow us</p>
-            </div>
-          </div>
-          <div className="space-y-5 relative">
                <span className="text-xl right-10 max-sm:text-sm text-zinc-600 bottom-3/4 max-md:bottom-1/2  absolute z-20">
                 &#x2726;
               </span>
-            <p className="text-custom-highlight">Popular Locations</p>
-            <p className="block cursor-pointer" >Enugu</p>
-            <p  className="block cursor-pointer">Lagos</p>
-            <p  className="block cursor-pointer" >Anambra</p>
-            <p  className="block cursor-pointer">Abia</p>
-            <p  className="block cursor-pointer">Ebonyi</p>
-            <div className="flex gap-4 items-center">
-              <p className="text-custom-highlight">Follow us</p>
-            </div>
-          </div>
-          <div className="space-y-5 relative">
                <span className="text-xl right-0 m ax-sm:text-sm text-white bottom-0 max-md:bottom-1/2  absolute z-20">
                 &#x2726;
               </span>
-            <p className="text-custom-highlight">Contact Us</p>
-            <p className="flex gap-4 items-center">
-              {/* <img src={ICON.call} alt="" className="object-contain"/> */}
-              <span>+234 679 81819</span>
-            </p>
-  
-            <div className="flex gap-4 ">
-              {/* <img src={ICON.gp} alt="" className="object-contain -mt-10"/> */}
-              <div>
-                <p>27,Alara Street</p>
-                <p>Yaba 100012</p>
-                <p>Lagos State</p>
-              </div>
+          {/* //category// */}
+          {footer_links.map({header, id, list})=>(
+            <div key={}>
+              <h3>{header}</h3>
+              <div>{list}</div>
             </div>
+          )}
           </div>
+          
         </div>
         <div className="text-center pt-8 pb-5 relative">
         <span className="text-xl max-sm:text-sm text-custom-highlight textt-center block pb-4">
