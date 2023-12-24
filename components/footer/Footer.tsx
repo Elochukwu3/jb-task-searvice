@@ -1,18 +1,16 @@
 "use client"
-import { footer_links } from "@db/constants/link_list";
 import useCollapseAll from "@hooks/useCollapseAll"
 import { CaretDown, CaretRight, FacebookLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react";
+import { footer_links } from "@db/constants/link_list";
+import {SectionWraper, FooterList, Star} from "./style"
 
 const Footer = () => {
   const {collapse, handler} = useCollapseAll()
     return (
-      <div className="bg-custom-dark font-montserrat mt-14 bg-footer py-10 mb-0 relative text-white ">
-           <span className="text-xl left-14 max-sm:left-4  max-sm:inline max-sm:text-sm text-custom-dark top-1/4 max-sm:top-20 max-md:hidden block  absolute z-20">
-                &#x2726;
-              </span>
+      <SectionWraper>
+
         <div className=" w-full p-4 max-lg:px-2 max-sm:px-4">
-          
-          <div className="space-y-3  relative grid grid-cols-6 mb-5 max-md:grid-cols-1">
+          <FooterList>
           <div className="col-span-2 max-sm:col-span-1  max-md:pr-0">
             <div className="font-clash text-3xl font-bold mb-6 ">
             JBProMend
@@ -29,13 +27,13 @@ const Footer = () => {
               </span>
             </p>
           </div>
-               <span className="text-xl right-10 max-sm:text-sm text-zinc-600 bottom-3/4 max-md:bottom-1/2  absolute z-20">
+               <Star>
                 &#x2726;
-              </span>
-               <span className="text-xl right-10 max-sm:text-sm text-zinc-600 bottom-3/4 max-md:bottom-1/2  absolute z-20">
+              </Star>
+               <Star>
                 &#x2726;
-              </span>
-               <span className="text-xl right-0 m ax-sm:text-sm text-white bottom-0 max-md:bottom-1/2  absolute z-20">
+              </Star>
+               <span className="text-xl right-0  ax-sm:text-sm text-white bottom-0 max-md:bottom-1/2  absolute z-20">
                 &#x2726;
               </span>
           {footer_links.map((item, i)=>(
@@ -54,16 +52,16 @@ const Footer = () => {
              </p>
             </div>
           ))}
-          </div>
+          </FooterList>
           
         </div>
-        <div className="flex justify-end gap-4 px-7">
+        <div className="flex justify-end gap-4 px-7 bg-gradient-btn">
         <FacebookLogo size={26} color="#fffdfa" weight="bold" />
         <InstagramLogo size={26} color="#fffdfa" weight="bold" />
         <TwitterLogo size={26} color="#fffdfa" weight="bold" />
         <LinkedinLogo size={26} color="#fffdfa" weight="bold" />
         </div>
-        <div className="text-center pt-8 pb-5 relative">
+        <div className="text-center pt-4 pb-5 relative">
         <span className="text-xl max-sm:text-sm text-custom-highlight textt-center block pb-4">
                 &#x2726;
               </span>
@@ -71,7 +69,7 @@ const Footer = () => {
               All rights reserved. © getlinked Ltd.
               </span>
           </div>
-      </div>
+      </SectionWraper>
     );
   };
   export default Footer

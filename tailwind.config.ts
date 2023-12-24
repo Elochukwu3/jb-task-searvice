@@ -17,6 +17,10 @@ const config: Config = {
         tommy: ["MADE TOMMY Outline", "sans-serif"],
         satoshi: ['Satoshi', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-btn': 'linear-gradient(109.6deg, rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1%)',
+        "dark": "linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1% );"
+      },
       colors:{
         custom:{
           "dark":"#022022",
