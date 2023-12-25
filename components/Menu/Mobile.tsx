@@ -23,7 +23,8 @@ const Mobile = ({handler}: {handler: (item: Boolean) => void}) => {
           <>
             <MenuItem>location</MenuItem>
             <MenuItem onClick={handleDropDown}><span>services</span>
-            <CaretRight  size={24} color={"#0d7a5f"} weight={"light"}/></MenuItem>
+            <CaretRight  size={24} color={"#0d7a5f"} weight={"light"}/>
+            </MenuItem>
             <MenuItem>sign up/sign in</MenuItem>
             <ButtonWrapper>Become Mender</ButtonWrapper>
           </>

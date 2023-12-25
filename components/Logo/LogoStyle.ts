@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 
-const LogoWrapper = tw.div `
+const LogoWrapper = tw.a `
  block font-unical text-4xl text-custom-dark
  tracking-wide
  font-bold leading-[1.15] 

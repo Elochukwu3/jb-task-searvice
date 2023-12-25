@@ -21,7 +21,7 @@ const RatingSection = () => (
             <path
               fillRule="evenodd"
               d="M7.45 14.975 5.825 22 12 18.275 18.175 22l-1.625-7.025L22 10.25l-7.2-.625L12 3 9.2 9.625 2 10.25l5.45 4.725Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </p>

@@ -62,7 +62,6 @@ export default function Home() {
           <ProductCard />
         </div>
       </div>
-      {/* //getmoredone section// */}
       <MoreDone />
       <GettingDone />
       <HomeRating />

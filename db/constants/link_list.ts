@@ -71,4 +71,11 @@ const footer_links = [
     ],
   },
 ] as const;
-export { linkList, footer_links};
+const MENU_URL = {
+  location: "/location",
+  service: "/service",
+  mender: "/earn-as-mender",
+  login: "/login",
+  index: "/"
+}as const
+export { linkList, footer_links, MENU_URL};

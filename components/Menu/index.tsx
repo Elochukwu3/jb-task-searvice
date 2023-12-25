@@ -1,23 +1,35 @@
-"use client"
 import { ButtonWrapper } from "@components/Button/ButtonStyle"
 import {Menu as  MenuWrappper, MenuItem} from "./MenuStyle"
+import Link from 'next/link';
+import {MENU_URL} from "@db/constants/link_list"
 import DropDown from "./DropDown";
-import useDropDown from "@hooks/useDropDown"
 
 
 
 const Menu = () => {
-const { isDropdownOpen, handleDropDown, handler } = useDropDown()
-
   return (
     <MenuWrappper>
-      <MenuItem>location</MenuItem>
+      <MenuItem>
+      <Link href={MENU_URL.location}>
+      location
+      </Link>
+      </MenuItem>
       <MenuItem $bool={true}>
+      <Link href={MENU_URL.service} className="w-full relative">
          service
+      </Link>
       <DropDown/>
       </MenuItem>
-      <MenuItem>sign up/sign in</MenuItem>
-      <ButtonWrapper>Become Mender</ButtonWrapper>
+      <MenuItem>
+      <Link href={MENU_URL.login}>
+      sign up/sign in
+      </Link>
+      </MenuItem>
+      <ButtonWrapper>
+      <Link href={MENU_URL.mender}>
+        Become Mender
+      </Link>
+        </ButtonWrapper>
     </MenuWrappper>
   )
 }

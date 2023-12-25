@@ -9,7 +9,7 @@ const ProjectOutline = () => {
     <section className=" pt-5 pb-10 text-gray-600  w-full ">
       <div className=" mx-auto flex flex-wrap">
         {data.map((item, i)=>(
-          <div key={"key" + 1} className="flex relative w-full mx-auto items-start">
+          <div key={"key"+i} className="flex relative w-full mx-auto items-start">
           <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
