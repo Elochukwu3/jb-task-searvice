@@ -10,7 +10,7 @@ const variantMotion = {
     },
         animate:(index:number)=>({
         y:0,
-        transition: {delay: index * 0.04},
+        transition: {delay: index * 0.05},
         opacity: 1
         })
 }
@@ -21,10 +21,10 @@ const variantMotion = {
         <motion.div
         variants={variantMotion}
         initial="initial"
-        animate="animate"
         whileInView="animate"
         custom={index}
         key={item}
+        viewport={{once: true}}
         >
         <HelperButton >{item}</HelperButton>
         </motion.div>

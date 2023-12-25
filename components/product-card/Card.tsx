@@ -13,13 +13,13 @@ const ProductCard =  () => {
     <ProductCardWrapper>
       <Image src="/images/project-img/tv.png" 
       className="hover:scale-110 transition-all duration-[2s] ease-out" alt="card" width={500} height={600} />
-      <AnimatePresence initial={false}>
+      {/* <AnimatePresence initial={false}>
       {swipe && (
         <motion.div variants={btnVariant} initial="close" animate="open" onClick={handleDropDown} className="absolute top-0 left-0 right-0 z-30">
           <ButtonWrapper $bool={swipe}>See Less</ButtonWrapper>
         </motion.div>
       )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <div className="p-2">
         <a href="/">
           <h5 className="font-clash mb-2 text-lg  font-normal tracking-tight text-gray-900 dark:text-white">

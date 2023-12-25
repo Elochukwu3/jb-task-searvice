@@ -9,7 +9,7 @@ export const variants = {
         opacity: 1,
         transition:{
             type:"spring",
-            stiffness: 100,
+            stiffness: 50,
         }
         
     }
