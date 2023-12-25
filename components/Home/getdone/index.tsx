@@ -1,14 +1,14 @@
 "use client"
+import {useState} from "react";
 import EachTree from "./EachTree";
 import {pageProp} from "./type";
 import EachTreeTwo from "./EachTreeTwo";
-import {submenu, displayObject} from "@utils/store_data/constants/getdone";
-import {useState} from "react";
+import {submenu, displayObject} from "@db/constants/getdone";
 
 const GettingDone = ()=>{
     const [display, setDisplay] = useState<pageProp[]>(displayObject[submenu[0].id as keyof typeof displayObject])
     
-      const handle = (id: any) => {
+      const handle = (id: string) => {
         const eachObject = displayObject[id as keyof typeof displayObject]
         setDisplay(eachObject);
       };
@@ -16,7 +16,7 @@ const GettingDone = ()=>{
     return(
         <div className="w-full">
              <div className="w-11/12 mx-auto">
-                <div className="w-fit mx-auto mb-[56px] md:mb-[91px]">
+                <div className="w-fit mx-auto mt-9 mb-[20px] md:mb-[80px]">
                     <div id="timeline"
                         className="text-custom-dark mb-[21px] md:mb-[12px] mx-auto  text-center text-[20px] md:text-[32px] font-[700] clashsd">
                         See what others are getting done

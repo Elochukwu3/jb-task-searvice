@@ -36,7 +36,7 @@ const variants = {
 }
   return (
     <BannerWrapper  ref={container}>
-      <motion.div className="w-full my-10 sm:absolute relative sm:h-full h-80 " style={{scale}}>
+      <motion.div className="w-full mt-12 mb-10 sm:absolute relative sm:h-full h-80 " style={{scale}}>
         <Image src={carousel_images[slider]} 
       alt="" fill className="object-cover" priority={true} quality={85}/>
       <svg className="absolute z-40 sm:hidden -bottom-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

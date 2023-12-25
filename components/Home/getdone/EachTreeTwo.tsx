@@ -34,9 +34,9 @@ const EachTreeTwo = ({header, text, label, image, index}:pageProp)=>{
             {index !== 3 && 
               <div className="flex  lg:space-x-[86px] md:space-x-[50px] w-full items-center">
                   <div className="w-[40%]"/>
-                  <div className="h-[43px] w-[43px]">
+                  <motion.div initial={{y: 0}} className="h-[43px] w-[43px]">
                       <div className="mx-auto mb-[3px] pl-1 w-[4px] pb-[50px] bg-custom-dark"/>
-                  </div>
+                  </motion.div>
                   <div className="w-[40%] mb-[5px]"/>
               </div>
               }

@@ -1,7 +1,7 @@
 import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont, HelpMove } from "./style";
 import TextSvg from "./Svg";
 import { ButtonWrapper, } from "@components/Button/ButtonStyle";
-import {usersInfoHome} from "@utils/store_data/constants/svg";
+import {usersInfoHome} from "@db/constants/svg";
 import Image from "next/image";
 // clip-path: inset(0px 0px 33%);
 const MoreDone = () => {

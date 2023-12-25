@@ -1,4 +1,4 @@
-import {linkList} from "@utils/store_data/link_list";
+import {linkList} from "@db/constants/link_list";
 
 const List = () => {
   return (
