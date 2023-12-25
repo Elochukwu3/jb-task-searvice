@@ -55,7 +55,7 @@ const Footer = () => {
           </FooterList>
           
         </div>
-        <div className="flex justify-end gap-4 px-7 bg-gradient-btn">
+        <div className="flex justify-end gap-4 px-7 w-fit ml-auto bg-gradient-btn py-4 rounded-md">
         <FacebookLogo size={26} color="#fffdfa" weight="bold" />
         <InstagramLogo size={26} color="#fffdfa" weight="bold" />
         <TwitterLogo size={26} color="#fffdfa" weight="bold" />

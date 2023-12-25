@@ -19,7 +19,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-btn': 'linear-gradient(109.6deg, rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1%)',
-        "dark": "linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1% );"
+        "dark": "linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, #022022 91.1% );"
       },
       colors:{
         custom:{
