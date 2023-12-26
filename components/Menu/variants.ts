@@ -30,7 +30,15 @@ export const perspective = {
         }
     }
 }
-
+export const linkStag = {
+    initial:{
+        x: 0
+    },
+    whileHover:{
+        x:-16,
+       
+    }
+}
 export const slideIn = {
     initial: {
         opacity: 0,
