@@ -1,5 +1,5 @@
 "use client"
-import {useState, useRef} from "react";
+import {useState,useEffect,  useRef} from "react";
 import Image from "next/image";
 import SearchSection from "./SearchSection"
 import {BannerWrapper} from "./homeStyle";
@@ -14,12 +14,18 @@ const Banner = () => {
   const {scrollYProgress} = useScroll({target: container, offset:["start end", "start start"]});
   const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
 
-const nextHandler = ()=>{
-    setSlider(prev => prev < carousel_images.length-1 ? prev + 1 : 0)
-  }
-const prevHandler = ()=>{
-  setSlider((prev)=>(prev<= 0 ? carousel_images.length -1 : prev-1))
-}
+  const changeSliderEvery10Minutes = () => {
+    const intervalId = setInterval(() => {
+      setSlider((prev) => (prev < carousel_images.length - 1 ? prev + 1 : 0));
+    }, 10 * 60 * 1000); 
+    return () => clearInterval(intervalId);
+  };
+
+  useEffect(() => {
+    const intervalId = changeSliderEvery10Minutes();
+    return () => clearInterval((intervalId as unknown) as NodeJS.Timeout);
+  }, []); 
+
 const variants = {
   hidden: {
     pathLength: 0,
@@ -47,9 +53,6 @@ const variants = {
         Menders to users in Nee-Where solutions and expertise Unite</h2>
       </div>
       </motion.div>
-      <div onClick={prevHandler} className="absolute cursor-pointer max-sm:top-5 max-sm:w-1/2 z-30 h-28 w-28 left-10" />
-      <div onClick={nextHandler} className="absolute cursor-pointer z-30 h-28 max-sm:w-1/2 w-24 max-sm:top-5 right-10"/>
-
       <SearchSection isBool={true}/>
       <SearchSection/>
     </BannerWrapper>
