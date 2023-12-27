@@ -58,3 +58,14 @@ export const slideIn = {
         transition: { duration: 0.5, type: "tween", ease: "easeInOut"}
     }
 }
+export const sidebarVariant = {
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.3,
+        delay: 0.58,
+      },
+    },
+  };
