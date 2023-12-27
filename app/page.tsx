@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import Banner from "@components/Home/Banner";
+import Banner from "@components/Home/banner-section/Banner";
 import ProductCard from "@components/product-card/Card";
 import MoreDone from "@components/Home/getmoredone";
 import GettingDone from "@components/Home/getdone";
 import HomeRating from "@components/Home/rating-home";
-import ProjectOutline from "@components/Home/ProjectOutline";
+import ProjectOutline from "@components/Home/banner-section/ProjectOutline";
 import ProjectCard from "@components/project_card";
 
 export const metadata: Metadata = {
