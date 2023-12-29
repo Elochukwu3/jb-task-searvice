@@ -14,7 +14,7 @@ const Banner = () => {
 
   const {scrollYProgress} = useScroll({target: container, offset:["start end", "start start"]});
   const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-
+// to clean up these in a helper func(changeEvery10miniuite and the useEffect)
   const changeEvery10Minutes = () => {
     const intervalId = setInterval(() => {
       setSlider((prev) => (prev < carousel_images.length - 1 ? prev + 1 : 0));
