@@ -16,6 +16,9 @@ const config: Config = {
         unical: ["Unica One", "cursive"],
         tommy: ["MADE TOMMY Outline", "sans-serif"],
         satoshi: ['Satoshi', 'sans-serif'],
+        manrope:['Manrope', 'sans-serif'],
+        sora: ['Sora', 'sans-serif']
+        
       },
       backgroundImage: {
         'gradient-btn': 'linear-gradient(109.6deg, rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1%)',
