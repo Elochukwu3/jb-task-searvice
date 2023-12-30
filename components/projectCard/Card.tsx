@@ -9,7 +9,7 @@ import Link from "next/link";
 const ProductCard =  <T extends ProjectData>({data}:ProjectProp<T>) => {
   return (
     <ProductCardWrapper >
-     <Link href={"/[link]"} as={`${data.header.trim().replace("", "-").toLowerCase()}`} className="relative w-full h-[53.40%]">
+     <Link href={"/[link]"} as={`${data.header.trim().replace(" ", "-").toLowerCase()}`} className="relative w-full h-[53.40%]">
      <Image src={data.img} 
       className="hover:scale-110  transition-all duration-[2s] ease-out object-cover" alt="card" 
       fill
