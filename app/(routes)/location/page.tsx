@@ -1,4 +1,4 @@
-import CardParallax from "@components/product-card/CardParallax";
+import CardParallax from "@components/projectCard/CardParallax";
 
  const LocationPage =()=>{
     return(

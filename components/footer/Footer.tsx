@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
              <h3 className="font-clash  max-sm:hidden font-bold text-[16px]"> {item.header}</h3>
              <p className={`space-y-3  my-5 max-sm:px-2  ${collapse === i ? "max-sm:block" : "max-sm:hidden"}`}>{item.list.map((list, index)=>
-             (<span key={list + index} className="block text-[#CDD0DD]">{list}</span>))}
+             (<span key={list.trim()} className="block text-[#CDD0DD]">{list}</span>))}
              </p>
             </div>
           ))}

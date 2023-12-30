@@ -3,8 +3,8 @@ import { ButtonProp } from "@components/Button/ButtonStyle";
 
 
 export const ProductCardWrapper = tw.div` 
- w-[213.3px] mx-auto relative bg-white border border-zinc-300
-overflow-hidden  h-fit shadow max-sm:shadow-md shadow-white 
+ w-[179.3px] max-[380px]:w-[96%] mx-auto relative bg-white border  border-zinc-300
+overflow-hidden   h-[200px] shadow md:shadow-sm shadow-white 
 dark:bg-transparent  
 
 
