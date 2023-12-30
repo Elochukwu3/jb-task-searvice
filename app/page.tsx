@@ -10,7 +10,7 @@ import { MAIN_PROJECT } from "@db/constants/project";
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "JBProMend",
+    title: "JBProMend.",
     description: "Get your local work done here",
     url: "https://jb-task-searvice.vercel.app/",
     siteName: "JBProMend",
@@ -42,7 +42,7 @@ export default function Home() {
           {MAIN_PROJECT.map((data) => (
             <ProductCard
               data={data}
-              key={`${data.header.split("").join()}key-project`}
+              key={`${data.header.split("").join()}key-projects`}
             />
           ))}
         </div>
