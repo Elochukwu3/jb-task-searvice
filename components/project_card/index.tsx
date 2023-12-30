@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {DataProp} from" ./type"
+import {DataProp} from"./type"
 
 const index = ({img, header, caption}:DataProp) => {
   return (
