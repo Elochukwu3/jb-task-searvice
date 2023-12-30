@@ -1,37 +1,33 @@
 "use client";
 import Image from "next/image";
 import { ProductCardWrapper} from "./cardStyles";
-import { ButtonWrapper } from "@components/Button/ButtonStyle";
-import CardOverlay from "./CardOverlay";
-import useDropDown from "@hooks/useDropDown";
-import { motion, AnimatePresence } from "framer-motion";
-import { btnVariant } from "@utils/store_data/variants/motionVariants";
+import {ProjectProp, ProjectData} from "../project_card/type";
+import {Star } from "@phosphor-icons/react";
+import { formatNumberInput } from "@utils/varinats/numberConverter";
+import Link from "next/link";
 
-const ProductCard =  () => {
-  const { isDropdownOpen: swipe, handleDropDown } = useDropDown();
+const ProductCard =  <T extends ProjectData>({data}:ProjectProp<T>) => {
   return (
-    <ProductCardWrapper>
-      <Image src="/images/project-img/tv.png" 
-      className="hover:scale-110 transition-all duration-[2s] ease-out" alt="card" width={500} height={600} />
-      {/* <AnimatePresence initial={false}>
-      {swipe && (
-        <motion.div variants={btnVariant} initial="close" animate="open" onClick={handleDropDown} className="absolute top-0 left-0 right-0 z-30">
-          <ButtonWrapper $bool={swipe}>See Less</ButtonWrapper>
-        </motion.div>
-      )}
-      </AnimatePresence> */}
-      <div className="p-2">
-        <a href="/">
-          <h5 className="font-clash mb-2 text-lg  font-normal tracking-tight text-gray-900 dark:text-white">
-            Mount a TV, art or shelves
+    <ProductCardWrapper >
+     <Link href={"/[link]"} as={`${data.header.trim().replace("", "-").toLowerCase()}`} className="relative w-full h-[53.40%]">
+     <Image src={data.img} 
+      className="hover:scale-110  transition-all duration-[2s] ease-out object-cover" alt="card" 
+      fill
+      />
+     </Link>
+      <div className="">
+          <h5 className="font-manrope p-1 gap-1 items-center flex mb-1 text-lg sm:text-base font-normal tracking-tight text-gray-900 dark:text-white">
+            {data?.header}<Star size={11} color="#ffd700" weight="bold" />
           </h5>
-        </a>
-        <p className="text-[12px] font-initial break-words tracking-wide">Help with accounting and tax returns</p>
-        {/* {!swipe && (
-          <ButtonWrapper className="after:hover:w-0 hover:text-custom-greaner" onClick={handleDropDown}>see more</ButtonWrapper>
-        )}
-        <CardOverlay swipe={swipe} /> */}
-      </div>
+        <p className="text-[12px] px-1 font-saro whitespace-nowrap truncate">{data.caption}</p>
+        <p className="text-[12px] mt-1 items-center gap-1 flex font-saro whitespace-nowrap overflow-x-scroll no-scrollbar tracking-wide bg-zinc-100 px-1 rounded-md">
+         <span className="font-bold whitespace-no-wrap">Price range:</span> 
+         <span>₦{formatNumberInput(data.price_1)}</span>
+         <span className="font-boldold text-xl">-</span>
+         <span>₦{formatNumberInput(data.price_2)}</span>
+          </p>
+
+    </div>
     </ProductCardWrapper>
   );
 };

@@ -10,7 +10,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: none;
   border-radius: 0px;
   border: 0px solid #ffffff;
 }
@@ -22,7 +22,7 @@
   list-style-type: none;
   box-sizing: border-box;
   scrollbar-width: auto;
-  scrollbar-color: #000000 #ffffff;
+  scrollbar-color:  #ffffff;
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import {DataProp} from" ./type"
 
-const index = ({img, header, caption}:{img: string, header: string, caption: string}) => {
+const index = ({img, header, caption}:DataProp) => {
   return (
     <section className="mx-3 font-manrope w-[main(288px)] items-center  flex justify-center bg-white  gap-3 overflow-hidden p-2">
       <div className="relative">
