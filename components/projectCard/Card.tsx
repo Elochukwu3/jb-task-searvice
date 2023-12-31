@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ProductCardWrapper} from "./cardStyles";
 import {ProjectProp, ProjectData} from "../project_card/type";
-import {Star } from "@phosphor-icons/react";
+import Star from "./Star";
 import { formatNumberInput } from "@utils/varinats/numberConverter";
 import Link from "next/link";
 
