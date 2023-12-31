@@ -15,15 +15,17 @@ const ProductCard =  <T extends ProjectData>({data}:ProjectProp<T>) => {
       />
      </Link>
       <div className="">
-          <h5 className="font-manrope p-1 gap-1 items-center flex mb-1 text-lg sm:text-base font-normal tracking-tight text-gray-900 dark:text-white">
+          <h5 className="p-1 truncate gap-1 items-center text-black/70 max-[380px]:text-black flex mb-1 text-lg sm:text-base max-[380px]:text-[14px] font-normal tracking-tigh">
             {data?.header}<Star size={11} color="#ffd700" weight="bold" />
           </h5>
-        <p className="text-[12px] px-1 font-saro whitespace-nowrap truncate">{data.caption}</p>
-        <p className="text-[12px] mt-1 items-center gap-1 flex font-saro whitespace-nowrap overflow-x-scroll no-scrollbar tracking-wide bg-zinc-100 px-1 rounded-md">
-         <span className="font-bold whitespace-no-wrap">Price range:</span> 
+        <p className="text-[12px] px-1 max-[380px]:text-black/80  whitespace-nowrap">{data.caption}</p>
+        <p className="text-[12px] mt-1 items-end gap-1 flex font-saro whitespace-nowrap overflow-x-scroll no-scrollbar tracking-wide bg-zinc-100 px-1 py-2 rounded-md">
+         <span className="font-bold whitespace-no-wrap capitalize">pricing:</span> 
+         <span className="flex items-center gap-2 max-[380px]:gap-1  text-[11px] text-black/70">
          <span>₦{formatNumberInput(data.price_1)}</span>
-         <span className="font-boldold text-xl">-</span>
+         <span className="block w-3 max-[380px]:w-[9px] h-[2px] bg-zinc-400"/>
          <span>₦{formatNumberInput(data.price_2)}</span>
+         </span>
           </p>
 
     </div>

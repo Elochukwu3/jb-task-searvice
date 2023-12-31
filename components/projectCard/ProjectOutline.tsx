@@ -5,6 +5,7 @@ const ProjectOutline = () => {
     {caption:"Describe what you need done", text:"What specific task or service do you need assistance with? Please describe it in detail."},
     { caption: "Set your budget", text:"What is your budget for the task or service you described?"}, 
      {caption:"Get quotes and choose the top-rated Tasker", text:"Ready to receive quotes?"}]
+     
   return (
     <section className=" pt-5 pb-10 text-gray-600  w-full ">
       <div className=" mx-auto flex flex-wrap">
