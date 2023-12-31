@@ -50,7 +50,7 @@ const words = `Bridging Gaps, Mending Needs. A Platform that Connects Skilled Me
         initial="initial"
         whileInView="animate"
         className="inline-block pr-2"
-        custom={(i-0.05)}
+        custom={(i-0.06)}
         >{word}</motion.span>
         ))}
         </h2>
