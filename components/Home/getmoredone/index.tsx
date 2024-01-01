@@ -1,8 +1,10 @@
+"use client"
 import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont, HelpMove } from "./style";
 import TextSvg from "./Svg";
 import { ButtonWrapper, } from "@components/Button/ButtonStyle";
 import {usersInfoHome} from "@db/constants/svg";
 import Image from "next/image";
+import {useState} from "react"
 // clip-path: inset(0px 0px 33%);
 const MoreDone = () => {
   return (
