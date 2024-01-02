@@ -5,29 +5,17 @@ import SearchSection from "./SearchSection"
 import {BannerWrapper} from "./homeStyle";
 import {carousel_images} from "@db/carousel";
 import {useScroll,motion, useTransform} from "framer-motion";
-import {bannerSvgVariants, scaleYVariant} from "./variant"
+import {bannerSvgVariants, scaleYVariant} from "./variant";
+import useTimeOut from "@hooks/useTimeOut"
 
 const Banner = () => {
-  const [slider, setSlider] = useState(0);
 
   const container = useRef<HTMLDivElement|null>(null);
 
   const {scrollYProgress} = useScroll({target: container, offset:["start end", "start start"]});
   const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-// to clean up these in a helper func(changeEvery10miniuite and the useEffect)
-  const changeEvery10Minutes = () => {
-    const intervalId = setInterval(() => {
-      setSlider((prev) => (prev < carousel_images.length - 1 ? prev + 1 : 0));
-    }, 10 * 60 * 1000); 
-    return intervalId
-  };
 
-  useEffect(() => {
-    const intervalId = changeEvery10Minutes();
-    return () => clearInterval(intervalId );
-  }, []); 
-
-const words = `Bridging Gaps, Mending Needs. A Platform that Connects Skilled Menders to users in Nee-Where solutions and expertise Unite`;
+const slider = useTimeOut(0, carousel_images, (10 * 60 * 1000))
 
   return (
     <BannerWrapper  ref={container}>
@@ -51,6 +39,7 @@ const words = `Bridging Gaps, Mending Needs. A Platform that Connects Skilled Me
         whileInView="animate"
         className="inline-block pr-2"
         custom={(i-0.06)}
+        viewport={{once: true}}
         >{word}</motion.span>
         ))}
         </h2>
@@ -63,3 +52,6 @@ const words = `Bridging Gaps, Mending Needs. A Platform that Connects Skilled Me
 }
 
 export default Banner
+const words = `
+  Bridging gaps, addressing needs. A platform that connects skilled service providers with users where solutions and expertise come together.
+`;
