@@ -19,12 +19,12 @@ const Banner = () => {
     const intervalId = setInterval(() => {
       setSlider((prev) => (prev < carousel_images.length - 1 ? prev + 1 : 0));
     }, 10 * 60 * 1000); 
-    return () => clearInterval(intervalId);
+    return intervalId
   };
 
   useEffect(() => {
     const intervalId = changeEvery10Minutes();
-    return () => clearInterval((intervalId as unknown) as NodeJS.Timeout);
+    return () => clearInterval(intervalId );
   }, []); 
 
 const words = `Bridging Gaps, Mending Needs. A Platform that Connects Skilled Menders to users in Nee-Where solutions and expertise Unite`;
