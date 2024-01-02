@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <div className="items-center flex flex-col justify-center gap-10">
+    <main className="items-center flex flex-col justify-center gap-10">
       <Banner />
       <MiniProjectCard />
      <MainProjects/>
       <MoreDone />
       <GettingDone />
       <HomeRating />
-    </div>
+    </main>
   );
 }

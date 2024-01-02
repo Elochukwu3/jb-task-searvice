@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@styles/globals.css";
+import type { Metadata } from "next";import "@styles/globals.css";
 import { ReactProp } from "@app-types/type";
-import Nav from "@components/Nav";
-import Footer from "@components/footer/Footer";
-// const inter = Inter({ subsets: ["latin"] });
+import Logo from "@components/Logo";
+import {NavWrapper } from "@components/Nav/NavStyle"
 
 export const metadata: Metadata = {
   title: "JBProMend",
@@ -12,7 +9,7 @@ export const metadata: Metadata = {
     "JBProMend: Find Trusted Taskers Near You | Local Services Made Easy",
 };
 
-export default function RootLayout({ children }: ReactProp) {
+export default function AuthLayout({ children }: ReactProp) {
   return (
     <html lang="en">
       <body>
@@ -20,14 +17,12 @@ export default function RootLayout({ children }: ReactProp) {
         <div className="main">
           <div className="gradient" />
         </div>
-        <div className="relative mx-auto z-10 w-full overflow-x-hidden">
-          <Nav />
-
+        <NavWrapper>
+        <Logo/>
+        </NavWrapper>
           <div className="relative mx-auto z-10 max-w-7xl  md:pt-[110px] sm:pt-[90px] xs:pt-[72px] w-full">
             {children}
           </div>
-          <Footer/>
-        </div>
       </body>
     </html>
   );
