@@ -3,13 +3,14 @@ import {pageProp} from "./type";
 import Image from "next/image";
 import {variants as motionFade} from "./variant"
 import { motion } from "framer-motion";
+import Star from "@components/projectCard/Star"
 
-export default function GetDone ({header, text, label, image,}: pageProp){
+export default function GetDone ({header, text, label, image, index}: pageProp){
     return(
         <div>
              <div key={label} className="w-fit mx-auto hidden md:block">
              <div className="flex mb-[11px] mt-[5px] lg:space-x-[86px] md:space-x-[50px] w-full items-center">
-                    <motion.div variants={motionFade} initial="initial" whileInView={"animate"} className="w-[40%]">
+                    <motion.div custom={index} variants={motionFade} initial="initial" whileInView={"animate"} className="w-[40%]">
                         <div className="text-custom-dark text-right mb-[12px] mont text-[24px] font-[700]">
                             {header}
                         </div>
@@ -22,7 +23,12 @@ export default function GetDone ({header, text, label, image,}: pageProp){
                     </div>
                     <div className="text-custom-dark w-[40%] text-left mb-1 mont text-[24px] font-[700]">
                         {label}
-                    </div>
+                        <span className="w-fit flex text-gold-900">
+                    {Array.from({ length: 5 }, (_, index) => (
+                    <Star key={index} weight="fill" size={13} color="#ffd700" />
+                ))}                        
+                         </span>
+                        </div>
                 </div>
                 <div className="flex mb-[0px] lg:space-x-[86px] md:space-x-[50px] w-full items-center">
                     <div className="w-[40%] bg-custom-dark"/>

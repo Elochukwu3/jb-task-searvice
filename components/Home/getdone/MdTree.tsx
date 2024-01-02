@@ -1,10 +1,15 @@
 import {pageProp} from "./type";
 import Image from "next/image";
+import {motion} from "framer-motion";
+import {scaleY} from"./variant";
+import Star from "@components/projectCard/Star"
 
-const MdTree = ({header, text, label, image}: pageProp)=>{
+const MdTree = ({header, text, label, image, index}: pageProp)=>{
   
-
-    return (  <div >
+    return (  <motion.div 
+        variants={scaleY}
+        whileInView="animate"
+      initial="initail" custom={index}>
         <div className="md:hidden pl-[19px] border-l-[2px] border-custom-dark">
             <div className="text-custom-dark mb-[13px] mont  font-[700]">
                 {header}
@@ -19,10 +24,15 @@ const MdTree = ({header, text, label, image}: pageProp)=>{
                 <Image src={image} alt="" fill />
             </div>
             <div className="text-custom-dark mont  font-[700]">
-                {label}
+                {label}    
+                <span className="w-fit flex text-gold-900">
+                    {Array.from({ length: 5 }, (_, index) => (
+                    <Star key={index} weight="fill" size={11} color="#ffd700" />
+                ))}                        
+                         </span>
             </div>
         </div>
-    </div>
+    </motion.div>
     )
 };
 
