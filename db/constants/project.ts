@@ -20,5 +20,9 @@ export const MAIN_PROJECT = [
     { img: "/images/project-img/tv.png", price_1: 2000, price_2: 45000, header: "Mount Tv", caption: "TV Mounting Experts" },
   ] as const;
   
+  export const MAIN_PROJECT_SIDE_TEXT =  [
+    {caption:"Describe what you need done", text:"What specific task or service do you need assistance with? Please describe it in detail."},
+    { caption: "Set your budget", text:"What is your budget for the task or service you described?"}, 
+     {caption:"Get quotes and choose the top-rated Tasker", text:"Ready to receive quotes?"}]
 
    

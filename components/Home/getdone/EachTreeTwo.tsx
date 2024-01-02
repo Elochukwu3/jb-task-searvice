@@ -1,23 +1,26 @@
 import MdTree from "./MdTree";
 import {pageProp} from "./type";
 import Image from "next/image";
-import {motion} from "framer-motion"
+import {motion} from "framer-motion";
+import { scaleY} from "./variant";
+import Star from "@components/projectCard/Star";
 
 const EachTreeTwo = ({header, text, label, image, index}:pageProp)=>{
     return(
-        <motion.div 
-    //     whileInView={{ scale: 1, opacity: 1 }}
-    //   animate={{ scale: .6, opacity: 0 }}
-    //   transition={{
-    //     scale: { duration: 1.2,  },
-    //     opacity: { duration: 1, delay: 3 }
-    //   }}
-    //   initial={{ rotate: 0 }}
+        <motion.div variants={scaleY}
+        whileInView="animate"
+      animate="animate"
+      initial="initial" custom={index}
         >
             <div key={label} className="w-fit mx-auto hidden md:block">
             <div className="flex mb-[11px] lg:space-x-[86px] md:space-x-[50px] w-full items-center">
                   <div className="text-bg-custom-dark w-[40%] text-right mb-[12px] mont text-[24px] font-[700]">
                      {label}
+                     <span className="w-fit flex ml-auto">
+                    {Array.from({ length: 5 }, (_, index) => (
+                    <Star key={index} weight="fill" size={13} color="#ffd700" />
+                ))}                        
+             </span>
                   </div>
                   <div className="w-[53px] object-contain overflow-hidden relative  h-[53px] rounded-full">
                       <Image src={image} alt="" fill />

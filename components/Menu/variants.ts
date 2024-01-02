@@ -65,7 +65,7 @@ export const sidebarVariant = {
       transition: {
         ease: "easeInOut",
         duration: 0.3,
-        delay: 0.58,
+        delay: 0.38,
       },
     },
   };
