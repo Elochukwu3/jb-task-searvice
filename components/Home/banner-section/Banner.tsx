@@ -37,7 +37,7 @@ const slider = useTimeOut(0, carousel_images, (10 * 60 * 1000))
         variants={scaleYVariant}
         initial="initial"
         whileInView="animate"
-        className="inline-block pr-2"
+        className="inline-block whitespace-pre  pr-2"
         custom={(i-0.06)}
         viewport={{once: true}}
         >{word}</motion.span>
@@ -53,5 +53,5 @@ const slider = useTimeOut(0, carousel_images, (10 * 60 * 1000))
 
 export default Banner
 const words = `
-  Bridging gaps, addressing needs.A platform that connects skilled service providers with users where solutions and expertise come together.
+  Bridging gaps, addressing needs. A platform that connects skilled service providers with users where solutions and expertise come together.
 `;
