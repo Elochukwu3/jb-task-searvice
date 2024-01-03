@@ -18,6 +18,7 @@ export default function TaskLayout({ children }: ReactProp) {
       </div>
       <NavWrapper>
         <Logo />
+        <span>x</span>
       </NavWrapper>
       <div className="relative mx-auto z-10 max-w-7xl  md:pt-[110px] sm:pt-[90px] xs:pt-[72px] w-full">
         {children}

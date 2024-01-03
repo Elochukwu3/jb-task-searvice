@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 export default function CompanyLayout({ children }: ReactProp) {
   return (
-    <>
+    
       <div>
         {" "}
-        <div className="relative mx-auto z-10 w-full overflow-x-hidden">
+        <div className="relative z-10 w-full mx-auto overflow-x-hidden">
           <Nav />
 
           <div className="relative mx-auto z-10 max-w-7xl  md:pt-[110px] sm:pt-[90px] xs:pt-[72px] w-full">
@@ -23,6 +23,5 @@ export default function CompanyLayout({ children }: ReactProp) {
           <Footer/>
         </div>
       </div>
-    </>
   );
 }
