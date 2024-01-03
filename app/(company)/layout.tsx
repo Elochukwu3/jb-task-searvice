@@ -14,9 +14,6 @@ export default function CompanyLayout({ children }: ReactProp) {
     <>
       <div>
         {" "}
-        <div className="main">
-          <div className="gradient" />
-        </div>
         <div className="relative mx-auto z-10 w-full overflow-x-hidden">
           <Nav />
 

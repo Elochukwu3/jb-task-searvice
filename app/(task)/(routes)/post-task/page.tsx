@@ -8,7 +8,7 @@ export const metadata:Metadata = {
 }
 const page = () => {
   return (
-    <main>WELCOME TO MY PAGE</main>
+    <div className="grid grid-cols-1fr md:grid-cols-[_1fr,50%,_1fr]">WELCOME TO MY PAGE</div>
   )
 }
 
