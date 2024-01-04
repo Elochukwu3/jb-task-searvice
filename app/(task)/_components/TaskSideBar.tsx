@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import SideBarItem from "./SideBarItem";
 const TaskSideBar = () => {
   return (
-    <div className="sticky top-[58px] bg-red-900 place-items-start">
+    <div className="sticky top-[58px]place-items-start">
       <div>
         <h3>Post a task</h3>
         <div>
@@ -22,3 +22,4 @@ const routes = [
     {href: "#Details", label:"Details"},
     {href: "#Budget", label:"Budget"},
 ] as const;
+
