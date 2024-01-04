@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 };
 const page = () => {
   return (
-    <div className="w-full flex justify-center grow">
+    <div className="flex justify-center w-full grow">
     <div className="max-w-[1200px] w-full flex-1 flex flex-col">
 
-    <div className="grid-cols-[1fr_50%_1fr] gap-x-6 px-6 grid grid-cols-[100%] gap-x-4 h-full bg-white px-4">
+    <div className="md:grid-cols-[1fr_50%_1fr] gap-x-6 px-6 grid grid-cols-[100%] h-full bg-white">
       WELCOME TO MY PAGE
     </div>
     </div>

@@ -6,8 +6,7 @@ import { NavWrapper } from "@components/Nav/NavStyle";
 
 export const metadata: Metadata = {
   title: "JBProMend",
-  description:
-    "JBProMend: Add New task | We deliver your task",
+  description: "JBProMend: Add New task | We deliver your task",
 };
 
 export default function TaskLayout({ children }: ReactProp) {
@@ -16,7 +15,7 @@ export default function TaskLayout({ children }: ReactProp) {
       <div className="main">
         <div className="gradient" />
       </div>
-      <NavWrapper>
+      <NavWrapper className="h-[59px]">
         <Logo />
         <span>x</span>
       </NavWrapper>
