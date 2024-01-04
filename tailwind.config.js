@@ -1,14 +1,13 @@
-import type { Config } from "tailwindcss"
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
-  prefix: "",
+  ],
+  prefix: "tw",
   theme: {
     container: {
       center: true,
@@ -18,25 +17,7 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        clash: ["Clash Display", "sans-serif"],
-        unical: ["Unica One", "cursive"],
-        tommy: ["MADE TOMMY Outline", "sans-serif"],
-        satoshi: ['Satoshi', 'sans-serif'],
-        manrope:['Manrope', 'sans-serif'],
-        sora: ['Sora', 'sans-serif']
-        
-      },
-      backgroundImage: {
-        'gradient-btn': 'linear-gradient(109.6deg, rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1%)',
-        "dark": "linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, #022022 91.1% );"
-      },
       colors: {
-        custom:{
-          "dark":"#022022",
-          "greaner":'#0d7a5f'
-        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -93,6 +74,4 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
-
-export default config
+}
