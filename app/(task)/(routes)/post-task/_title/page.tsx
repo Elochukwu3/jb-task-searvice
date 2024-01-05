@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { cn } from "@/lib/utils"
 
 import {
   Form,
@@ -48,13 +49,10 @@ const CreateTitle = () => {
 
   return ( 
     <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
-      <div>
+      <div className="w-full">
         <h1 className="text-2xl">
         Let&apos;s start with the basics
         </h1>
-        <p className="text-sm text-slate-600">
-        In a few words, what do you need done?
-        </p>
         <Form {...form}>
           <form
             // onSubmit={form.handleSubmit(onSubmit)}
@@ -65,12 +63,13 @@ const CreateTitle = () => {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>
-                    Course title
+                  <FormLabel className="block">
+                  In a few words, what do you need done?
                   </FormLabel>
                   <FormControl>
                     <Input
                       disabled={isSubmitting}
+                      className="w-full"
                       placeholder="e.g. 'Advanced web development'"
                       {...field}
                     />
@@ -106,3 +105,5 @@ const CreateTitle = () => {
 }
  
 export default CreateTitle;
+
+
