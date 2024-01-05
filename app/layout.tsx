@@ -14,7 +14,7 @@ export default function RootLayout({ children }: ReactProp) {
     <html lang="en">
       <body>
           <ToasterProvider/>
-          <main>
+          <main className="min-h-screen">
           <div className="main">
           <div className="gradient" />
         </div>

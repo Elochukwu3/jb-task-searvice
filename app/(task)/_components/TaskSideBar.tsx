@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import SideBarItem from "./SideBarItem";
 const TaskSideBar = () => {
   return (
-    <div className="sticky top-[58px]place-items-start">
-      <div>
-        <h3>Post a task</h3>
-        <div>
+    <div className="sticky left-0 top-[70px] pt-[48px]  h-max md:block hidden">
+      <div className="w-10/12  mx-auto">
+        <h3 className="text-muted-foreground  pl-6">Post a task</h3>
+        <div className="space-y-1">
           {routes.map((items) => (
             <SideBarItem {...items} key={`${items.href}linkpath`}/>
           ))}
