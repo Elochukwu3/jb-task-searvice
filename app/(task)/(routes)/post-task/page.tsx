@@ -1,6 +1,7 @@
 
 import { Metadata } from "next";
 import React from "react";
+import CreateTitle from "./_title/page";
 
 export const metadata: Metadata = {
   title: "New task",
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 };
 const page = () => {
   return (
-      <div  className="bg-green-900 h-full">
-        
+      <div  className="">
+        <CreateTitle/>
       </div>
   );
 };
