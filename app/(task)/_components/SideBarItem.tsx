@@ -1,6 +1,6 @@
 "use client";
 import { BarButton } from "../style";
-import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState} from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -11,25 +11,22 @@ interface SidebarItemProps {
 }
 
 const SideBarItem = ({ label, href }: SidebarItemProps) => {
-  const path = usePathname();
-  const router = useRouter();
+  const [isActive, setIsActive] = useState(false)
+  useEffect(() => {
+    const fullPath = window.location.href
+    const $isActive =  fullPath.endsWith(`${href}`);
+    setIsActive($isActive)
+  }, [href]);
 
-  const $isActive: Boolean =  window.location.href.endsWith(`${href}`);
-  // console.log(router.asPath)
-  // const isActive = router.pathname === `/post-task/${href}`;
-    // const handleClick = () => {
-    //   const fullPath = window.location.href
-    //   console.log(fullPath)
-    //   router.push(href);
-    // };
+ 
   return (
-      <BarButton $isActive>
+      <BarButton $isActive={isActive}>
     <Link className="block w-full h-full relative" href={`/post-task/${href}`} aria-label={`/post-task/${href}`} scroll={false}>
         <span>{label}</span>
         <span
           className={cn(
-            "ml-auto opacity-0 border-2 border-black h-full transition-all",
-            $isActive && "opacit-10"
+            "ml-auto opacity-0 block border-2 border-black h-full transition-all",
+            isActive && "w-2"
           )}
         />
     </Link>
