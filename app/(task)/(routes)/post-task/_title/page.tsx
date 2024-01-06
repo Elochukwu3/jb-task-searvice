@@ -3,52 +3,24 @@ import * as z from "zod";
 import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 import {
   Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormLabel,
-  FormMessage,
-  FormItem,
 } from "@components-shadui/ui/form";
 import { Button } from "@components-shadui/ui/button";
-import { Input } from "@components-shadui/ui/input";
+import {useFormData}  from "./_components/_hook/useFormData";
+import DatePickerForm from "./_components/Date-form"
+import DescriptionForm from "./_components/Description-form"
 
-const formSchema = z.object({
-  title: z.string().min(1, {
-    message: "Title is required",
-  }),
-});
 
 const CreateTitle = () => {
-//   const router = useRouter();
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: ""
-    },
-  });
-
-  const { isSubmitting, isValid } = form.formState;
-
-//   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-//     try {
-//       const response = await axios.post("/api/courses", values);
-//       router.push(`/teacher/courses/${response.data.id}`);
-//       toast.success("Course created");
-//     } catch {
-//       toast.error("Something went wrong");
-//     }
-//   }
+  const form = useFormData() 
 
   return ( 
-    <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
+    <div className="max-w-5xl bg-white mx-auto flex md:items-center md:justify-center h-full p-6">
       <div className="w-full">
         <h1 className="text-2xl">
         Let&apos;s start with the basics
@@ -58,45 +30,8 @@ const CreateTitle = () => {
             // onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-8 mt-8"
           >
-            <FormField
-              control={form.control}
-              name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="block">
-                  In a few words, what do you need done?
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      disabled={isSubmitting}
-                      className="w-full"
-                      placeholder="e.g. 'Advanced web development'"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>
-                    What will you teach in this course?
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="flex items-center gap-x-2">
-              <Link href="/">
-                <Button
-                  type="button"
-                  variant="ghost"
-                >
-                  Cancel
-                </Button>
-              </Link>
-              <Button
-                type="submit"
-                disabled={!isValid || isSubmitting}
-              >
-                Continue
-              </Button>
-            </div>
+            <DescriptionForm form={form}/>
+            <DatePickerForm form={form}/>
           </form>
         </Form>
       </div>
