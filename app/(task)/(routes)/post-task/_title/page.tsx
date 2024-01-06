@@ -20,7 +20,7 @@ const CreateTitle = () => {
   const form = useFormData() 
 
   return ( 
-    <div className="max-w-5xl bg-white mx-auto flex md:items-center md:justify-center h-full p-6">
+    <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
       <div className="w-full">
         <h1 className="text-2xl">
         Let&apos;s start with the basics
@@ -28,7 +28,7 @@ const CreateTitle = () => {
         <Form {...form}>
           <form
             // onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 mt-8"
+            className="space-y-8 mt-6"
           >
             <DescriptionForm form={form}/>
             <DatePickerForm form={form}/>

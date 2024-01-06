@@ -1,7 +1,5 @@
-import { cn } from "@/lib/utils";
 import {
   FormControl,
-  FormDescription,
   FormField,
   FormLabel,
   FormMessage,
@@ -26,7 +24,7 @@ const DescriptionForm = ({form}: FormType) => {
           <FormControl>
             <Input
               disabled={isSubmitting}
-              placeholder="e.g. 'Advanced web development'"
+              placeholder="e.g. 'Help to clean'"
               {...field}
             />
           </FormControl>
