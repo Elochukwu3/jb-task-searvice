@@ -27,7 +27,7 @@ export default function DatePickerForm({ form }: FormType) {
       name="ondate"
       render={({ field }) => (
         <FormItem className="flex flex-col">
-          <FormLabel>Date of birth</FormLabel>
+          <FormLabel>Set date</FormLabel>
           <Popover>
             <PopoverTrigger asChild>
               <FormControl>
@@ -58,14 +58,13 @@ export default function DatePickerForm({ form }: FormType) {
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date: Date) => date < new Date()}
-                    // date > new Date() || date < new Date("1900-01-01")
                     initialFocus
                   />
                 )}
               />
             </PopoverContent>
           </Popover>
-          <FormMessage />
+          <FormMessage className="text-[#FF4401]"/>
         </FormItem>
       )}
     />

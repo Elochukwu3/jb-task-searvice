@@ -22,7 +22,7 @@ const CreateTitle = () => {
   return ( 
     <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
       <div className="w-full">
-        <h1 className="text-2xl">
+        <h1 className="text-2xl text-custom-dark">
         Let&apos;s start with the basics
         </h1>
         <Form {...form}>
@@ -31,8 +31,9 @@ const CreateTitle = () => {
             className="space-y-8 mt-6"
           >
             <DescriptionForm form={form}/>
-            <DatePickerForm form={form}/>
-          <Button variant="outline" type="submit">Submit</Button>
+            <div className="grid grid-cols-2"><DatePickerForm form={form}/>
+            <DatePickerForm form={form}/></div>
+          <Button variant="secondary" type="submit">Submit</Button>
           </form>
         </Form>
       </div>

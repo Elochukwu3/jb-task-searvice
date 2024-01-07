@@ -28,7 +28,7 @@ const DescriptionForm = ({form}: FormType) => {
               {...field}
             />
           </FormControl>
-          <FormMessage />
+          <FormMessage  className="text-[#FF4401]"/>
         </FormItem>
       )}
     />
