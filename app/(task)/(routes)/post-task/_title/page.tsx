@@ -1,15 +1,13 @@
 "use client";
 import axios from "axios";
 import "react-day-picker/dist/style.css"
-import {
-  Form,
-} from "@components-shadui/ui/form";
-import { Button } from "@components-shadui/ui/button";
 import {useFormData}  from "./_components/_hook/useFormData";
+import {FormData} from "./_components/type";
+import { Form} from "@components-shadui/ui/form";
 import DatePickerForm from "./_components/Date-form"
 import DescriptionForm from "./_components/Description-form";
-import {FormData} from "./_components/type";
-import CheckBox from "./_components/checkbox"
+import CheckBox from "./_components/checkbox";
+import { Button } from "@components-shadui/ui/button";
 
 
 
@@ -17,7 +15,7 @@ const CreateTitle = () => {
   const form = useFormData() 
 
   const onSubmit =(values:FormData)=>{
-    console.log(values)
+    console.log(values.timeRange)
   }
 
   return ( 
@@ -32,8 +30,7 @@ const CreateTitle = () => {
             className="space-y-8 mt-6"
           >
             <DescriptionForm form={form}/>
-            <div className="grid grid-cols-2"><DatePickerForm form={form}/>
-            <DatePickerForm form={form}/></div>
+            <DatePickerForm form={form}/>
             <CheckBox form={form}/>
           <Button className="bg-custom-greaner text-white" type="submit">Submit</Button>
           </form>

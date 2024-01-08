@@ -1,4 +1,5 @@
-import { object, string, date, boolean } from "zod";
+import { object, string, date, boolean, nativeEnum} from "zod";
+import {timeRanges} from "../timerange";
 
 export const formSchema = object({
   title: string()
@@ -7,5 +8,6 @@ export const formSchema = object({
   ondate:date({
     required_error: "date is required.",
   }),
-  timeRange: boolean().default(false).optional()
+  timeRange: boolean().default(false).optional(),
+  timeRangeOuput: nativeEnum(timeRanges).optional(),
 });

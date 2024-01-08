@@ -24,6 +24,7 @@ const DescriptionForm = ({form}: FormType) => {
           <FormControl>
             <Input
               disabled={isSubmitting}
+              className="boreder border-custom-greaner"
               placeholder="e.g. 'Help to clean'"
               {...field}
             />

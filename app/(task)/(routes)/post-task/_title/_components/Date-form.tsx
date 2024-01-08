@@ -27,15 +27,17 @@ export default function DatePickerForm({ form }: FormType) {
       name="ondate"
       render={({ field }) => (
         <FormItem className="flex flex-col">
-          <FormLabel className="text-custom-dark">When do you need this done?</FormLabel>
+          <FormLabel className="text-custom-dark pb-2">
+            When do you need this done?
+          </FormLabel>
           <Popover>
             <PopoverTrigger asChild>
               <FormControl>
                 <Button
                   variant={"outline"}
                   className={cn(
-                    "w-[240px] pl-3 text-left font-normal",
-                    !field.value && "text-muted-foreground"
+                    "w-[240px] pl-3 text-left font-normal boreder border-custom-greaner",
+                    !field.value && "text-custom-greaner/50"
                   )}
                 >
                   {field.value ? (
@@ -64,7 +66,7 @@ export default function DatePickerForm({ form }: FormType) {
               />
             </PopoverContent>
           </Popover>
-          <FormMessage className="text-[#FF4401]"/>
+          <FormMessage className="text-[#FF4401]" />
         </FormItem>
       )}
     />
