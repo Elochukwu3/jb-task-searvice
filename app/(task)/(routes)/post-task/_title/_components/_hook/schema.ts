@@ -1,4 +1,4 @@
-import { object, string, date } from "zod";
+import { object, string, date, boolean } from "zod";
 
 export const formSchema = object({
   title: string()
@@ -7,4 +7,5 @@ export const formSchema = object({
   ondate:date({
     required_error: "date is required.",
   }),
+  timeRange: boolean().default(false).optional()
 });
