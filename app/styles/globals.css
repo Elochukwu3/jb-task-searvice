@@ -212,7 +212,9 @@ box-sizing: border-box;
     transform: translateX(-100%);
   }
 }
-
+.rdp-day_selected{
+  background-color: #0d7a5f!important;
+}
 
 
 
