@@ -1,3 +1,4 @@
+"use client"
 import React, { createContext, useState, useContext } from 'react';
 import { ReactProp } from "@app-types/type";
 
@@ -9,7 +10,7 @@ type SidebarContextType = {
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export const FormProvider: React.FC = ({ children }:ReactProp ) => {
-  const [activeTab, setActiveTab] = useState<string>('title');
+  const [activeTab, setActiveTab] = useState<string>("#Title-date");
 const handleSetter = (value:string)=>{
     setActiveTab(value)
 }

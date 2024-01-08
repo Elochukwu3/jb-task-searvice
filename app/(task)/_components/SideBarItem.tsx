@@ -1,8 +1,7 @@
 "use client";
 import { BarButton } from "../style";
-import { useEffect, useState} from "react";
 import Link from "next/link";
-
+import useSidebarContext from "@app/(task)/context/FormProvider";
 import { cn } from "@/lib/utils";
 
 interface SidebarItemProps {
@@ -11,26 +10,25 @@ interface SidebarItemProps {
 }
 
 const SideBarItem = ({ label, href }: SidebarItemProps) => {
-  const [isActive, setIsActive] = useState(false)
-  useEffect(() => {
-    const fullPath = window.location.href
-    const $isActive =  fullPath.endsWith(`${href}`);
-    setIsActive($isActive)
-  }, [href]);
+  const { activeTab } = useSidebarContext();
 
- 
   return (
-      <BarButton $isActive={isActive}>
-    <Link className="block w-full h-full relative" href={`/post-task/${href}`} aria-label={`/post-task/${href}`} scroll={false}>
+    <BarButton $isActive={activeTab === href}>
+      <Link
+        className="w-full h-full relative flex"
+        href={`/post-task/${href}`}
+        aria-label={`/post-task/${href}`}
+        scroll={false}
+      >
         <span className=" text-custom-greaner">{label}</span>
         <span
           className={cn(
-            "ml-auto opacity-0 block border-2 border-black h-full transition-all",
-            isActive && "w-2"
+            "ml-auto opacity-0 block h-4 bg-red-600 border-2 w-10 border-black  transition-all",
+            activeTab === href && "w-2"
           )}
         />
-    </Link>
-      </BarButton>
+      </Link>
+    </BarButton>
   );
 };
 export default SideBarItem;
