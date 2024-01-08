@@ -22,7 +22,7 @@ const SideBarItem = ({ label, href }: SidebarItemProps) => {
   return (
       <BarButton $isActive={isActive}>
     <Link className="block w-full h-full relative" href={`/post-task/${href}`} aria-label={`/post-task/${href}`} scroll={false}>
-        <span>{label}</span>
+        <span className=" text-custom-greaner">{label}</span>
         <span
           className={cn(
             "ml-auto opacity-0 block border-2 border-black h-full transition-all",
