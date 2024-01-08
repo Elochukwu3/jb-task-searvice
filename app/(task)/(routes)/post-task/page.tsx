@@ -15,9 +15,9 @@ const Page = () => {
   if (activeTab === "#Title-date") {
     content = <CreateTitle />;
   } else if (activeTab === "location") {
-    content = <div>content</div>;
+    content = <div>content location</div>;
   } else if (activeTab === "details") {
-    content = <div>content</div>;
+    content = <div>content details</div>;
   } else {
     content = <div>content</div>;
   }
