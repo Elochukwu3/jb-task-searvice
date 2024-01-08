@@ -18,8 +18,8 @@ const DescriptionForm = ({form}: FormType) => {
       name="title"
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="block">
-            In a few words, what do you need done?
+          <FormLabel className="block text-custom-dark pb-2">
+            In a few words, what do you need doe?
           </FormLabel>
           <FormControl>
             <Input

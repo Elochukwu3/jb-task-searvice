@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import "@styles/globals.css";
 import { ReactProp } from "@app-types/type";
 import Logo from "@components/Logo";
-import { NavWrapper } from "@components/Nav/NavStyle";
 import X from "@components/icon/Times";
 import TaskSideBar from "@app/(task)/_components/TaskSideBar";
 
@@ -24,7 +22,7 @@ export default function TaskLayout({ children }: ReactProp) {
         <div className="max-w-[1200px] w-full flex-1 flex flex-col">
           <div className="md:grid-cols-[1fr_50%_1fr] gap-x-6 px-6 grid grid-cols-[100%] ">
             <TaskSideBar />
-            <div className="pt-[10px] font-manrope"> {children}</div>
+            <div className="pt-[10px] font-manrope border-l border-zinc-400"> {children}</div>
             <div className=" sticky top-20 pt-20 min-h-screen" />
           </div>
         </div>

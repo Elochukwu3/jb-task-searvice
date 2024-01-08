@@ -27,7 +27,7 @@ export default function DatePickerForm({ form }: FormType) {
       name="ondate"
       render={({ field }) => (
         <FormItem className="flex flex-col">
-          <FormLabel>Set date</FormLabel>
+          <FormLabel className="text-custom-dark">When do you need this done?</FormLabel>
           <Popover>
             <PopoverTrigger asChild>
               <FormControl>
@@ -41,7 +41,7 @@ export default function DatePickerForm({ form }: FormType) {
                   {field.value ? (
                     format(field.value, "PPP")
                   ) : (
-                    <span>Pick a date</span>
+                    <span>Pick on date</span>
                   )}
                   <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                 </Button>

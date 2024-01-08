@@ -10,6 +10,7 @@ export type FormType = {
  form: UseFormReturn<{
     title: string;
     ondate: Date;
+    timeRange?: boolean;
   }, any, undefined>;
 };
 

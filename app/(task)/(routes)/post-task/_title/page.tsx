@@ -8,7 +8,8 @@ import { Button } from "@components-shadui/ui/button";
 import {useFormData}  from "./_components/_hook/useFormData";
 import DatePickerForm from "./_components/Date-form"
 import DescriptionForm from "./_components/Description-form";
-import {FormData} from "./_components/type"
+import {FormData} from "./_components/type";
+import CheckBox from "./_components/checkbox"
 
 
 
@@ -33,7 +34,8 @@ const CreateTitle = () => {
             <DescriptionForm form={form}/>
             <div className="grid grid-cols-2"><DatePickerForm form={form}/>
             <DatePickerForm form={form}/></div>
-          <Button variant="secondary" type="submit">Submit</Button>
+            <CheckBox form={form}/>
+          <Button className="bg-custom-greaner text-white" type="submit">Submit</Button>
           </form>
         </Form>
       </div>
