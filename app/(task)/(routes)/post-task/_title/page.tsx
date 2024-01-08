@@ -8,15 +8,19 @@ import DatePickerForm from "./_components/Date-form"
 import DescriptionForm from "./_components/Description-form";
 import CheckBox from "./_components/checkbox";
 import { Button } from "@components-shadui/ui/button";
+import useSidebarContext from "@app/(task)/context/FormProvider";
 
 
 
 const CreateTitle = () => {
   const form = useFormData() 
+  const {handleSetter} = useSidebarContext ();
 
   const onSubmit =(values:FormData)=>{
-    console.log(values.timeRange)
-  }
+    console.log(form)
+    if(values){
+    handleSetter("#Location")
+      }  }
 
   return ( 
     <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">

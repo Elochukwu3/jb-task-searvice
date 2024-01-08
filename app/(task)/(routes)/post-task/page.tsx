@@ -10,19 +10,19 @@ import useSidebarContext from "@app/(task)/context/FormProvider";
 // };
 
 const Page = () => {
-  const { activeTab } = useSidebarContext();
+  const { activeTab, activeWindow } = useSidebarContext();
   let content: JSX.Element;
-  if (activeTab === "#Title-date") {
+  if (activeTab === activeWindow) {
     content = <CreateTitle />;
-  } else if (activeTab === "location") {
+  } else if (activeTab === activeWindow) {
     content = <div>content location</div>;
-  } else if (activeTab === "details") {
+  } else if (activeTab === activeWindow ) {
     content = <div>content details</div>;
   } else {
     content = <div>content</div>;
   }
 
-  return content;
+  return window && content;
 };
 
 export default Page;

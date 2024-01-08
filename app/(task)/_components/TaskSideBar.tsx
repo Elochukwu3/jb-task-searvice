@@ -17,7 +17,7 @@ const TaskSideBar = () => {
 export default TaskSideBar;
 
 const routes = [
-    {href: "#Title-date", label:"Title & Date"},
+    {href: "#title-date", label:"Title & Date"},
     {href: "#Location", label:"Location"},
     {href: "#Details", label:"Details"},
     {href: "#Budget", label:"Budget"},
