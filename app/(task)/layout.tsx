@@ -24,7 +24,7 @@ export default function TaskLayout({ children }: ReactProp) {
         <div className="max-w-[1200px] w-full flex-1 flex flex-col">
           <div className="md:grid-cols-[1fr_50%_1fr] gap-x-6 px-6 grid grid-cols-[100%] ">
             <TaskSideBar />
-            <div className="pt-[10px] font-manrope border-l border-zinc-400">{children}</div>
+            <div className="overflow-x-hidden pt-[10px] md:pt-2 font-manrope md:border-l md:border-zinc-200">{children}</div>
             <div className=" sticky top-20 pt-20 min-h-screen" />
           </div>
         </div>
