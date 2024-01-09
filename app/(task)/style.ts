@@ -6,10 +6,10 @@ export type SideBarProp = {
 };
 
 const BarButton = tw.div<SideBarProp>`
-flex items-center gap-x-2 text-slate-500 text-sm font-[500] pl-6 transition-all hover:text-slate-600 
+flex items-center py-2 relative px-4 text-sm w-max font-[500] transition-all  
        ${(p) =>
          p.$isActive &&
-         "text-sky-700 bg-black/20 hover:bg-sky-200/20 hover:text-sky-700"}
+         "text-sky-700  hover:bg-custom-greaner/20 "}
 `;
 
 export { BarButton };

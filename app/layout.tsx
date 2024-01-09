@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@styles/globals.css";
+import "./styles/globals.css";
 import { ReactProp } from "@app-types/type";
 import { ToasterProvider } from "@components/providers/ToasterProvider";
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }: ReactProp) {
     <html lang="en">
       <body>
           <ToasterProvider/>
-          <main>
+          <main className="min-h-screen">
           <div className="main">
           <div className="gradient" />
         </div>

@@ -1,8 +1,10 @@
-"use client"
+"use client";
 import { BarButton } from "../style";
-import { usePathname, useRouter } from "next/navigation";
-
+import useSidebarContext from "@app/(task)/context/FormProvider";
 import { cn } from "@/lib/utils";
+import { useSearchParams, useRouter } from 'next/navigation';
+
+
 
 interface SidebarItemProps {
   label: string;
@@ -10,26 +12,22 @@ interface SidebarItemProps {
 }
 
 const SideBarItem = ({ label, href }: SidebarItemProps) => {
-  const path = usePathname();
-  const router = useRouter();
-
-  const $isActive: Boolean =
-    (path === "/" && href === "/") || path === href || path.endsWith(`${href}`);
+  const searchParams = useSearchParams();
+  const param = searchParams.get('origin');
+  const router = useRouter()
   const handleClick = () => {
-    router.push(href);
+    router.push(`/post-task?origin=${href}`, {scroll: false});
   };
   return (
-    <BarButton onClick={handleClick} $isActive>
-        <span>{label}</span>
-      <div
+    <BarButton className="cursor-pointer" $isActive={param === href} onClick={handleClick}>
+      <span className=" text-custom-greaner">{label}</span>
+      <span
         className={cn(
-          "ml-auto opacity-0 border-2 border-black h-full transition-all",
-          $isActive && "opacity-100"
+          "absolute inset-y-0 left-0 opacity-0 border-2 block border-custom-greaner h-full transition-all",
+          param === href && "opacity-100"
         )}
       />
     </BarButton>
   );
 };
 export default SideBarItem;
-
-
