@@ -3,7 +3,7 @@ import { ReactProp } from "@app-types/type";
 import Logo from "@components/Logo";
 import X from "@components/icon/Times";
 import TaskSideBar from "@app/(task)/_components/TaskSideBar";
-import {FormProvider} from "./context/FormProvider"
+import { FormProvider } from "./context/FormProvider";
 
 export const metadata: Metadata = {
   title: "JBProMend",
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 
 export default function TaskLayout({ children }: ReactProp) {
   return (
-    <FormProvider>
     <div className="z-10 relative bg-white">
       <div className="sticky top-0 w-full left-0 z-[100] bg-white/90">
         <div className="h-[69px] w-screen max-w-5xl mx-auto px-5 flex justify-between ">
@@ -24,12 +23,13 @@ export default function TaskLayout({ children }: ReactProp) {
         <div className="max-w-[1200px] w-full flex-1 flex flex-col">
           <div className="md:grid-cols-[1fr_50%_1fr] gap-x-6 px-6 grid grid-cols-[100%] ">
             <TaskSideBar />
-            <div className="overflow-x-hidden pt-[10px] md:pt-2 font-manrope md:border-l md:border-zinc-200">{children}</div>
+            <div className="overflow-x-hidden pt-[10px] md:pt-2 font-manrope md:border-l md:border-zinc-200">
+              <FormProvider>{children}</FormProvider>
+            </div>
             <div className=" sticky top-20 pt-20 min-h-screen" />
           </div>
         </div>
       </div>
     </div>
-    </FormProvider>
   );
 }

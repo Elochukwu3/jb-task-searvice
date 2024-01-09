@@ -2,6 +2,7 @@
 import { Metadata } from "next";
 import React from "react";
 import CreateTitle from "./_title/page";
+import CreateLocation from "./_location/page";
 import useSidebarContext from "@app/(task)/context/FormProvider";
 import { useSearchParams } from 'next/navigation';
 import {convertToObject} from "./helper/convertArray"
@@ -24,7 +25,7 @@ try {
   if (param === routes?.titleDate) {
     content = <CreateTitle />;
   } else if (param === routes?.Location) {
-    content = <div>content location</div>;
+    content = <CreateLocation/>;
   } else if (param === routes?.Details ) {
     content = <div>content details</div>;
   } else if (param === routes?.Budget ) {

@@ -18,7 +18,6 @@ const CreateTitle = () => {
   const routes = convertToObject();
 
   const onSubmit =(values:FormData)=>{
-    console.log(form)
     if(values){
     handleSetter(routes?.Location)
       }  }
