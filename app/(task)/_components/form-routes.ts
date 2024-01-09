@@ -1,6 +1,6 @@
 export const formQeuryRoutes = [
-    {href: "Site%20Header-v#titleDate", label:"Title & Date"},
-    {href: "Site%20Header-v#Location", label:"Location"},
-    {href: "Site%20Header-v#Details", label:"Details"},
-    {href: "Site%20Header-v#Budget", label:"Budget"},
+    {href: "form%Header-VtitleDate", label:"Title & Date"},
+    {href: "form%Header-VLocation", label:"Location"},
+    {href: "form%Header-VDetails", label:"Details"},
+    {href: "form%Header-VBudget", label:"Budget"},
 ] as const;

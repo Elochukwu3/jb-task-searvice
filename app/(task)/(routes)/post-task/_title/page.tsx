@@ -9,17 +9,18 @@ import DescriptionForm from "./_components/Description-form";
 import CheckBox from "./_components/checkbox";
 import { Button } from "@components-shadui/ui/button";
 import useSidebarContext from "@app/(task)/context/FormProvider";
-
+import {convertToObject} from "@app/(task)/(routes)/post-task/helper/convertArray";
 
 
 const CreateTitle = () => {
   const form = useFormData() 
-  const {handleSetter} = useSidebarContext ();
+  const {handleSetter} = useSidebarContext (); 
+  const routes = convertToObject();
 
   const onSubmit =(values:FormData)=>{
     console.log(form)
     if(values){
-    handleSetter("#Location")
+    handleSetter(routes?.Location)
       }  }
 
   return ( 
