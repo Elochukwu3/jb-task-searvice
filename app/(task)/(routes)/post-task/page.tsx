@@ -3,6 +3,10 @@ import { Metadata } from "next";
 import React from "react";
 import CreateTitle from "./_title/page";
 import useSidebarContext from "@app/(task)/context/FormProvider";
+import { useSearchParams } from 'next/navigation';
+import { formQeuryRoutes } from "@app/(task)/_components/form-routes";
+
+
 
 // export const metadata: Metadata = {
 //   title: "New task",
@@ -11,18 +15,27 @@ import useSidebarContext from "@app/(task)/context/FormProvider";
 
 const Page = () => {
   const { activeTab, activeWindow } = useSidebarContext();
+  const searchParams = useSearchParams();
+  const param = searchParams.get('origin');
+
+  const routeObj:{[key:string]: string} = {};
+  {formQeuryRoutes.forEach(({href})=>{
+    const key = href.split("#")[1];
+    routeObj[key] = href
+  })}
+
   let content: JSX.Element;
-  if (activeTab === activeWindow) {
+  if (param === routeObj?.titleDate) {
     content = <CreateTitle />;
   } else if (activeTab === activeWindow) {
     content = <div>content location</div>;
   } else if (activeTab === activeWindow ) {
     content = <div>content details</div>;
   } else {
-    content = <div>content</div>;
+    content = <div>content not available</div>;
   }
 
-  return window && content;
+  return param && content;
 };
 
 export default Page;
