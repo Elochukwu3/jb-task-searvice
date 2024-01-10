@@ -1,5 +1,6 @@
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
-import {MAIN_PROJECT_SIDE_TEXT} from "@db/constants/project"
+import {MAIN_PROJECT_SIDE_TEXT} from "@db/constants/project";
+
 
 const ProjectOutline = () => {
  
@@ -29,7 +30,7 @@ const ProjectOutline = () => {
         </div>
         ))}
       </div>
-      <ButtonWrapper $bool={true} className="mt-10 max-lg:w-1/2 mx-auto"> Post task</ButtonWrapper>
+      <ButtonWrapper $as="a" href="/post-task?origin=form%Header-VtitleDate" $bool={true} className="mt-10 max-lg:w-1/2 mx-auto"> Post task</ButtonWrapper>
     </section>
   );
 };
