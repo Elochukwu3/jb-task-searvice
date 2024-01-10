@@ -21,6 +21,7 @@ export const revalidate = 10
 const CreateLocation = () => {
   const [data, setData] = useState<any[]>([]);
   const [err, setErr] = useState<string>();
+  const [selectedItem, setSelectedItem] = useState(0);
   const inputSchema = object({
     search: string().min(1, {
       message: "Title is required",
@@ -84,6 +85,22 @@ const CreateLocation = () => {
                         field.onChange(value);
                         debouncedSearch(value);
                       }}
+                      onKeyDown={(event) => {
+                        // Arrow down key
+                        if (event.keyCode === 40) {
+                          setSelectedItem((prevSelectedItem) => Math.min(prevSelectedItem + 1, data.length - 1));
+                          console.log("40")
+                        }
+                        // Arrow up key
+                        else if (event.keyCode === 38) {
+                            console.log("38")
+                          setSelectedItem((prevSelectedItem) => Math.max(prevSelectedItem - 1, 0));
+                        }
+                        // Enter key
+                        else if (event.keyCode === 13) {
+                          handleSelectItem(data[selectedItem]?.display_name);
+                        }
+                      }}
                     />
                   </FormControl>
                   <FormMessage className="text-[#FF4401]" />
@@ -95,12 +112,12 @@ const CreateLocation = () => {
         </Form>
         {(err && !data) &&<span className="text-red-400 ">{err}</span>}
         {data?.length > 0 ? (
-          <div>
+          <div className="">
             {data.map((item, i) => (
               <button 
               key={`select${item?.name + i}`}
               onClick={() => handleSelectItem(item?.display_name)}
-             style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", backgroundColor: i === selectedItem ? 'lightgray' : 'white' }}
             >{item?.display_name}</button>
             ))}
           </div>
