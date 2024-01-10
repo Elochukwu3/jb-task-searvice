@@ -16,12 +16,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { debounceFunc } from "@utils/debounce";
 import { useState } from "react";
+import useKeyboardKey from "@hooks/useKeyboard"
 
 export const revalidate = 10
 const CreateLocation = () => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<T[]>([]);
   const [err, setErr] = useState<string>();
-  const [selectedItem, setSelectedItem] = useState(0);
+  const [selected, setSelected] = useState<T>()
+  const {showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey(data, (item)=> setSelected(item))
   const inputSchema = object({
     search: string().min(1, {
       message: "Title is required",
@@ -85,22 +87,6 @@ const CreateLocation = () => {
                         field.onChange(value);
                         debouncedSearch(value);
                       }}
-                      onKeyDown={(event) => {
-                        // Arrow down key
-                        if (event.keyCode === 40) {
-                          setSelectedItem((prevSelectedItem) => Math.min(prevSelectedItem + 1, data.length - 1));
-                          console.log("40")
-                        }
-                        // Arrow up key
-                        else if (event.keyCode === 38) {
-                            console.log("38")
-                          setSelectedItem((prevSelectedItem) => Math.max(prevSelectedItem - 1, 0));
-                        }
-                        // Enter key
-                        else if (event.keyCode === 13) {
-                          handleSelectItem(data[selectedItem]?.display_name);
-                        }
-                      }}
                     />
                   </FormControl>
                   <FormMessage className="text-[#FF4401]" />
@@ -117,7 +103,7 @@ const CreateLocation = () => {
               <button 
               key={`select${item?.name + i}`}
               onClick={() => handleSelectItem(item?.display_name)}
-              style={{ cursor: "pointer", backgroundColor: i === selectedItem ? 'lightgray' : 'white' }}
+              style={{ cursor: "pointer"}}
             >{item?.display_name}</button>
             ))}
           </div>
