@@ -97,11 +97,11 @@ const CreateLocation = () => {
         {data?.length > 0 ? (
           <div>
             {data.map((item, i) => (
-              <div 
+              <button 
               key={`select${item?.name + i}`}
               onClick={() => handleSelectItem(item?.display_name)}
              style={{ cursor: "pointer" }}
-            >{item?.display_name}</div>
+            >{item?.display_name}</button>
             ))}
           </div>
         ): <span>notfound</span>}
