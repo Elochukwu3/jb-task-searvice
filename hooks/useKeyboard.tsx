@@ -3,7 +3,7 @@ import { FC, useCallback, useEffect, useRef, useState } from "react";
 interface Props<T> {
   results?: T[];
   onSelect?: (item: T) => void;
-  callback?: (param:string, item:T)=> void;
+//   callback?: (param:string, item:T)=> void;
 }
 
 const useKeyboardKey = <T extends object>({

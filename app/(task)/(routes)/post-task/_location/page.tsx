@@ -20,10 +20,9 @@ import useKeyboardKey from "@hooks/useKeyboard"
 
 export const revalidate = 10
 const CreateLocation = () => {
-  const [data, setData] = useState<T[]>([]);
+  const [data, setData] = useState<any[]>([]);
   const [err, setErr] = useState<string>();
-  const [selected, setSelected] = useState<T>()
-  const {showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey(data, (item)=> setSelected(item))
+  const [selected, setSelected] = useState<object>({})
   const inputSchema = object({
     search: string().min(1, {
       message: "Title is required",
@@ -36,6 +35,8 @@ const CreateLocation = () => {
       search: "",
     },
   });
+  const {showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey(data, (item)=> setSelected(item))
+
   const debouncedSearch = debounceFunc(async (searchQuery: string) => {
     try {
       const response: AxiosResponse<any> = await axios.get(
