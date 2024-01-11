@@ -3,7 +3,7 @@ import { FC, useCallback, useEffect, useRef, useState } from "react";
 interface Props<T> {
   results?: T[];
   onSelect?: (item: T) => void;
-//   callback?: (param:string, item:T)=> void;
+ onSearchChange?: (searchQuery: string) => void;
 }
 
 const useKeyboardKey = <T extends object>({
@@ -68,7 +68,7 @@ const useKeyboardKey = <T extends object>({
   }, [results]);
 
 
-  return {showResults, resetSearchComplete, handleKeyDown}
+  return {focusedIndex, showResults, resetSearchComplete, handleKeyDown, resultContainer}
 };
 
 export default useKeyboardKey;

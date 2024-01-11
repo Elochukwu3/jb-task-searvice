@@ -35,12 +35,15 @@ const CreateLocation = () => {
       search: "",
     },
   });
-  const {showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey(data, (item)=> setSelected(item))
+  const {, showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey({results: data,
+    onSelect: (item) => setSelected(item),
+    onSearchChange: (searchQuery) => form.setValue("search", searchQuery),
+  })
 
   const debouncedSearch = debounceFunc(async (searchQuery: string) => {
     try {
       const response: AxiosResponse<any> = await axios.get(
-        `https://nominatim.openstreetmap.org/search?q=${searchQuery}&format=json&limit=4&countrycodes=NG`);
+        `https://nominatim.openstreetmap.org/search?q=${searchQuery}&format=json&limit=6&countrycodes=NG`);
       setData(response.data);
     } catch (error) {
       setErr("Error fetching search data:");
@@ -73,7 +76,10 @@ const CreateLocation = () => {
               control={form.control}
               name="search"
               render={({ field }) => (
-                <FormItem>
+                <FormItem   
+                tabIndex={1}
+                onBlur={resetSearchComplete}
+                onKeyDown={handleKeyDown}>
                   <FormLabel className="block text-custom-dark pb-2">
                     Where do you need this done?
                   </FormLabel>
@@ -104,7 +110,10 @@ const CreateLocation = () => {
               <button 
               key={`select${item?.name + i}`}
               onClick={() => handleSelectItem(item?.display_name)}
-              style={{ cursor: "pointer"}}
+              style={{
+                backgroundColor:
+                  index === focusedIndex ? "rgba(0,0,0,0.1)" : "",
+              }}
             >{item?.display_name}</button>
             ))}
           </div>
