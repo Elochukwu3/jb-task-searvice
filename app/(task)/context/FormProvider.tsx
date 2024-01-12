@@ -10,7 +10,7 @@ type SidebarContextType = {
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
-export const FormProvider: React.FC = ({ children }:ReactProp ) => {
+export const FormProvider: React.FC<{children: React.ReactNode}>= ({ children } ) => {
   const [activeTab, setActiveTab] = useState<string>("#title-date");
   const router = useRouter()
 const handleSetter = (value:string)=>{

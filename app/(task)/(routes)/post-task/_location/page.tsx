@@ -1,5 +1,5 @@
 "use client";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { Form } from "@components-shadui/ui/form";
 import { Button } from "@components-shadui/ui/button";
 import { convertToObject } from "@app/(task)/(routes)/post-task/helper/convertArray";
@@ -19,6 +19,7 @@ import getlocation from "@utils/getLocation";
 import { useState } from "react";
 import useKeyboardKey from "@hooks/useKeyboard";
 import useSidebarContext from "@app/(task)/context/FormProvider";
+import { XCircle } from "@phosphor-icons/react";
 
 export const revalidate = 10;
 const CreateLocation = () => {
@@ -26,6 +27,7 @@ const CreateLocation = () => {
   const [selected, setSelected] = useState<object>({});
   const routes = convertToObject();
   const {handleSetter} = useSidebarContext (); 
+
   const inputSchema = object({
     search: string().min(8, {
       message: "field not filled",
@@ -39,10 +41,11 @@ const CreateLocation = () => {
     },
   });
   const {
+    handleSelection,
     focusedIndex,
     resultContainer,
     showResults,
-    resetSearchComplete,
+    handleBlur,
     handleKeyDown,
   } = useKeyboardKey({
     results: data,
@@ -55,16 +58,14 @@ const CreateLocation = () => {
     const res = await getlocation(searchQuery)
     setData(res)
   }, 300);
-  const handleSelectItem = (selectedValue: string) => {
-    form.setValue("search", selectedValue);
-    setData([]);
-  };
+
 const onSubmit =(value:{search: string})=>{
     if(value){
         handleSetter(routes?.Details)
     }   
 
 }
+
   return (
     <div className="max-w-5xl mx-auto flex md:justify-center h-full p-6">
       <div className="w-full">
@@ -82,24 +83,30 @@ const onSubmit =(value:{search: string})=>{
         <Form {...form}>
           <form className="space-y-8 mt-6"
           onSubmit={form.handleSubmit(onSubmit)}
+          
           >
             <FormField
               control={form.control}
               name="search"
               render={({ field }) => (
                 <FormItem
-                  tabIndex={1}
-                  onBlur={resetSearchComplete}
-                  onKeyDown={handleKeyDown}
+                 
                 >
                   <FormLabel className="block text-custom-dark pb-2">
                     Where do you need this done?
                   </FormLabel>
+                  <div
+                    tabIndex={1}
+                    onKeyDown={handleKeyDown}
+                    onBlur={handleBlur}
+                  >
+
+                  
+                  <div className="flex relative">
                   <FormControl>
                     <Input
                       className="boreder border-custom-greaner"
                       placeholder="e.g. 'enter area or postcode"
-                      type="text"
                       autoComplete="off" 
                       {...field}
                       onChange={(event) => {
@@ -109,7 +116,30 @@ const onSubmit =(value:{search: string})=>{
                       }}
                     />
                   </FormControl>
+                    <span className="inset-y-0 items-center flex absolute right-3" onClick={()=> form.setValue("search", "")}>
+                    <XCircle size={16} color="#3e3d3b" weight="bold" />
+                    </span>
+                    </div>
                   <FormMessage className="text-[#FF4401]" />
+                  {showResults && (
+          <div  className="bg-white w-full space-y-1 text-custom-dark max-h-40 overflow-y-scroll no-scroll">
+            {data?.length > 0 ? (
+              data.map((item, i) => (
+                <button
+                  key={`select${item?.name + i}`}
+                  onClick={()=>handleSelection(i)}
+                  ref={resultContainer(i)}
+                  className={`${i === focusedIndex ? "bg-green-100 " : ""} relative z-20 block w-full p-1 rounded-sm`}
+                >
+                  {item?.display_name}
+                </button>
+              ))
+            ) : (
+              <span>notfound</span>
+            )}
+          </div>
+         )} 
+                  </div>
                 </FormItem>
               )}
             />
@@ -119,24 +149,7 @@ const onSubmit =(value:{search: string})=>{
             </div>
           </form>
         </Form>
-        {showResults && (
-          <div className="bg-white w-full space-y-1 text-custom-dark max-h-40 overflow-y-scroll no-scroll">
-            {data?.length > 0 ? (
-              data.map((item, i) => (
-                <div
-                  key={`select${item?.name + i}`}
-                  onClick={() => handleSelectItem(item?.display_name)}
-                  ref={resultContainer(i)}
-                  className={`${i === focusedIndex ? "bg-green-100 " : ""} block w-full p-1 rounded-sm`}
-                >
-                  {item?.display_name}
-                </div>
-              ))
-            ) : (
-              <span>notfound</span>
-            )}
-          </div>
-         )} 
+        
           {!selected && form.formState.touchedFields.search && form.formState.isDirty && !showResults && (
           <span className="text-red-400 ">Field is required</span>
         )}

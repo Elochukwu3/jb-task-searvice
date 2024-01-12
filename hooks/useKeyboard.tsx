@@ -14,7 +14,7 @@ const useKeyboardKey = <T extends {display_name: string }>({
   resetResult
 }: Props<T>) => {
   const [focusedIndex, setFocusedIndex] = useState(-1);
-  const resultContainer = useRef<HTMLDivElement>(null);
+  const resultContainer = useRef<HTMLButtonElement>(null);
   const [showResults, setShowResults] = useState(false);
 
   const handleSelection = (selectedIndex: number) => {
@@ -31,7 +31,7 @@ const useKeyboardKey = <T extends {display_name: string }>({
     setFocusedIndex(-1);
     setShowResults(false);
     resetResult && resetResult([])
-  }, []);
+  }, [resetResult]);
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
     const { key } = e;
@@ -55,6 +55,11 @@ const useKeyboardKey = <T extends {display_name: string }>({
     setFocusedIndex(nextIndexCount);
   };
 
+  const handleBlur = (e:React.FocusEvent<HTMLDivElement>) => {
+    if (!e.relatedTarget) {
+      resetSearchComplete();
+    }
+  };
   useEffect(() => {
     if (!resultContainer.current) return;
 
@@ -70,7 +75,7 @@ const useKeyboardKey = <T extends {display_name: string }>({
   }, [results, showResults]);
 
 
-  return {focusedIndex, showResults, resetSearchComplete, handleKeyDown,   resultContainer: (index: number) =>
+  return {handleSelection, focusedIndex, showResults, handleBlur, handleKeyDown,   resultContainer: (index: number) =>
     index === focusedIndex ? resultContainer : null}
 };
 
