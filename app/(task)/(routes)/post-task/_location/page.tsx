@@ -114,7 +114,7 @@ const onSubmit =(value:{search: string})=>{
               )}
             />
             <div className="fixed bottom-0 flex gap-10 z-10">
-            <Button onClick={()=> handleSetter(routes?.Location)} className="bg-zinc-200 text-black" >Back</Button>
+            <Button type="button" onClick={()=> handleSetter(routes?.titleDate)} className="bg-zinc-200 text-black" >Back</Button>
             <Button className="bg-custom-greaner text-white" type="submit">Submit</Button>
             </div>
           </form>
