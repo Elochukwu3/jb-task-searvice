@@ -24,8 +24,8 @@ const CreateLocation = () => {
   const [err, setErr] = useState<string>();
   const [selected, setSelected] = useState<object>({});
   const inputSchema = object({
-    search: string().min(1, {
-      message: "Title is required",
+    search: string().min(8, {
+      message: "field not filled",
     }),
   });
 
