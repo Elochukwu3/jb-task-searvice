@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import React from 'react';
-import {CalendarForm} from "./test"
 
 
 export const metadata:Metadata = {
@@ -10,7 +9,6 @@ export const metadata:Metadata = {
 const page = () => {
   return (
     <div>WELCOME TO MY PAGE
-      <CalendarForm/>
     </div>
   )
 }
