@@ -64,9 +64,9 @@ const useKeyboardKey = <T extends {display_name: string }>({
   }, [focusedIndex]);
 
   useEffect(() => {
-    if (results.length > 0 && !showResults) setShowResults(true);
+    if (results?.length > 0 && !showResults) setShowResults(true);
 
-    if (results.length <= 0) setShowResults(false);
+    if (results?.length <= 0) setShowResults(false);
   }, [results, showResults]);
 
 
