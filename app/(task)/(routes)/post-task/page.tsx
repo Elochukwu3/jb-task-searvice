@@ -4,6 +4,7 @@ import React from "react";
 import CreateTitle from "./_title/page";
 import CreateLocation from "./_location/page";
 import Details from "./_details/page";
+import Budget from "./_budget/page";
 import useSidebarContext from "@app/(task)/context/FormProvider";
 import { useSearchParams } from 'next/navigation';
 import {convertToObject} from "./helper/convertArray"
@@ -30,7 +31,7 @@ try {
   } else if (param === routes?.Details ) {
     content = <Details />;
   } else if (param === routes?.Budget ) {
-    content = <div>content Budget</div>;
+    content = <Budget/>;
   } else {
     content = <div>content not available</div>;
   }
