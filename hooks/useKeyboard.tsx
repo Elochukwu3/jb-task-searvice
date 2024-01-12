@@ -3,12 +3,13 @@ import { FC, useCallback, useEffect, useRef, useState } from "react";
 interface Props<T> {
   results?: T[];
   onSelect?: (item: T) => void;
- onSearchChange?: (searchQuery: string) => void;
+onSearchSubmit?: (searchQuery: string) => void;
 }
 
-const useKeyboardKey = <T extends object>({
+const useKeyboardKey = <T extends {display_name: string }>({
   results = [],
   onSelect,
+  onSearchSubmit
 }: Props<T>) => {
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const resultContainer = useRef<HTMLDivElement>(null);
@@ -19,7 +20,8 @@ const useKeyboardKey = <T extends object>({
     if (!selectedItem) return resetSearchComplete();
     onSelect && onSelect(selectedItem);
     resetSearchComplete();
-    // callback("search", selectedItem);
+    onSearchSubmit && onSearchSubmit(selectedItem.display_name)
+    console.log(selectedItem, "selected")
   };
 
   const resetSearchComplete = useCallback(() => {
@@ -65,10 +67,11 @@ const useKeyboardKey = <T extends object>({
     if (results.length > 0 && !showResults) setShowResults(true);
 
     if (results.length <= 0) setShowResults(false);
-  }, [results]);
+  }, [results, showResults]);
 
 
-  return {focusedIndex, showResults, resetSearchComplete, handleKeyDown, resultContainer}
+  return {focusedIndex, showResults, resetSearchComplete, handleKeyDown,   resultContainer: (index: number) =>
+    index === focusedIndex ? resultContainer : null}
 };
 
 export default useKeyboardKey;

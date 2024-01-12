@@ -35,9 +35,9 @@ const CreateLocation = () => {
       search: "",
     },
   });
-  const {, showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey({results: data,
+  const {focusedIndex, resultContainer, showResults, resetSearchComplete, handleKeyDown} = useKeyboardKey({results: data,
     onSelect: (item) => setSelected(item),
-    onSearchChange: (searchQuery) => form.setValue("search", searchQuery),
+    onSearchSubmit: (searchQuery) => form.setValue("search", searchQuery),
   })
 
   const debouncedSearch = debounceFunc(async (searchQuery: string) => {
@@ -107,14 +107,16 @@ const CreateLocation = () => {
         {data?.length > 0 ? (
           <div className="">
             {data.map((item, i) => (
-              <button 
+              <div 
               key={`select${item?.name + i}`}
               onClick={() => handleSelectItem(item?.display_name)}
+              ref={resultContainer(i)}
               style={{
                 backgroundColor:
-                  index === focusedIndex ? "rgba(0,0,0,0.1)" : "",
+                  i === focusedIndex ? "rgba(0,0,0,0.1)" : "",
               }}
-            >{item?.display_name}</button>
+              className="block w-full   "
+            >{item?.display_name}</div>
             ))}
           </div>
         ): <span>notfound</span>}
