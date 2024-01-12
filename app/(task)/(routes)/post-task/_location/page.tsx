@@ -20,6 +20,7 @@ import { useState } from "react";
 import useKeyboardKey from "@hooks/useKeyboard";
 import useSidebarContext from "@app/(task)/context/FormProvider";
 import { XCircle } from "@phosphor-icons/react";
+import Locations from "./Locations"
 
 export const revalidate = 10;
 const CreateLocation = () => {
@@ -121,24 +122,8 @@ const onSubmit =(value:{search: string})=>{
                     </span>
                     </div>
                   <FormMessage className="text-[#FF4401]" />
-                  {showResults && (
-          <div  className="bg-white w-full space-y-1 text-custom-dark max-h-40 overflow-y-scroll no-scroll">
-            {data?.length > 0 ? (
-              data.map((item, i) => (
-                <button
-                  key={`select${item?.name + i}`}
-                  onClick={()=>handleSelection(i)}
-                  ref={resultContainer(i)}
-                  className={`${i === focusedIndex ? "bg-green-100 " : ""} relative z-20 block w-full p-1 rounded-sm`}
-                >
-                  {item?.display_name}
-                </button>
-              ))
-            ) : (
-              <span>notfound</span>
-            )}
-          </div>
-         )} 
+                  {showResults && <Locations data={data} handleSelection={handleSelection} focusedIndex={focusedIndex} resultContainer={resultContainer} />}
+
                   </div>
                 </FormItem>
               )}
