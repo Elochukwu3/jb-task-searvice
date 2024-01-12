@@ -22,7 +22,6 @@ import useSidebarContext from "@app/(task)/context/FormProvider";
 import { XCircle } from "@phosphor-icons/react";
 import Locations from "./Locations"
 
-export const revalidate = 10;
 const CreateLocation = () => {
   const [data, setData] = useState<any[]>([]);
   const [selected, setSelected] = useState<object>({});
