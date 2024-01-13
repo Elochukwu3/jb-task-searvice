@@ -36,7 +36,7 @@ const Page = () => {
   }
   
   return (
-    <div className="max-w-5xl mx-auto flex md:justify-center h-full p-6">
+    <div className="max-w-5xl mx-auto flex md:justify-center h-full">
       <div className="w-full text-custom-dark">
         <h1 className="text-3xl text-custom-dark my-2 mb-5">Suggest your budget</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

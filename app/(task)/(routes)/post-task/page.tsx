@@ -49,7 +49,7 @@ const Page = () => {
     loadContent();
   }, [param, router, routes?.Budget, routes?.Details, routes?.Location,  routes?.titleDate]);
 
-  return loading ? <div>Loading...</div> : content;
+  return loading ? <div>Loading...</div> : <div className="md:px-6 px-1">{content}</div>;
 };
 
 export default Page;
