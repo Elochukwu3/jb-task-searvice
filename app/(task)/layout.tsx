@@ -15,7 +15,7 @@ export default function TaskLayout({ children }: ReactProp) {
   return (
     <div className="z-10 relative bg-white">
       <div className="sticky top-0 w-full left-0 z-[100] bg-white/90">
-        <div className="h-[69px] w-screen max-w-5xl mx-auto px-5 flex justify-between items-center">
+        <div className="h-[69px] w-11/12 max-w-4xl mx-auto px-5 flex justify-between items-center overflow-x-hidden">
           <Logo />
           <Link href="/">
           <X size={24} color="black" weight="bold" />
@@ -29,7 +29,7 @@ export default function TaskLayout({ children }: ReactProp) {
             <div className="overflow-x-hidden pt-[10px] md:pt-2 font-manrope md:border-l md:border-zinc-200">
               <FormProvider>{children}</FormProvider>
             </div>
-            <div className=" sticky top-20 pt-20 min-h-screen" />
+            <div className=" sticky top-20 pt-20 md:block hidden min-h-screen" />
           </div>
         </div>
       </div>
