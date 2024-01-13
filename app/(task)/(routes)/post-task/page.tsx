@@ -9,10 +9,7 @@ import useSidebarContext from "@app/(task)/context/FormProvider";
 import { useSearchParams } from 'next/navigation';
 import { convertToObject } from "./helper/convertArray";
 import { useRouter } from "next/navigation";
-const metadata: Metadata = {
-  title: "New task",
-  description: "Ask about our product",
-};
+
 
 const Page = () => {
   const { activeTab } = useSidebarContext();
