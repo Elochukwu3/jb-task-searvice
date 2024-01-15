@@ -38,10 +38,10 @@ const useKeyboardKey = <T extends {display_name: string }>({
     let nextIndexCount = 0;
 
     if (key === "ArrowDown")
-      nextIndexCount = (focusedIndex + 1) % results.length;
+      nextIndexCount = (focusedIndex + 1) % results?.length;
 
     if (key === "ArrowUp")
-      nextIndexCount = (focusedIndex + results.length - 1) % results.length;
+      nextIndexCount = (focusedIndex + results?.length - 1) % results?.length;
 
     if (key === "Escape") {
       resetSearchComplete();

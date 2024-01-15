@@ -1,24 +1,23 @@
 "use client"
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import { ReactProp } from "@app-types/type";
+import React, { createContext, useState, useContext} from 'react';
 import { useRouter } from 'next/navigation';
 
 type SidebarContextType = {
-  activeTab: string;
+  activeTab: {[key:string]: boolean};
   handleSetter: (value: string) => void;
 };
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export const FormProvider: React.FC<{children: React.ReactNode}>= ({ children } ) => {
-  const [activeTab, setActiveTab] = useState<string>("#title-date");
+  const [activeTab, setActiveTab] = useState<{[key:string]: boolean}>({});
   const router = useRouter()
 const handleSetter = (value:string)=>{
-    setActiveTab(value)
-    if(value){
-      router.push(`/post-task?origin=${value}`, {scroll: false});
+  if(value){
+    router.push(`/post-task?origin=${value}`, {scroll: false});
+    setActiveTab((prev)=> ({...prev, [value]: true}))
     }
-}
+} 
 
 
   return (
