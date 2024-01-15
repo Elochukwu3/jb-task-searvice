@@ -4,7 +4,7 @@ import { ReactProp } from "@app-types/type";
 import { useRouter } from 'next/navigation';
 
 type SidebarContextType = {
-  activeTab: string;
+  activeTab: {[key:string]: boolean};
   handleSetter: (value: string) => void;
 };
 
@@ -14,11 +14,11 @@ export const FormProvider: React.FC<{children: React.ReactNode}>= ({ children } 
   const [activeTab, setActiveTab] = useState<string>("#title-date");
   const router = useRouter()
 const handleSetter = (value:string)=>{
-    setActiveTab(value)
-    if(value){
-      router.push(`/post-task?origin=${value}`, {scroll: false});
+  if(value){
+    router.push(`/post-task?origin=${value}`, {scroll: false});
+    setActiveTab((prev)=> ({...prev, [value]: true}))
     }
-}
+} 
 
 
   return (
