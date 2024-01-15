@@ -15,8 +15,13 @@ const SideBarItem = ({ label, href }: SidebarItemProps) => {
   const searchParams = useSearchParams();
   const param = searchParams.get('origin');
   const router = useRouter()
+  const{activeTab} = useSidebarContext (); 
   const handleClick = () => {
-    router.push(`/post-task?origin=${href}`, {scroll: false});
+
+    console.log(activeTab[href], "===", href)
+    if(activeTab[href]){
+      router.push(`/post-task?origin=${href}`, {scroll: false});
+    }
   };
   return (
     <BarButton className="cursor-pointer" $isActive={param === href} onClick={handleClick}>
