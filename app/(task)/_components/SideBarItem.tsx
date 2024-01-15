@@ -16,15 +16,15 @@ const SideBarItem = ({ label, href }: SidebarItemProps) => {
   const param = searchParams.get('origin');
   const router = useRouter()
   const{activeTab} = useSidebarContext (); 
-  const handleClick = () => {
-
-    console.log(activeTab[href], "===", href)
+  const handleClick = (e:React.MouseEvent<HTMLButtonElement>) => {
+    console.log(activeTab[href], e, "out")
     if(activeTab[href]){
+      console.log(activeTab[href], e)
       router.push(`/post-task?origin=${href}`, {scroll: false});
     }
   };
   return (
-    <BarButton className="cursor-pointer" $isActive={param === href} onClick={handleClick}>
+    <BarButton id={href} disabled={activeTab[href]} className="cursor-pointer" $isActive={param === href} onClick={handleClick}>
       <span className=" text-custom-greaner">{label}</span>
       <span
         className={cn(
