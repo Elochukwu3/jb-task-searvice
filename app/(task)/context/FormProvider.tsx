@@ -1,6 +1,5 @@
 "use client"
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { ReactProp } from "@app-types/type";
 import { useRouter } from 'next/navigation';
 
 type SidebarContextType = {
@@ -11,7 +10,7 @@ type SidebarContextType = {
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export const FormProvider: React.FC<{children: React.ReactNode}>= ({ children } ) => {
-  const [activeTab, setActiveTab] = useState<string>("#title-date");
+  const [activeTab, setActiveTab] = useState<{[key:string]: boolean}>({});
   const router = useRouter()
 const handleSetter = (value:string)=>{
   if(value){
