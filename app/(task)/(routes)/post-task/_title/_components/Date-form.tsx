@@ -1,5 +1,4 @@
 "use client";
-
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,6 +20,7 @@ import { FormType } from "./type";
 import { DayPicker } from "react-day-picker";
 
 export default function DatePickerForm({ form }: FormType) {
+
   return (
     <FormField
       control={form.control}
@@ -49,7 +49,10 @@ export default function DatePickerForm({ form }: FormType) {
                 </Button>
               </FormControl>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
+            <PopoverContent
+              className="w-auto p-0"
+              align="start"
+            >
               <Controller
                 control={form.control}
                 name="ondate"
@@ -73,4 +76,3 @@ export default function DatePickerForm({ form }: FormType) {
   );
 }
 
-import * as z from "zod";

@@ -19,9 +19,6 @@ const Page = () => {
 
   const form = useForm<zInfer<typeof inputSchema>>({
     resolver: zodResolver(inputSchema),
-    defaultValues: {
-      budget: 0,
-    },
   });
   const { register, handleSubmit, formState: { errors, isValid , isSubmitting } } = form;
   const onSubmit= (value: {budget: number})=>{
@@ -41,7 +38,7 @@ const Page = () => {
         <h1 className="text-3xl text-custom-dark my-2 mb-5">Suggest your budget</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="budget">What is your budget?</label>
-            <p className="text-sm py-3">Feel free to negotiate the final price.</p>
+            <p className="text-sm py-3 mt-6">Feel free to negotiate the final price.</p>
    <div className={`${errors.budget ? "border-[#FF4401]": "border-custom-greaner/40"} "flex h-10 items-center  w-full px-2 rounded-md border  bg-background 
              text-sm "`}>
     <span> ₦</span>
@@ -53,7 +50,7 @@ const Page = () => {
           {errors.budget && <p className="text-[#FF4401]">{errors.budget.message}</p>}
           <div className="fixed bottom-0 flex gap-10 z-10">
             <Button type="button" onClick={()=> handleSetter(routes?.Details)} className="bg-zinc-200 text-black" >Back</Button>
-            <Button disabled={!isValid || isSubmitting} className="bg-custom-greaner text-white" type="submit">Continue</Button>
+            <Button disabled={!isValid || isSubmitting} className="bg-custom-greaner disabled:opacity-35 text-white" type="submit">Continue</Button>
             </div>
         </form>
       </div>
