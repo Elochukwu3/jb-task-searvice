@@ -58,7 +58,14 @@ export default function DatePickerForm({ form }: FormType) {
                     mode="single"
                     className="w-full"
                     selected={field.value}
-                    onSelect={field.onChange}
+                    onSelect={(date)=>{
+                      field.onChange(date);
+                      const activeElement = document.activeElement as HTMLButtonElement | null;
+                      if (activeElement && typeof activeElement.blur === 'function') {
+                        console.log(date, activeElement)
+                        activeElement.blur();
+                      }
+                    }}
                     disabled={(date: Date) => date < new Date()}
                     initialFocus
                   />
