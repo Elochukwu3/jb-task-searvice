@@ -70,18 +70,12 @@ const onSubmit =(value:{search: string})=>{
     <div className="max-w-5xl mx-auto flex md:justify-center h-full">
       <div className="w-full">
         <h1 className="text-3xl text-custom-dark my-2 ">Your Location</h1>
-        <section className="grid grid-cols-2 w-full text-sm">
-          <div className="w-11/12 text-center p-3 rounded-sm bg-custom-dark text-white">
+            <div className="w-11/12 text-center p-3 my-4 duration-500 rounded-sm bg-custom-dark hover:scale-95 mx-auto text-white">
             <p>In-person</p>
             <p>Select this if you need the Tasker physically there</p>
-          </div>
-          <div className="w-11/12 text-center p-3 rounded-sm bg-slate-300 text-custom-dark">
-            <p>In-person</p>
-            <p>Select this if you need the Tasker physically there</p>
-          </div>
-        </section>
+          </div> 
         <Form {...form}>
-          <form className="space-y-8 mt-6"
+          <form className="space-y-8 mt-8"
           onSubmit={form.handleSubmit(onSubmit)}
           
           >
