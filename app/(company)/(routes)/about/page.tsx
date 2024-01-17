@@ -8,7 +8,8 @@ export const metadata:Metadata = {
 }
 const page = () => {
   return (
-    <div>WELCOME TO MY PAGE
+    <div className='bg-red-900'>
+      WELCOME TO MY PAGE
     </div>
   )
 }

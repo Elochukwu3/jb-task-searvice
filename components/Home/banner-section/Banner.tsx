@@ -1,5 +1,5 @@
 "use client"
-import {useState,useEffect,  useRef} from "react";
+import {useRef} from "react";
 import Image from "next/image";
 import SearchSection from "./SearchSection"
 import {BannerWrapper} from "./homeStyle";
