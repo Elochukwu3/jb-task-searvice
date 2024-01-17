@@ -16,6 +16,51 @@ const page = () => {
       </div>
       <div className="flex-1">
         <YourComponent/>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="image" x="0" y="0" height="100%" width="100%"
+             viewBox="0 0 512 512">
+      <image x="0" y="0" width="512" height="512"
+             href="https://i.imgur.com/5JQJc41.png"></image>
+    </pattern>
+  </defs>
+  <circle cx="50" cy="50" r="40" fill="url(#image)" stroke="black" stroke-width="2"/>
+  <g transform="translate(50,50)">
+    <g transform="rotate(0)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(90)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(135)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(180)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(225)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(270)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+    <g transform="rotate(315)">
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
+      <circle cx="0" cy="-20" r="5" fill="black"/>
+    </g>
+  </g>
+</svg>
+
       </div>
     </div>
     </section>
