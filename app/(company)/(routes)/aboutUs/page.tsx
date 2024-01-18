@@ -10,57 +10,73 @@ const page = () => {
   return (
     <section className='max-w-7xl mx-auto '>
       <div className='min-h-[60vh] w-11/12 rounded-md mx-auto flex justify-between p-6 bg-[#F9F3EF] '>
-      <div>
-        <h1 className='text-4xl'>We&apos;`re making a difference to people&apos;`s lives</h1>
+      <div className='flex-1'>
+        <h1 className='text-5xl'>We&apos;re making a difference to people&apos;s lives</h1>
         <p>Creating a way to connect people ready to work, with people who need work done</p>
       </div>
-      <div className="flex-1">
+      <div className="min-h-[240px] min-w-80 bg-red-300 flex-1">
         <YourComponent/>
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="image" x="0" y="0" height="100%" width="100%"
-             viewBox="0 0 512 512">
-      <image x="0" y="0" width="512" height="512"
-             href="https://i.imgur.com/5JQJc41.png"></image>
-    </pattern>
-  </defs>
-  <circle cx="50" cy="50" r="40" fill="url(#image)" stroke="black" stroke-width="2"/>
-  <g transform="translate(50,50)">
-    <g transform="rotate(0)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(90)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(135)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(180)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(225)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(270)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(315)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-  </g>
-</svg>
 
+        <div className="position-relative d-flex flex-column flex-md-row gutter-spacious col-lg-10 mx-auto my-lg-6">
+        <div className="col-md-6 js-build-in-item build-in-scale-right build-in-animate">
+          <div className="p-4 rounded mt-5 box-shadow-mktg-xl mb-6" >
+            <ul className="list-style-none mb-n4">
+                <li className="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade build-in-animate">
+                  <div className="d-flex flex-items-center">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" className="octicon octicon-check-circle-fill color-fg-success mr-2">
+    <path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z"></path>
+</svg>
+                    <span className="text-medium">Build</span>
+                  </div>
+                  <span className="f5 color-fg-muted d-none d-sm-block">1m 21s</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="home-campaign-ghas-connect position-relative position-md-absolute z-1 d-flex flex-items-center js-build-in-item build-in-scale-fade build-in-animate" >
+          <div className="d-inline-block circle p-1 color-bg-emphasis" style={{boxShadow: "0 0 0 2px #444D56;"}}></div>
+          <div style={{width: "40px", height: "2px", background: "#D1D5DA;"}}></div>
+          <div className="d-inline-block circle p-1 color-bg-emphasis" style={{boxShadow: "0 0 0 2px #444D56;"}}></div>
+        </div>
+
+        <div className="col-md-6 js-build-in-item build-in-scale-right build-in-animate" >
+          <div className="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" >
+            Steps
+          </div>
+          <div className="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6">
+            <ul className="list-style-none mb-n4">
+                <li className="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade build-in-animate" >
+                  <div className="d-flex flex-items-center">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" className="octicon octicon-check-circle-fill color-fg-success mr-2">
+    <path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z"></path>
+</svg>
+                    <span className="text-medium">Initialize CodeQL</span>
+                  </div>
+                  <span className="f5 color-fg-muted d-none d-sm-block">1m 42s</span>
+                </li>
+                <li className="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade build-in-animate" >
+                  <div className="d-flex flex-items-center">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" className="octicon octicon-check-circle-fill color-fg-success mr-2">
+    <path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z"></path>
+</svg>
+                    <span className="text-medium">Autobuild</span>
+                  </div>
+                  <span className="f5 color-fg-muted d-none d-sm-block">1m 24s</span>
+                </li>
+                <li className="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade build-in-animate" >
+                  <div className="d-flex flex-items-center">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" className="octicon octicon-check-circle-fill color-fg-success mr-2">
+    <path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm16.28-2.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018l-5.97 5.97-2.47-2.47a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l3 3a.75.75 0 0 0 1.06 0Z"></path>
+</svg>
+                    <span className="text-medium">Perform CodeQL Analyses</span>
+                  </div>
+                  <span className="f5 color-fg-muted d-none d-sm-block">1m 36s</span>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     </section>
@@ -92,3 +108,5 @@ const YourComponent = () => {
   );
 };
 
+// element.style {
+//   transform: perspective(700px) rotateX(-0.03deg) rotateY(-0.03deg);
