@@ -5,7 +5,7 @@ function AboutVision() {
     <div className="flex w-[92%] px-1 mx-auto py-20 gap-1 font-manrope">
       <div className=" inline-block">
       <div className=" bg-custom-dark text-slate-200 p-3 w-fit rounded-md">
-        “The only way to do great work is to love what you do”
+        
       </div>
       </div>
       <div className="relative after:top-0 bg-custom-dark h-2 w-[14%] mt-5 

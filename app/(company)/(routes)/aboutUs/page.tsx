@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image';
 import React from 'react';
 import AboutVision from './components/AboutVision';
+import Comp from './components/Comp';
 
 
 export const metadata:Metadata = {
@@ -46,6 +47,7 @@ const page = () => {
       </div>
     </div>
     <AboutVision/>
+    <Comp/>
     </section>
   )
 }
