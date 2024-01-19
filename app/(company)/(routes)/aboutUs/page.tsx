@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image';
 import React from 'react';
+import AboutVision from './components/AboutVision';
 
 
 export const metadata:Metadata = {
@@ -9,7 +10,7 @@ export const metadata:Metadata = {
 }
 const page = () => {
   return (
-    <section className='max-w-7xl mx-auto pesp'>
+    <section className='max-w-7xl mx-auto space-y-10 pesp'>
       <div className='min-h-[60vh] w-11/12 rounded-xl mx-auto flex justify-between p-20 bg-[#F9F3EF] '>
       <div className='flex-1 space-y-5'>
         <h1 className='text-[72px] font-satoshi font-bold leading-[70px] py-8 text-black text-balance'>We&apos;re making a difference to people&apos;s lives</h1>
@@ -44,6 +45,7 @@ const page = () => {
         {/* <YourComponent/> */}
       </div>
     </div>
+    <AboutVision/>
     </section>
   )
 }
