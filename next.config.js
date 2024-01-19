@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        // domains: ['images.airtasker.com'],
+        domains: ['github.githutassets.com', "images.airtasker.com"],
       },
 }
 
