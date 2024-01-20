@@ -72,6 +72,7 @@ const footer_links = [
   },
 ] as const;
 const MENU_URL = {
+  about:"/aboutUs",
   location: "/location",
   service: "/service",
   mender: "/earn-as-mender",
