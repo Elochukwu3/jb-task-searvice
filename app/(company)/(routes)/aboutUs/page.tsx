@@ -11,7 +11,7 @@ export const metadata:Metadata = {
 const page = () => {
   return (
     <section className='max-w-7xl mx-auto space-y-10 pesp'>
-      <div className='min-h-[60vh] w-11/12 rounded-xl mx-auto flex justify-between p-20 bg-[#F9F3EF] '>
+      <div className='overflow-hidden relative min-h-[60vh] w-11/12 rounded-xl mx-auto flex justify-between p-20 bg-[#F9F3EF] '>
       <div className='flex-1 space-y-5'>
         <h1 className='text-[72px] font-satoshi font-bold leading-[70px] py-8 text-black text-balance'>We&apos;re making a difference to people&apos;s lives</h1>
         <p>Creating a way to connect people ready to work, with people who need work done</p>
@@ -43,6 +43,17 @@ const page = () => {
         className='filter-0 hue-rotate-18 saturate-100 sepia brightness-100'
         /> */}
         {/* <YourComponent/> */}
+      </div>
+      <div className='absolute -bottom-10 '>
+        <Image
+        src={"https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg"}
+        height={300}
+        width={300}
+        sizes='200px'
+        alt='image-git'
+        style={{ filter: 'invert(1)'}}
+        // className='saturate-100 brightness-100'
+        />
       </div>
     </div>
     <Comp/>
