@@ -4,6 +4,7 @@ import React from 'react';
 import Comp from './components/Comp';
 
 
+
 export const metadata:Metadata = {
     title: 'About us | JBpromend NG',
     description: 'ask about our product',
