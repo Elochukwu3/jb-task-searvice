@@ -1,6 +1,5 @@
 import { ButtonWrapper } from "@components/Button/ButtonStyle"
 import {Menu as  MenuWrappper, MenuItem} from "./MenuStyle"
-import Link from 'next/link';
 import {MENU_URL} from "@db/constants/link_list"
 import DropDown from "./DropDown";
 
@@ -9,8 +8,8 @@ import DropDown from "./DropDown";
 const Menu = () => {
   return (
     <MenuWrappper>
-      <MenuItem $as="a" href={MENU_URL.location}>
-      location
+      <MenuItem $as="a" href={MENU_URL.about}>
+      About Us
       </MenuItem>
       <MenuItem $bool={true} >
          service
