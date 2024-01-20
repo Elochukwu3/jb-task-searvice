@@ -7,6 +7,7 @@ import { MenuItem } from "./MenuStyle";
 import { ButtonWrapper } from "@components/Button/ButtonStyle";
 import List from "./List";
 import { XCircle, CaretLeft, CaretRight } from "@phosphor-icons/react";
+import {MENU_URL} from "@db/constants/link_list"
 
 const Mobile = ({ handler }: { handler: (item: Boolean) => void }) => {
   const { isDropdownOpen, handleDropDown } = useDropDown();
@@ -41,7 +42,7 @@ const Mobile = ({ handler }: { handler: (item: Boolean) => void }) => {
         <AnimatePresence mode="wait">
           {!isDropdownOpen ? (
             <MobileStyle>
-              <MenuItem>location</MenuItem>
+              <MenuItem $as={"a"} href={MENU_URL.about}>About Us</MenuItem>
               <MenuItem onClick={handleDropDown}>
                 <span>services</span>
                 <CaretRight
