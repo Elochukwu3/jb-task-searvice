@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image';
 import React from 'react';
-import AboutVision from './components/AboutVision';
 import Comp from './components/Comp';
 
 
@@ -46,7 +45,6 @@ const page = () => {
         {/* <YourComponent/> */}
       </div>
     </div>
-    <AboutVision/>
     <Comp/>
     </section>
   )

@@ -5,18 +5,18 @@ import Svg from "./Svg";
 const Comp = () => {
   return (
     <div className="w-[92%] px-1 mx-auto py-20 gap-1 font-manrope">
-      <div className="relative flex flex-col md:flex-row gap-x-6 col-lg-10 mx-auto my-6">
+      <div className="relative flex flex-col md:flex-row gap-x-6 mx-auto my-6">
         <div
-          className="md:w-6/12 js-build-in-item build-in-scale-right build-in-animate"
+          className="md:w-[49.999%]"
           style={{ transitionDelay: "0ms" }}
         >
           <div
             className="p-4 rounded mt-5 shadow-xl mb-6"
             style={{ background: "rgba(235, 245, 255, 0.2)" }}
           >
-            <ul className="list-none mb-n4">
+            <ul className="list-none">
               <li
-                className="mb-4 flex items-center justify-between f4-mktg js-build-in-item build-in-scale-fade build-in-animate"
+                className="mb-4 flex items-center justify-between"
                 style={{ transitionDelay: "200ms" }}
               >
                 <div className="flex items-center">
@@ -33,14 +33,13 @@ const Comp = () => {
                     “The only way to do great work is to love what you do”
                   </span>
                 </div>
-                {/* <span className="f5 text-muted hidden sm:block">1m 21s</span> */}
               </li>
             </ul>
           </div>
         </div>
 
         <div
-          className="home-campaign-ghas-connect relative md:absolute z-1 flex items-center js-build-in-item build-in-scale-fade build-in-animate"
+          className="relative md:absolute z-1 flex items-center left-1/2 top-[64px] mr-[-28px]"
           style={{ transitionDelay: "400ms" }}
         >
           <div
@@ -55,17 +54,16 @@ const Comp = () => {
         </div>
 
         <div
-          className="md:w-6/12  build-in-scale-right build-in-animate"
+          className="md:w-[45%']  build-in-scale-right build-in-animate"
           style={{ transitionDelay: "600ms" }}
         >
           <div
-            className="pt-2 pb-1 px-4 rounded-sm inline-block text-medium"
-            style={{ background: "rgba(235, 245, 255, 0.2)" }}
+            className="pt-2 pb-1 text-white bg-custom-dark px-4 rounded-t-sm inline-block text-medium"
           >
-            The Airtasker Vision
+            The JBPromend Vision
           </div>
           <div
-            className="p-4 rounded-bottom-2 rounded-right-2 shadow-xl mb-6"
+            className="p-4 rounded-r-sm  shadow-xl mb-6 text-sm"
             style={{ background: "rgba(235, 245, 255, 0.2)" }}
           >
             <ul className="list-none mb-n4">
