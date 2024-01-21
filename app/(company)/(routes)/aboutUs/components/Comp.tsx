@@ -7,7 +7,7 @@ const Comp = ({reverse}:{reverse?: boolean}) => {
     <div className={cn( "md:w-[92%] w-[95.99%] px-1 mx-auto  font-manrope")}>
       <div className={`${reverse &&"md:flex-row-reverse pt-6"} "pt-10 relative flex flex-col md:flex-row mx-auto my-6"`}>
         <div
-          className="md:w-[42.999%] hover:skew-y-1 "
+          className="md:w-[42.999%] hover:skew-y-1 duration-500"
           style={{ transitionDelay: "0ms" }}
         >
           <div
@@ -106,3 +106,4 @@ const Comp = ({reverse}:{reverse?: boolean}) => {
 };
 
 export default Comp;
+ 
