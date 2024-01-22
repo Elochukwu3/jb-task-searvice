@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image';
 import React from 'react';
 import Comp from './components/Comp';
+import Gallery from './components/Gallery';
 
 
 
@@ -17,34 +18,7 @@ const page = () => {
         <h1 className='text-[72px] font-satoshi font-bold leading-[70px] py-8 text-black text-balance'>We&apos;re making a difference to people&apos;s lives</h1>
         <p>Creating a way to connect people ready to work, with people who need work done</p>
       </div>
-      <div className="min-h-[240px] min-w-80 flex-1">
-        {/* <Image
-        src={"https://github.githubassets.com/assets/shape-2-f30dcc9bd35c.svg"}
-        height={300}
-        width={300}
-        sizes='200px'
-        alt='image-git'
-        style={{ filter: 'invert(1)'}}
-        /> */}
-        <Image
-        src={"https://images.airtasker.com/v7/www.airtasker.com/static/assets/e67aa6fa0989cb7f.jpg?w=1104&func=bound&org_if_sml=1&q=80"}
-        height={'40'}
-        width={'400'}
-        // sizes='(min-width: 400px)400px'
-        alt='image-airtask'
-        className='object-contain mx-auto'
-        // className='filter- hue-rotate-180 saturate-100 sepia brightness-100 mx-auto'
-        />
-        {/* <Image
-        src={"https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg"}
-        height={300}
-        width={300}
-        sizes='200px'
-        alt='image-git'
-        className='filter-0 hue-rotate-18 saturate-100 sepia brightness-100'
-        /> */}
-        {/* <YourComponent/> */}
-      </div>
+      <Gallery/>
       <div className='absolute -bottom-10 '>
         <Image
         src={"https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg"}
