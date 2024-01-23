@@ -16,7 +16,7 @@ const page = () => {
     <section className='max-w-7xl mx-auto space-y-10 pesp'>
       <div className='overflow-hidden relative min-h-[60vh] md:w-11/12 w-[96%] flex-col rounded-xl mx-auto md:flex-row flex justify-between p-20 bg-[#F9F3EF] '>
       <div className='flex-1 space-y-5'>
-        <h1 className='text-[72px] font-satoshi max-md:text-center font-bold leading-[70px] py-8 text-black text-balance'>We&apos;re making a difference to people&apos;s lives</h1>
+        <h1 className='text-[72px] font-satoshi max-md:text-center font-bold leading-[70px] py-8 text-black text-balance'>Our actions are impacting people’s well-being</h1>
         <p>Creating a way to connect people ready to work, with people who need work done</p>
       </div>
       <Gallery/>
