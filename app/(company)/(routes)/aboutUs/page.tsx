@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Comp from './components/Comp';
 import Gallery from './components/Gallery';
+import AboutFaq from './components/AboutFaq';
 
 
 
@@ -33,6 +34,7 @@ const page = () => {
     </div>
     <Comp/>
     <Comp reverse={true}/>
+    <AboutFaq/>
     </section>
   )
 }
