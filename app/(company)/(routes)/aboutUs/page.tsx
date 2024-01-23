@@ -1,5 +1,10 @@
 import { Metadata } from 'next'
+import Image from 'next/image';
 import React from 'react';
+import Comp from './components/Comp';
+import Gallery from './components/Gallery';
+import AboutFaq from './components/AboutFaq';
+
 
 
 export const metadata:Metadata = {
@@ -8,61 +13,28 @@ export const metadata:Metadata = {
 }
 const page = () => {
   return (
-    <section className='max-w-7xl mx-auto '>
-      <div className='min-h-[60vh] w-11/12 rounded-md mx-auto flex justify-between p-6 bg-[#F9F3EF] '>
-      <div>
-        <h1 className='text-4xl'>We&apos;`re making a difference to people&apos;`s lives</h1>
+    <section className='max-w-7xl mx-auto space-y-10 pesp'>
+      <div className='overflow-hidden relative min-h-[60vh] md:w-11/12 w-[96%] flex-col rounded-xl mx-auto md:flex-row flex justify-between p-20 bg-[#F9F3EF] '>
+      <div className='flex-1 space-y-5'>
+        <h1 className='text-[72px] font-satoshi max-md:text-center font-bold leading-[70px] py-8 text-black text-balance'>Our actions are impacting people’s well-being</h1>
         <p>Creating a way to connect people ready to work, with people who need work done</p>
       </div>
-      <div className="flex-1">
-        <YourComponent/>
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="image" x="0" y="0" height="100%" width="100%"
-             viewBox="0 0 512 512">
-      <image x="0" y="0" width="512" height="512"
-             href="https://i.imgur.com/5JQJc41.png"></image>
-    </pattern>
-  </defs>
-  <circle cx="50" cy="50" r="40" fill="url(#image)" stroke="black" stroke-width="2"/>
-  <g transform="translate(50,50)">
-    <g transform="rotate(0)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(90)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(135)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(180)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(225)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(270)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-    <g transform="rotate(315)">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="black" stroke-width="2"/>
-      <circle cx="0" cy="-20" r="5" fill="black"/>
-    </g>
-  </g>
-</svg>
-
+      <Gallery/>
+      <div className='absolute -bottom-10 '>
+        <Image
+        src={"https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg"}
+        height={300}
+        width={300}
+        sizes='200px'
+        alt='image-git'
+        style={{ filter: 'invert(1)'}}
+        // className='saturate-100 brightness-100'
+        />
       </div>
     </div>
+    <Comp/>
+    <Comp reverse={true}/>
+    <AboutFaq/>
     </section>
   )
 }
@@ -72,23 +44,17 @@ export default page
 
 const YourComponent = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-start min-w-0">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
         {/* Central Circle */}
-        <circle cx="300" cy="300" r="50" fill="#3498db" />
-
-        {/* Wireframes connecting to smaller circles */}
-        {Array.from({ length: 8 }).map((_, index) => (
-          <g key={index} transform={`rotate(${index * 45} 300 300)`}>
-            {/* Wireframe Line */}
+        <circle cx="300" cy="300" r="50" fill="#0d7a5f" />
+        {Array.from({ length: 6 }).map((_, index) => (
+          <g key={index} transform={`rotate(${index * 60} 300 300)`}>
             <line x1="300" y1="300" x2="450" y2="300" stroke="#2ecc71" strokeWidth="2" />
-
-            {/* Smaller Circular Image */}
-            <circle cx="450" cy="300" r="20" fill="#e74c3c" />
+            <circle cx="450" cy="300" r="20" fill="white" />
           </g>
         ))}
       </svg>
     </div>
   );
 };
-
