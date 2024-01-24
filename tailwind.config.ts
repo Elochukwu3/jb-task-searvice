@@ -25,7 +25,8 @@ const config = {
         tommy: ["MADE TOMMY Outline", "sans-serif"],
         satoshi: ['Satoshi', 'sans-serif'],
         manrope:['Manrope', 'sans-serif'],
-        sora: ['Sora', 'sans-serif']
+        sora: ['Sora', 'sans-serif'],
+        chela: ["Chela One", "system-ui"],
         
       },
       backgroundImage: {
