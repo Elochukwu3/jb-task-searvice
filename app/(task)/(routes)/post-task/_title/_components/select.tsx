@@ -14,8 +14,8 @@ export default function SelectForm({form}: FormType) {
         render={({ field }) => (
           <select
             {...field}
-            placeholder="Select a time range "
-            className=" bg-white border border-gray-300 cursor-pointer focus:border-custom-greaner/40 focus:outline-none hover:bg-gray-100 hover:border-custom-greaner/50 p-2.5 placeholder-gray-400 rounded-lg text-gray-600 w-64"
+            defaultValue="Select a time range"
+              className=" bg-white border border-gray-300 cursor-pointer focus:border-custom-greaner/40 focus:outline-none hover:bg-gray-100 hover:border-custom-greaner/50 p-2.5 placeholder-gray-400 rounded-lg text-gray-600 w-64"
           >
             {Object.values(timeRanges).map((range, index) => (
               <option key={`${index}timerange`} value={range}>
