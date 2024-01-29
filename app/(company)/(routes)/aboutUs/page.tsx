@@ -29,7 +29,6 @@ const page = () => {
         sizes='200px'
         alt='image-git'
         style={{ filter: 'invert(1)'}}
-        // className='saturate-100 brightness-100'
         />
       </div>
     </AboutHero>
