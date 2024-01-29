@@ -4,6 +4,7 @@ import React from 'react';
 import Comp from './components/Comp';
 import Gallery from './components/Gallery';
 import AboutFaq from './components/AboutFaq';
+import { AboutHero } from './style';
 
 
 
@@ -14,7 +15,7 @@ export const metadata:Metadata = {
 const page = () => {
   return (
     <section className='max-w-7xl mx-auto space-y-10 pesp'>
-      <div className='overflow-hidden relative min-h-[60vh] md:w-11/12 w-[96%] flex-col rounded-xl mx-auto md:flex-row flex justify-between p-20 bg-[#F9F3EF] '>
+      <AboutHero>
       <div className='flex-1 space-y-5'>
         <h1 className='text-[72px] font-chela font-bod leading-[70px] pt-8 text-custom-greaner text-balance'>Our actions are impacting people’s well-being</h1>
         <p className='font-bold text-sm opacity-40'>Creating a way to connect people ready to work, with people who need work done</p>
@@ -31,7 +32,7 @@ const page = () => {
         // className='saturate-100 brightness-100'
         />
       </div>
-    </div>
+    </AboutHero>
     <Comp/>
     <Comp reverse={true}/>
     <AboutFaq/>
