@@ -8,7 +8,7 @@ import HomeRating from "@components/Home/rating-home";
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "JBProMend.",
+    title: "JBProMend.com",
     description: "Get your local work done here",
     url: "https://jb-task-searvice.vercel.app/",
     siteName: "JBProMend",
