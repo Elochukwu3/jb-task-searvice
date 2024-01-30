@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ReactProp } from "@app-types/type";
-import Nav from "@components/Nav";
-import Footer from "@components/footer/Footer";
+import { ReactProp } from "@/app-types/type";
+import Nav from "@/components/Nav";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "JBProMend",

@@ -1,5 +1,5 @@
 "use client";
-import useCollapseAll from "@hooks/useCollapseAll";
+import useCollapseAll from "@/hooks/useCollapseAll";
 import {
   CaretDown,
   CaretRight,
@@ -8,7 +8,7 @@ import {
   LinkedinLogo,
   TwitterLogo,
 } from "@phosphor-icons/react";
-import { footer_links } from "@db/constants/link_list";
+import { footer_links } from "@/db/constants/link_list";
 import { SectionWraper, FooterList, Star } from "./style";
 
 const Footer = () => {

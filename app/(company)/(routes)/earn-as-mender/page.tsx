@@ -6,8 +6,8 @@ import { AboutHero, AboutHeroText } from '../aboutUs/style';
 
 
 export const metadata:Metadata = {
-    title: 'About us | JBpromend NG',
-    description: 'ask about our product',
+    title: 'Become a menader | JBpromend NG',
+    description: 'earn-as-mender',
 }
 const page = () => {
   return (
