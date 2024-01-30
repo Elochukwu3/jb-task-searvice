@@ -3,10 +3,10 @@ import {useRef} from "react";
 import Image from "next/image";
 import SearchSection from "./SearchSection"
 import {BannerWrapper} from "./homeStyle";
-import {carousel_images} from "@db/carousel";
+import {carousel_images} from "@/db/carousel";
 import {useScroll,motion, useTransform} from "framer-motion";
 import {bannerSvgVariants, scaleYVariant} from "./variant";
-import useTimeOut from "@hooks/useTimeOut"
+import useTimeOut from "@/hooks/useTimeOut"
 
 const Banner = () => {
 

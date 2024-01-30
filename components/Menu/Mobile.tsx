@@ -1,13 +1,13 @@
 "use client";
 import { MobileStyle, MobileWrapper } from "./MenuStyle";
-import useDropDown from "@hooks/useDropDown";
+import useDropDown from "@/hooks/useDropDown";
 import { motion, AnimatePresence } from "framer-motion";
 import { sidebarVariant } from "./variants";
 import { MenuItem } from "./MenuStyle";
-import { ButtonWrapper } from "@components/Button/ButtonStyle";
+import { ButtonWrapper } from "@/components/Button/ButtonStyle";
 import List from "./List";
 import { XCircle, CaretLeft, CaretRight } from "@phosphor-icons/react";
-import {MENU_URL} from "@db/constants/link_list"
+import {MENU_URL} from "@/db/constants/link_list"
 
 const Mobile = ({ handler }: { handler: (item: Boolean) => void }) => {
   const { isDropdownOpen, handleDropDown } = useDropDown();

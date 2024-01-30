@@ -3,7 +3,7 @@ import {useState} from "react";
 import EachTree from "./EachTree";
 import {pageProp} from "./type";
 import EachTreeTwo from "./EachTreeTwo";
-import {submenu, displayObject} from "@db/constants/getdone";
+import {submenu, displayObject} from "@/db/constants/getdone";
 import {motion} from "framer-motion"
 
 const GettingDone = ()=>{

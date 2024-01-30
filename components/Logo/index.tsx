@@ -1,5 +1,5 @@
 import { LogoWrapper } from "./LogoStyle";
-import {MENU_URL} from "@db/constants/link_list"
+import {MENU_URL} from "@/db/constants/link_list"
 
 
 const Logo = () => {

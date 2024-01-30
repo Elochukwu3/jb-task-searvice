@@ -1,5 +1,5 @@
  import {motion, AnimatePresence } from "framer-motion";
- import { testimonialVariant } from "@utils/varinats/motionVariants";
+ import { testimonialVariant } from "@/utils/varinats/motionVariants";
  import {cardprop} from "./cardType"
 
 

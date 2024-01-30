@@ -1,9 +1,9 @@
 "use client"
-import Menu from "@components/Menu";
+import Menu from "@/components/Menu";
 import { NavWrapper } from "./NavStyle";
-import Logo from "@components/Logo";
-import Mobile from "@components/Menu/Mobile";
-import useDropDown from "@hooks/useDropDown";
+import Logo from "@/components/Logo";
+import Mobile from "@/components/Menu/Mobile";
+import useDropDown from "@/hooks/useDropDown";
 import { List } from "@phosphor-icons/react";
 import {motion, AnimatePresence} from "framer-motion";
 

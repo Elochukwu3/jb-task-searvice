@@ -1,5 +1,5 @@
-import { ButtonWrapper } from "@components/Button/ButtonStyle";
-import {MAIN_PROJECT_SIDE_TEXT} from "@db/constants/project";
+import { ButtonWrapper } from "@/components/Button/ButtonStyle";
+import {MAIN_PROJECT_SIDE_TEXT} from "@/db/constants/project";
 
 
 const ProjectOutline = () => {

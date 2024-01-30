@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { ButtonProp } from "@components/Button/ButtonStyle";
+import { ButtonProp } from "@/components/Button/ButtonStyle";
 
 const Menu = tw.nav`sm:flex justify-between
 gap-4 satoshi text-lg items-center
