@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { ReactProp } from "@app-types/type";
-import Logo from "@components/Logo";
-import X from "@components/icon/Times";
-import TaskSideBar from "@app/(task)/_components/TaskSideBar";
+import { ReactProp } from "@/app-types/type";
+import Logo from "@/components/Logo";
+import X from "@/components/icon/Times";
+import TaskSideBar from "@/app/(task)/_components/TaskSideBar";
 import { FormProvider } from "./context/FormProvider";
 import Link from "next/link";
 

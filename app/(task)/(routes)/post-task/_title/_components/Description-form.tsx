@@ -4,8 +4,8 @@ import {
   FormLabel,
   FormMessage,
   FormItem,
-} from "@components-shadui/ui/form";
-import { Input } from "@components-shadui/ui/input";
+} from "@/components-shadui/ui/form";
+import { Input } from "@/components-shadui/ui/input";
 import { FormType } from "./type";
 
 

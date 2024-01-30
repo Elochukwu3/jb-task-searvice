@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import useCollapseAll from "@hooks/useCollapseAll";
-import { faq } from "@db/constants/faq";
+import useCollapseAll from "@/hooks/useCollapseAll";
+import { faq } from "@/db/constants/faq";
 import { FaqContainer } from "../style";
 
 function AboutFaq() {
