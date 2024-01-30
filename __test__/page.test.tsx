@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import About from '@app/(company)/(routes)/aboutUs/components/AboutFaq';
+import About from '@/app/(company)/(routes)/aboutUs/components/AboutFaq';
 
 describe('Home', () => {
   it('renders without crashing', () => {
