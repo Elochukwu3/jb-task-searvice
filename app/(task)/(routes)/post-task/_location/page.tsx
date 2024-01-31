@@ -1,24 +1,24 @@
 "use client";
 import axios from "axios";
-import { Form } from "@components-shadui/ui/form";
-import { Button } from "@components-shadui/ui/button";
-import { convertToObject } from "@app/(task)/(routes)/post-task/helper/convertArray";
+import { Form } from "@/components-shadui/ui/form";
+import { Button } from "@/components-shadui/ui/button";
+import { convertToObject } from "@/app/(task)/(routes)/post-task/helper/convertArray";
 import {
   FormControl,
   FormField,
   FormLabel,
   FormMessage,
   FormItem,
-} from "@components-shadui/ui/form";
-import { Input } from "@components-shadui/ui/input";
+} from "@/components-shadui/ui/form";
+import { Input } from "@/components-shadui/ui/input";
 import { string, object, infer as zInfer } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { debounceFunc } from "@utils/debounce";
-import getlocation from "@utils/getLocation";
+import { debounceFunc } from "@/utils/debounce";
+import getlocation from "@/utils/getLocation";
 import { useState } from "react";
-import useKeyboardKey from "@hooks/useKeyboard";
-import useSidebarContext from "@app/(task)/context/FormProvider";
+import useKeyboardKey from "@/hooks/useKeyboard";
+import useSidebarContext from "@/app/(task)/context/FormProvider";
 import { XCircle } from "@phosphor-icons/react";
 import Locations from "./Locations"
 

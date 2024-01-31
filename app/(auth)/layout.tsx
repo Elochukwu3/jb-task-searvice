@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "@styles/globals.css";
-import { ReactProp } from "@app-types/type";
-import Logo from "@components/Logo";
-import { NavWrapper } from "@components/Nav/NavStyle";
+import "@/styles/globals.css";
+import { ReactProp } from "@/app-types/type";
+import Logo from "@/components/Logo";
+import { NavWrapper } from "@/components/Nav/NavStyle";
 
 export const metadata: Metadata = {
   title: "JBProMend",

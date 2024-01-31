@@ -1,12 +1,12 @@
 "use client"
 import { GetMoreWrapper, GetMoreInner, PTag, Imagewrap, ImageCont} from "./style";
-import useTimeOut from "@hooks/useTimeOut";
+import useTimeOut from "@/hooks/useTimeOut";
 import TextSvg from "./Svg";
-import { ButtonWrapper, } from "@components/Button/ButtonStyle";
-import {usersInfoHome} from "@db/constants/svg";
+import { ButtonWrapper, } from "@/components/Button/ButtonStyle";
+import {usersInfoHome} from "@/db/constants/svg";
 import Image from "next/image";
 import {slideVariants,  slideVariantstwo} from "./variant";
-import { GETMOREDONE } from "@db/constants/getmore";
+import { GETMOREDONE } from "@/db/constants/getmore";
 import {motion, AnimatePresence} from "framer-motion";
 import UsersInfo from "./UserInfo"
 const MoreDone = () => {

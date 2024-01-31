@@ -1,4 +1,4 @@
-import { linkList } from "@db/constants/link_list";
+import { linkList } from "@/db/constants/link_list";
 import Link from "next/link";
 import {motion} from "framer-motion";
 

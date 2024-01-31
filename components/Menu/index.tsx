@@ -1,6 +1,6 @@
-import { ButtonWrapper } from "@components/Button/ButtonStyle"
+import { ButtonWrapper } from "@/components/Button/ButtonStyle"
 import {Menu as  MenuWrappper, MenuItem} from "./MenuStyle"
-import {MENU_URL} from "@db/constants/link_list"
+import {MENU_URL} from "@/db/constants/link_list"
 import DropDown from "./DropDown";
 
 

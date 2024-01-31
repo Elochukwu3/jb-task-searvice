@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import useCollapseAll from "@hooks/useCollapseAll";
-import { faq } from "@db/constants/faq";
+import useCollapseAll from "@/hooks/useCollapseAll";
+import { faq } from "@/db/constants/faq";
 import { FaqContainer } from "../style";
 
 function AboutFaq() {
@@ -14,7 +14,7 @@ function AboutFaq() {
         <p className="text-center py-2">Frequently asked question at JBPromend</p>
         <div className="space-y-4 w-11/12 mx-auto p-2 ">
           {faq.map(({quest, ans}, i)=>(
-          <FaqContainer key={`key${quest}`} onClick={() =>handler(i)} className="bg-[#ffffff] border-l-2 px-5 py-3 hover:border-[#ffffff] border-black hover:bg-custom-dark hover:text-[#ffffff] transition-colors duration-300 ">
+          <FaqContainer key={`key${quest}`} onClick={() =>handler(i)}>
             <p className="py-6">{quest}</p>
             <div
               className={`overflow-hidden text-sm transition-[max-height] duration-300 ${

@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import Banner from "@components/Home/banner-section/Banner";
-import MiniProjectCard from "@components/project_card/Projects";
-import MainProjects from "@components/projectCard/Projects"
-import MoreDone from "@components/Home/getmoredone";
-import GettingDone from "@components/Home/getdone";
-import HomeRating from "@components/Home/rating-home";
+import Banner from "@/components/Home/banner-section/Banner";
+import MiniProjectCard from "@/components/project_card/Projects";
+import MainProjects from "@/components/projectCard/Projects"
+import MoreDone from "@/components/Home/getmoredone";
+import GettingDone from "@/components/Home/getdone";
+import HomeRating from "@/components/Home/rating-home";
 
 export const metadata: Metadata = {
   openGraph: {

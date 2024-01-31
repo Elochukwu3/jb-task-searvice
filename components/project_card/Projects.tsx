@@ -1,5 +1,5 @@
 import ProjectCard from "./index"
-import { MINI_PROJECT} from "@db/constants/project"
+import { MINI_PROJECT} from "@/db/constants/project"
 const Projects = ()=>{
     return(
         <div className="flex my-5 overflow-hidden  slider whitespace-nowrap">

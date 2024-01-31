@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import { ReactProp } from "@app-types/type";
-import { ToasterProvider } from "@components/providers/ToasterProvider";
+import { ReactProp } from "@/app-types/type";
+import { ToasterProvider } from "@/components/providers/ToasterProvider";
 
 export const metadata: Metadata = {
   title: "JBProMend",

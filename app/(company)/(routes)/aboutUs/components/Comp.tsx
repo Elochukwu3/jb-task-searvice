@@ -1,7 +1,7 @@
 import React from "react";
 import { AboutConnector, AboutLi } from "../style";
 import Svg from "./Svg";
-import { cn } from "@lib/utils";
+import { cn } from "@/lib/utils";
 
 const Comp = ({reverse}:{reverse?: boolean}) => {
   return (

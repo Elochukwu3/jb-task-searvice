@@ -1,4 +1,4 @@
-import {jobsList} from "@db/constants/banner"
+import {jobsList} from "@/db/constants/banner"
 import { HelperButton} from "./homeStyle";
 import { motion } from "framer-motion";
 import {scaleYVariant} from "./variant"

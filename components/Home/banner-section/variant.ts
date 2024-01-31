@@ -5,7 +5,7 @@ export const scaleYVariant = {
     },
         animate:(index:number)=>({
         y:0,
-        transition: {delay: index * 0.05},
+        transition: {delay: (index * 0.1) + 0.15},
         opacity: 1
         })
 };

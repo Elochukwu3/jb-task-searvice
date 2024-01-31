@@ -1,15 +1,15 @@
 "use client"
-import Input from "@components/Input";
+import Input from "@/components/Input";
 import {
   SearchBoldText,
   SearchSectionWrapper,
   HelperButtonWrapper,
   SearchInputWrapper
 } from "./homeStyle";
-import { ButtonWrapper } from "@components/Button/ButtonStyle";
+import { ButtonWrapper } from "@/components/Button/ButtonStyle";
 import ListHelper from "./ListHelper";
 import SearchDropper from "./SearchDropper";
-import useDropDown from "@hooks/useDropDown";
+import useDropDown from "@/hooks/useDropDown";
 
 const SearchSection = ({ isBool }: { isBool?: Boolean }) => {
   const { isDropdownOpen, handleDropDown, handler } = useDropDown();

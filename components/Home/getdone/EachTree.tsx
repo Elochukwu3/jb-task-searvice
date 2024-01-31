@@ -3,7 +3,7 @@ import {pageProp} from "./type";
 import Image from "next/image";
 import {variants as motionFade} from "./variant"
 import { motion } from "framer-motion";
-import Star from "@components/projectCard/Star"
+import Star from "@/components/projectCard/Star"
 
 export default function GetDone ({header, text, label, image, index}: pageProp){
     return(

@@ -1,6 +1,6 @@
 "use client"
 import ProjectOutline from "./ProjectOutline";
-import { MAIN_PROJECT } from "@db/constants/project";
+import { MAIN_PROJECT } from "@/db/constants/project";
 import {ProjectsWrapper} from "./cardStyles"
 import ProductCard from "./Card";
 import {motion} from "framer-motion"

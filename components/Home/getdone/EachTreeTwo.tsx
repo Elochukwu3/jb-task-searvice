@@ -3,7 +3,7 @@ import {pageProp} from "./type";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import { scaleY} from "./variant";
-import Star from "@components/projectCard/Star";
+import Star from "@/components/projectCard/Star";
 
 const EachTreeTwo = ({header, text, label, image, index}:pageProp)=>{
     return(
