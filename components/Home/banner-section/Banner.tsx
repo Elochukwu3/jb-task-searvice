@@ -38,7 +38,7 @@ const slider = useTimeOut(0, carousel_images, (10 * 60 * 1000))
         initial="initial"
         whileInView="animate"
         className="inline-block pr-2 whitespace-pre"
-        custom={(i-0.1)}
+        custom={(i)}
         viewport={{once: true}}
         >{word}</motion.span>
         ))}

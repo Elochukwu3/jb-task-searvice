@@ -8,7 +8,7 @@ function Gallery() {
         src={"/images/mini-about-3.jpg"}
         height={'220'}
         width={'200'}
-        alt='image-airtask1'
+        alt='image-airtask'
         className='object-contain mx-auto'
         style={{borderRadius: "100px 0px 0px 0px", boxShadow: "0px 4px 11px 0px rgba(192, 189, 189, 0.25), 0px 4px 6px 0px rgba(192, 189, 189, 0.25)"}}
         />
@@ -24,7 +24,7 @@ function Gallery() {
         src={"/images/mini-about-2.webp"}
         height={'142'}
         width={'142'}
-        alt='image-airtask1'
+        alt='image-airtask2'
         className='object-contain mr-auto'
         style={{borderRadius: "0px 0px 0px 90px", boxShadow: "0px 4px 11px 0px rgba(192, 189, 189, 0.25), 0px 4px 6px 0px rgba(192, 189, 189, 0.25)"}}
         />
@@ -34,7 +34,7 @@ function Gallery() {
         src={"/images/mini-about-1.webp"}
         height={'76'}
         width={'76'}
-        alt='image-airtask'
+        alt='image-airtask4'
         className='object-contain  rounded-3xl'
         />
          <Image
@@ -49,7 +49,7 @@ function Gallery() {
         src={"/images/mini-about-4.jpg"}
         height={'130'}
         width={'130'}
-        alt='image-airtask1'
+        alt='image-airtask6'
         className='object-contain mx-auto'
         style={{borderRadius: " 0px 0px 60px 0px", boxShadow: "0px 4px 11px 0px rgba(192, 189, 189, 0.25), 0px 4px 6px 0px rgba(192, 189, 189, 0.25)"}}
         />
